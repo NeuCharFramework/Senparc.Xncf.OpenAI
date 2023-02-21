@@ -1,4 +1,5 @@
-﻿using Senparc.Ncf.Core.Models;
+﻿using Senparc.CO2NET.Extensions;
+using Senparc.Ncf.Core.Models;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -35,7 +36,11 @@ namespace Senparc.Xncf.OpenAI
         /// <param name="organizationID"></param>
         public void Update(string apiKey, string organizationID)
         {
-            ApiKey = Convert.ToBase64String(Encoding.UTF8.GetBytes(apiKey));
+            //不为空时才更新
+            if (!apiKey.IsNullOrEmpty())
+            {
+                ApiKey = Convert.ToBase64String(Encoding.UTF8.GetBytes(apiKey));
+            }
             OrganizationID = organizationID;
         }
 

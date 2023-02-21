@@ -35,7 +35,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
                 openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
                 var completionResult = await openAIService.Completions.CreateCompletion(new CompletionCreateRequest()
                 {
-                    Prompt = "prompt",
+                    Prompt = prompt,
                     Model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3
                 });
 

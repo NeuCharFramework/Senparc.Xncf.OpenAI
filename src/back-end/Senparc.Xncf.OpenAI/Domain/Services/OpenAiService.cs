@@ -16,7 +16,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
     public class OpenAiService : ServiceBase<OpenAiConfig>
     {
         private OpenAIService _openAiService;
-        
+
         public OpenAiService(IRepositoryBase<OpenAiConfig> repo, IServiceProvider serviceProvider) : base(repo, serviceProvider)
         {
         }
@@ -28,7 +28,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <exception cref="NcfExceptionBase"></exception>
         public async Task<OpenAIService> GetOpenAiServiceAsync()
         {
-            if (_openAiService==null)
+            if (_openAiService == null)
             {
                 var config = await base.GetObjectAsync(z => true, z => z.Id, Ncf.Core.Enums.OrderingType.Descending);
                 if (config == null || config.ApiKey.IsNullOrEmpty())
@@ -39,10 +39,10 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
                 _openAiService = new OpenAIService(new OpenAiOptions()
                 {
                     ApiKey = config.GetOriginalAppKey(),
-                    Organization = config.OrganizationID
+                    Organization = config.OrganizationID?.Trim().Length == 0 ? null : config.OrganizationID
                 });
 
-                
+
             }
             return _openAiService;
         }
