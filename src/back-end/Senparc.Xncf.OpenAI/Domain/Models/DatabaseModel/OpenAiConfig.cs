@@ -1,8 +1,8 @@
 ﻿using Senparc.Ncf.Core.Models;
-using Senparc.Xncf.OpenAI.Models.DatabaseModel.Dto;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
 
 namespace Senparc.Xncf.OpenAI
 {
@@ -19,11 +19,13 @@ namespace Senparc.Xncf.OpenAI
         public string ApiKey { get; private set; }
         [MaxLength(100)]
         public string OrganizationID { get; private set; }
-        
+
+        private OpenAiConfig() { }
+
         public OpenAiConfig(string apiKey, string organizationID)
         {
-            ApiKey = apiKey;
-            OrganizationID = organizationID;
+            Update(apiKey, organizationID);
+
         }
 
         /// <summary>
@@ -33,8 +35,18 @@ namespace Senparc.Xncf.OpenAI
         /// <param name="organizationID"></param>
         public void Update(string apiKey, string organizationID)
         {
-            ApiKey = apiKey;
+            ApiKey = Convert.ToBase64String(Encoding.UTF8.GetBytes(apiKey));
             OrganizationID = organizationID;
+        }
+
+        /// <summary>
+        /// 获取原始的 AppId
+        /// </summary>
+        /// <returns></returns>
+        public string GetOriginalAppKey()
+        {
+            return Encoding.Default.GetString(Convert.FromBase64String(ApiKey));
+
         }
     }
 }

@@ -15,10 +15,8 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
 {
     public class MyFuctionAppService: AppServiceBase
     {
-        private ColorService _colorService;
-        public MyFuctionAppService(IServiceProvider serviceProvider, ColorService colorService) : base(serviceProvider)
+        public MyFuctionAppService(IServiceProvider serviceProvider) : base(serviceProvider)
         {
-            _colorService = colorService;
         }
 
         [FunctionRender("我的函数", "我的函数的注释", typeof(Register))]

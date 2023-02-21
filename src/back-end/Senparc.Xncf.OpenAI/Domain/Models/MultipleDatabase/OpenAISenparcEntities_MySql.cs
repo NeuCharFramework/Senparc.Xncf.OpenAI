@@ -6,7 +6,6 @@ using Senparc.Ncf.Core.Models;
 using Senparc.Ncf.XncfBase.Database;
 using System;
 using System.IO;
-using Senparc.Xncf.OpenAI.Models.DatabaseModel;
 
 namespace Senparc.Xncf.OpenAI.Models
 {

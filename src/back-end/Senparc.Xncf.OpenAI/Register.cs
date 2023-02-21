@@ -13,7 +13,7 @@ using Senparc.Xncf.OpenAI.OHS.Local.AppService;
 using Senparc.Ncf.Core.Models;
 using Senparc.Ncf.Database;
 using Senparc.Ncf.XncfBase.Database;
-using Senparc.Xncf.OpenAI.Models.DatabaseModel.Dto;
+using Senparc.Xncf.OpenAI.Domain.Services;
 
 namespace Senparc.Xncf.OpenAI
 {
@@ -44,10 +44,9 @@ namespace Senparc.Xncf.OpenAI
             {
                 case InstallOrUpdate.Install:
                     //新安装
-            #region 初始化数据库数据
-                    var colorService = serviceProvider.GetService<ColorAppService>();
-                    var colorResult = await colorService.GetOrInitColorAsync();
-            #endregion
+                    #region 初始化数据库数据
+         
+                    #endregion
                     break;
                 case InstallOrUpdate.Update:
                     //更新
@@ -77,7 +76,7 @@ namespace Senparc.Xncf.OpenAI
 
         public override IServiceCollection AddXncfModule(IServiceCollection services, IConfiguration configuration, IHostEnvironment env)
         {
-            services.AddScoped<ColorAppService>();
+            services.AddScoped<OpenAiConfigService>();
             return base.AddXncfModule(services, configuration, env);
         }
     }
