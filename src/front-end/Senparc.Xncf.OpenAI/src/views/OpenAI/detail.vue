@@ -1,13 +1,13 @@
 <!-- open详情页 -->
 <template>
     <div class="aisearch">
-        <div class="showText" ref="showText">
+        <div class="showText">
             <!-- 空状态 -->
             <div v-if="this.showState == false">
                 <el-empty description="请在下方输入框中输入您想要了解的内容"></el-empty>
             </div>
             <!-- 请求数据区域 -->
-            <div v-else id="demo">
+            <div v-else>
                 <main class="mian" v-for="item in dataState" :key="item.id">
                     <!-- 提问 -->
                     <div class="messageList">
@@ -43,21 +43,17 @@
         <div class="quesitionArea">
             <div class="iptArea">
                 <el-input placeholder="请输入内容" v-model="input">
-                    <el-button slot="append" icon="el-icon-position" @click="findContent"
-                               v-loading.fullscreen.lock="fullscreenLoading"></el-button>
+                    <el-button slot="append" icon="el-icon-position" @click="findContent"></el-button>
                 </el-input>
                 <el-button type="primary" @click="goOpenAImian">返回</el-button>
             </div>
-            <div class="iptArea" style="font-size: 14px;">
-                <span>您可以在这里输入想要查找的内容。</span>
-                <span style="color:gray" @click="showHistory">显示历史数据</span>
-            </div>
+            <div class="iptArea" style="font-size: 14px;">您可以在这里输入想要查找的内容</div>
         </div>
     </div>
 </template>
 <script>
 // 请求
-// import { getOpen, postOpen, putOpen, deleteOpen } from "@/api/openIndex"
+import { getOpen, postOpen, putOpen, deleteOpen } from "@/api/openIndex"
 export default {
     data() {
         return {
@@ -67,8 +63,6 @@ export default {
             firstQuestion: "",//问题
             dataState: [],//数据
             showState: false,//展示状态
-            fullscreenLoading: false,//loading
-            locastoreDatas: null,//本地存储历史shuju
         }
     },
     created() {
@@ -85,39 +79,24 @@ export default {
         goOpenAImian() {
             this.$router.push({
                 path: '/OpenAI/index',
-                // 分布后的跳转路径
-                // path: '/Module/b/openindex',
                 query: {
                     Token: this.token,//Token
                 }
             })
         },
-        // 新增消息
+        // 查找内容
         findContent() {
             this.showState = true;
             this.idNum = this.idNum + 1;
-            this.input = null;// 清空
-            this.fullscreenLoading = true;
-            setTimeout(() => {
-                this.dataState.push({
-                    id: this.idNum,
-                    quesition: this.input,
-                    anserData: "没有可回复的内容",
-                    anserState: "2",
-                })
-                this.fullscreenLoading = false;
-            }, 100);
-            setTimeout(() => {
-                this.$refs.showText.scrollTop = this.$refs.showText.scrollHeight;//滚动
-            }, 100)
-            // 数据需要存储本地
-            this.locastoreDatas = ['周一', { a: 1, b: 2 }, '周三', '周四', '周五'];
-            localStorage.setItem('weekDay', JSON.stringify(this.locastoreDatas));
-        },
-        // 显示历史数据内容
-        showHistory() {
-            this.locastoreDatas = JSON.parse(localStorage.getItem('weekDay'));
-            console.log(this.locastoreDatas);
+            // 模拟请求到的数据
+            this.dataState.push({
+                id: this.idNum,
+                quesition: this.input,
+                anserData: "没有可回复的内容",
+                anserState: "2",
+            })
+            // 清空
+            this.input = null;
         }
     },
 }
@@ -140,13 +119,8 @@ export default {
 }
 
 .aisearch {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
     .showText {
-        height: 700px;
+        height: 71vh;
         width: 100%;
         background-color: #fff;
         overflow: hidden;
@@ -251,7 +225,7 @@ export default {
     }
 
     .quesitionArea {
-        height: 200px;
+        height: 20vh;
         background-color: #fff;
         box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
         display: flex;

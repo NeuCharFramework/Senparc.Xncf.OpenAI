@@ -10,25 +10,17 @@
                     </span>
                 </el-header>
             </el-container>
-            <div class="textArea">
-                <span>功能描述-功能介绍</span>
-                <!-- 获取appkey和organziation -->
-                <div class="obtain">
-                    <span>若要使用模块，需要验证APP Key和Organization ID。没有这两项内容？传送门：</span>
-                    <a href="https://platform.openai.com/account/api-keys">获取APP Key</a>
-                    <a href="https://platform.openai.com/account/api-keys">获取Organization ID</a>
-                </div>
-            </div>
+            <div class="textArea">功能描述-功能介绍</div>
             <!-- 功能模块 -->
             <el-row>
                 <el-card class="box-card mw-100">
                     <div class="nav" v-if="yesno == false">
                         <h3>使用该模块需验证登录 </h3>
-                        <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">设置信息</el-button>
+                        <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">设置Token</el-button>
                     </div>
                     <div class="nav" v-if="yesno == true">
                         <h3>请单击需要使用的模块 </h3>
-                        <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">更换信息</el-button>
+                        <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">更换Token</el-button>
                     </div>
                     <!-- 搜索 -->
                     <el-input class="box-ipt" v-model="modelValue" placeholder="输入内容按下Enter" clearable
@@ -63,39 +55,26 @@
             </el-row>
         </main>
         <el-dialog title="登录" :visible.sync="dialogVisible" width="50%" :before-close="handleClose">
-            <!-- 未登录 -->
+            <!-- 首次操作 -->
             <div class="dialogArea" v-if="passwordState == false">
-                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-                    <el-form-item label="APPKEY" prop="appkey">
-                        <el-input v-model="ruleForm.appkey"></el-input>
-                    </el-form-item>
-                    <el-form-item label="Organization">
-                        <el-input v-model="ruleForm.Organization"></el-input>
-                    </el-form-item>
-                </el-form>
+                <el-input v-model="token" placeholder="请输入内容"></el-input>
+                <span>这是一段信息描述,登录请输入您的Token</span>
             </div>
-            <!-- 已登录 -->
+            <!-- 已登录，再次显示 -->
             <div class="dialogArea" v-if="passwordState == true">
-                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-                    <el-form-item label="APPKEY" prop="appkey">
-                        <el-input v-model="ruleForm.appkey" show-password></el-input>
-                    </el-form-item>
-                    <el-form-item label="Organization">
-                        <el-input v-model="ruleForm.Organization" show-password></el-input>
-                    </el-form-item>
-                    <span>这是一段信息描述,若修改Token请输入</span>
-                </el-form>
+                <el-input v-model="token" placeholder="请输入内容" show-password></el-input>
+                <span>这是一段信息描述,若修改Token请输入</span>
             </div>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="dialogVisible = false">取 消</el-button>
-                <el-button type="primary" @click="submitForm('ruleForm')">确 定</el-button>
+                <el-button type="primary" @click="login">确 定</el-button>
             </span>
         </el-dialog>
     </div>
 </template>
 <script>
 // 请求
-import { getAppkeyOrganizationID, postOpen, putOpen, deleteOpen } from "@/api/openIndex"
+import { getOpen, postOpen, putOpen, deleteOpen } from "@/api/openIndex"
 export default {
     data() {
         return {
@@ -149,21 +128,11 @@ export default {
             token: '',//token
             dialogVisible: false,//弹出层状态
             passwordState: false,//输入框是否显示password
-
-            ruleForm: {
-                appkey: '',
-                Organization: '',
-            },
-            rules: {
-                appkey: [
-                    { required: true, message: 'appkey为必填项', trigger: 'blur' },
-                ],
-            }
         }
     },
     created() {
         this.getToken();
-        this.getList();
+        // this.getList();
     },
     methods: {
         //获取Token
@@ -177,12 +146,7 @@ export default {
         },
         // 获取模块数据
         async getList() {
-            // const xncfOpenAIList = await getOpen();
-            await getAppkeyOrganizationID().then((res) => {
-                console.log('请求结果', res);
-            }).catch(() => {
-                console.log('请求失败');
-            })
+            const xncfOpenAIList = await getOpen();
         },
         //关闭弹出层
         handleClose(done) {
@@ -192,37 +156,18 @@ export default {
                 })
                 .catch(_ => { });
         },
-        // // 登录解锁
-        // login() {
-        //     if (this.token != '') {
-        //         this.yesno = true;//可操作
-        //         this.dialogVisible = false;//关闭弹出层
-        //         this.passwordState = true;//token显示password状态
-        //     }
-        // },
-        // 登录信息
-        submitForm(formName) {
-            this.$refs[formName].validate((valid) => {
-                if (valid) {
-                    this.yesno = true;//可操作
-                    this.dialogVisible = false;//关闭弹出层
-                    this.passwordState = true;//token显示password状态
-                } else {
-                    console.log('error submit!!');
-                    return false;
-                }
-            });
-        },
-        // 关闭弹窗
-        resetForm(formName) {
-            this.$refs[formName].resetFields();
+        // 登录解锁
+        login() {
+            if (this.token != '') {
+                this.yesno = true;//可操作
+                this.dialogVisible = false;//关闭弹出层
+                this.passwordState = true;//token显示password状态
+            }
         },
         // 去到详情页
         goOpenAIdetail() {
             this.$router.push({
                 path: '/OpenAI/detail',
-                // 分布后的跳转路径
-                // path: '/Module/b/opendetail',
                 query: {
                     Token: this.token, //Token
                 }
@@ -290,14 +235,6 @@ export default {
             margin: 10px 0px;
             white-space: pre-wrap;
             box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-
-            .obtain {
-                margin-top: 10px;
-
-                a {
-                    padding-right: 5px;
-                }
-            }
         }
 
         .box-ipt {
@@ -398,8 +335,6 @@ export default {
             line-height: 40px;
         }
     }
-
-
 }
 </style>
 <style scoped>

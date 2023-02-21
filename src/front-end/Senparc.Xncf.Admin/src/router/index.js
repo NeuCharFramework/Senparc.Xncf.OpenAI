@@ -80,6 +80,31 @@ export const constantRoutes = [
       },
     ],
   },
+  // 首页
+  {
+    path: "/openaiindex",
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: "/redirect/:path(.*)",
+        component: () => import("@/views/OpenAI/index"),
+      },
+    ],
+  },
+  // 详情页
+  {
+    path: "/openaidetail",
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: "/redirect/:path(.*)",
+        component: () => import("@/views/OpenAI/detail"),
+      },
+    ],
+  },
+
   // {
   //   path: '/AgGridTemplate',
   //   component: Layout,

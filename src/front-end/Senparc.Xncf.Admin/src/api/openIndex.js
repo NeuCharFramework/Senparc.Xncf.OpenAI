@@ -1,11 +1,11 @@
 import request from "@/utils/request"
 const baseUrl = ""//共用链接前缀-待定
 
-
-export function getOpen(data = {}) {
+// 获取appkey和organizationID
+export function getAppkeyOrganizationID(data = {}) {
     console.log(data);
     return request({
-        url: "",
+        url: "/Senparc.Xncf.OpenAI/OpenAiConfigService/Xncf.OpenAI_OpenAiConfigService.GetOpenAiConfigDtoAsync",
         data,
         method: 'get'
     })
