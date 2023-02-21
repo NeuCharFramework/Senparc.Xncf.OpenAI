@@ -18,15 +18,16 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
     public class GPT3AppService : AppServiceBase
     {
         readonly OpenAiService _openAiService;
-        
+
         public GPT3AppService(IServiceProvider serviceProvider, OpenAiService openAiService) : base(serviceProvider)
         {
             _openAiService = openAiService;
         }
 
-        public async Task<AppResponseBase<ChoiceResponse>> TextDavinciV3Async(string prompt)
+        [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
+        public async Task<AppResponseBase<List<ChoiceResponse>>> TextDavinciV3Async(string prompt)
         {
-            return await this.GetResponseAsync<AppResponseBase<ChoiceResponse>, ChoiceResponse>(async (response, logger) =>
+            return await this.GetResponseAsync<AppResponseBase<List<ChoiceResponse>>, List<ChoiceResponse>>(async (response, logger) =>
             {
                 var dt1 = SystemTime.Now;//开始计时
 
@@ -41,7 +42,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
 
                 if (completionResult.Successful)
                 {
-                    return completionResult.Choices.FirstOrDefault();
+                    return completionResult.Choices;//.FirstOrDefault();
                 }
                 else //handle errors
                 {

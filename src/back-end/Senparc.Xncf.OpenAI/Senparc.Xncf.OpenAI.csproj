@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Version>0.1</Version>
+    <Version>0.1-beta1</Version>
     <AssemblyName>Senparc.Xncf.OpenAI</AssemblyName>
     <RootNamespace>Senparc.Xncf.OpenAI</RootNamespace>
     <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
@@ -24,6 +24,9 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>..\..\..\BuildOutPut</OutputPath>
   </PropertyGroup>
+	  <ItemGroup>
+    <None Include="icon.jpg" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Betalgo.OpenAI.GPT3" Version="6.6.7" />
     <PackageReference Include="Senparc.CO2NET.WebApi" Version="1.1.2" />
