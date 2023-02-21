@@ -58,5 +58,41 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
 
             });
         }
+
+        [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
+        public async Task<AppResponseBase<string>> TextDavinciV3StreamAsync(string prompt)
+        {
+            return await this.GetResponseAsync<AppResponseBase<string>, string>(async (response, logger) =>
+            {
+                var dt1 = SystemTime.Now;//开始计时
+
+                var openAIService = await _openAiService.GetOpenAiServiceAsync();
+
+                openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
+                var completionResult = openAIService.Completions.CreateCompletionAsStream(new CompletionCreateRequest()
+                {
+                    Prompt = prompt,
+                    Model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3
+                });
+
+                var sb = new StringBuilder();
+
+                await foreach (var completion in completionResult)
+                {
+                    if (completion.Successful)
+                    {
+                        sb.Append(completion.Choices.FirstOrDefault()?.Text);
+                    }
+                    else
+                    {
+                        if (completion.Error == null)
+                        {
+                            throw new NcfExceptionBase("Unknown Error");
+                        }
+                        new NcfExceptionBase($"{completion.Error.Code}: {completion.Error.Message}");
+                    }
+                }
+            });
+        }
     }
 }
