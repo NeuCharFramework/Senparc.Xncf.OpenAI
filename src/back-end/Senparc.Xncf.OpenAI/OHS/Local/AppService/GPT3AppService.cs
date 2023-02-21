@@ -92,6 +92,8 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
                         new NcfExceptionBase($"{completion.Error.Code}: {completion.Error.Message}");
                     }
                 }
+
+                return sb.ToString();
             });
         }
     }
