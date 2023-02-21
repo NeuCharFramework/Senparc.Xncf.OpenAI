@@ -3,7 +3,7 @@ OpenAI 和 ChatGPT 等接口对接
 
 ## 使用方式
 
-1. 将当前 XNCF 项目引用到 NCF 项目（https://github.com/NeuCharFramework/NCF）中（引用源码项目或 Nuget 包）。 [NCF 文档](https://www.ncf.pub/docs)
+1. 将当前 XNCF 项目引用到 [NCF 项目](https://github.com/NeuCharFramework/NCF)中（引用源码项目或 Nuget 包）。 [NCF 文档](https://www.ncf.pub/docs)
 2. 在 NCF 后台安装 `Senparc.Xncf.OpenAI` 模块。
 3. 通过 UI 或 Swagger 进行接口测试。
 
