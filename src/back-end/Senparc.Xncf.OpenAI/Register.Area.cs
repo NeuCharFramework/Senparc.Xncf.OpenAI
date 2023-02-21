@@ -19,8 +19,8 @@ namespace Senparc.Xncf.OpenAI
         public string HomeUrl => "/Admin/OpenAI/Index";
 
         public List<AreaPageMenuItem> AareaPageMenuItems => new List<AreaPageMenuItem>() {
-                         new AreaPageMenuItem(GetAreaHomeUrl(),"首页","fa fa-laptop"),
-			 			 new AreaPageMenuItem(GetAreaUrl($"/Admin/OpenAI/DatabaseSample"),"数据库操作示例","fa fa-bookmark-o")
+        //                 new AreaPageMenuItem(GetAreaHomeUrl(),"首页","fa fa-laptop"),
+			 			 //new AreaPageMenuItem(GetAreaUrl($"/Admin/OpenAI/DatabaseSample"),"数据库操作示例","fa fa-bookmark-o")
 			 		};
 
         public IMvcBuilder AuthorizeConfig(IMvcBuilder builder, IHostEnvironment env)
