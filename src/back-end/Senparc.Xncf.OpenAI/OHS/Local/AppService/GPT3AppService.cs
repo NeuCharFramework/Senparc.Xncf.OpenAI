@@ -1,11 +1,10 @@
-﻿using OpenAI.GPT3.Managers;
-using OpenAI.GPT3.ObjectModels.RequestModels;
+﻿using OpenAI.GPT3.ObjectModels.RequestModels;
 using OpenAI.GPT3.ObjectModels.SharedModels;
 using Senparc.CO2NET;
+using Senparc.CO2NET.Extensions;
 using Senparc.Ncf.Core.AppServices;
 using Senparc.Ncf.Core.Exceptions;
 using Senparc.Xncf.OpenAI.Domain.Services;
-using Senparc.Xncf.OpenAI.OHS.Local.PL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,8 +23,16 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
             _openAiService = openAiService;
         }
 
+        /// <summary>
+        /// 使用不同模型运行 OpenAI
+        /// </summary>
+        /// <param name="prompt">prompt 提示信息</param>
+        /// <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
+        /// <param name="maxTokens">最大消费 Token 数量。默认为 50</param>
+        /// <returns></returns>
+        /// <exception cref="NcfExceptionBase"></exception>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
-        public async Task<AppResponseBase<List<ChoiceResponse>>> TextDavinciV3Async(string prompt)
+        public async Task<AppResponseBase<List<ChoiceResponse>>> CreateCompletionAsync(string prompt, string model = null, int maxTokens = 50)
         {
             return await this.GetResponseAsync<AppResponseBase<List<ChoiceResponse>>, List<ChoiceResponse>>(async (response, logger) =>
             {
@@ -33,11 +40,18 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
 
                 var openAIService = await _openAiService.GetOpenAiServiceAsync();
 
-                openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
+                if (model.IsNullOrEmpty())
+                {
+                    model = global::OpenAI.GPT3.ObjectModels.Models.CodeDavinciV2;
+                }
+
+                //openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
                 var completionResult = await openAIService.Completions.CreateCompletion(new CompletionCreateRequest()
                 {
                     Prompt = prompt,
-                    Model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3
+                    Model = model,
+                    MaxTokens = maxTokens,
+
                 });
 
                 if (completionResult.Successful)
@@ -59,29 +73,49 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
             });
         }
 
+        /// <summary>
+        /// 使用不同模型运行 OpenAI（使用 Stream 方式）
+        /// </summary>
+        /// <param name="prompt">prompt 提示内容</param>
+        /// <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
+        /// <param name="maxTokens">最大消费 Token 数量。默认为 50</param>
+        /// <returns></returns>
+        /// <exception cref="NcfExceptionBase"></exception>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
-        public async Task<AppResponseBase<string>> TextDavinciV3StreamAsync(string prompt)
+        public async Task<AppResponseBase<ChoiceResponse>> CreateCompletionStreamAsync(string prompt, string model = null, int maxTokens = 50)
         {
-            return await this.GetResponseAsync<AppResponseBase<string>, string>(async (response, logger) =>
+            return await this.GetResponseAsync<AppResponseBase<ChoiceResponse>, ChoiceResponse>(async (response, logger) =>
             {
                 var dt1 = SystemTime.Now;//开始计时
 
                 var openAIService = await _openAiService.GetOpenAiServiceAsync();
 
-                openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
+                if (model.IsNullOrEmpty())
+                {
+                    model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3;
+                }
+
+                //openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
                 var completionResult = openAIService.Completions.CreateCompletionAsStream(new CompletionCreateRequest()
                 {
                     Prompt = prompt,
-                    Model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3
+                    Model = model,
+                    MaxTokens = maxTokens,
                 });
 
+                List<ChoiceResponse> result = new List<ChoiceResponse>();
                 var sb = new StringBuilder();
 
                 await foreach (var completion in completionResult)
                 {
                     if (completion.Successful)
                     {
-                        sb.Append(completion.Choices.FirstOrDefault()?.Text);
+                        if (completion.Choices.FirstOrDefault() is ChoiceResponse first && first is not null)
+                        {
+                            result.Add(first);
+                            sb.Append(first.Text);
+                        }
+                        //sb.Append(completion.Choices.FirstOrDefault()?.Text);
                     }
                     else
                     {
@@ -93,7 +127,15 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
                     }
                 }
 
-                return sb.ToString();
+                var choiceResponse = new ChoiceResponse()
+                {
+                    Index = 0,
+                    FinishReason = result.LastOrDefault()?.FinishReason,
+                    LogProbs = result.LastOrDefault()?.LogProbs,
+                    Text = sb.ToString()
+                };
+
+                return choiceResponse;
             });
         }
     }

@@ -26,7 +26,10 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
             return config;
         }
 
-
+        /// <summary>
+        /// 获取 OpenAiConfig 配置信息。其中 AppKey 为部分信息
+        /// </summary>
+        /// <returns></returns>
         [ApiBind]
         public async Task<OpenAiConfigDto> GetOpenAiConfigDtoAsync()
         {
