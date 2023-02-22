@@ -62,13 +62,18 @@ export default {
     data() {
         return {
             input: "",
-            token: null,
             idNum: 1,
             firstQuestion: "",//问题
             dataState: [],//数据
             showState: false,//展示状态
             fullscreenLoading: false,//loading
             locastoreDatas: null,//本地存储历史shuju
+
+            // save请求到的数据
+            saveData: {
+                apiKey: "",
+                organizationID: ""
+            }
         }
     },
     created() {
@@ -77,18 +82,21 @@ export default {
     methods: {
         // 获取路由传值参数
         getToken() {
-            if (this.$router.currentRoute.query.Token) {
-                this.token = this.$router.currentRoute.query.Token;
+            if (this.$router.currentRoute.query) {
+                this.saveData.apiKey = this.$router.currentRoute.query.appKey;
+                this.saveData.organizationID = this.$router.currentRoute.query.organizationID;
+                console.log('spikey,id', this.saveData);
             }
         },
         // 回到首页
         goOpenAImian() {
             this.$router.push({
-                path: '/OpenAI/index',
-                // 分布后的跳转路径
-                // path: '/Module/b/openindex',
+                // path: '/OpenAI/index',
+                // 分布式的跳转路径
+                path: '/Module/b/openindex',
                 query: {
-                    Token: this.token,//Token
+                    appKey: this.saveData['apiKey'],
+                    organizaionID: this.saveData['organizationID']
                 }
             })
         },
