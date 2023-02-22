@@ -4,6 +4,7 @@ using OpenAI.GPT3.ObjectModels.RequestModels;
 using OpenAI.GPT3.ObjectModels.ResponseModels;
 using OpenAI.GPT3.ObjectModels.SharedModels;
 using Senparc.CO2NET;
+using Senparc.CO2NET.Extensions;
 using Senparc.Ncf.Core.AppServices;
 using Senparc.Ncf.Core.Exceptions;
 using Senparc.Xncf.OpenAI.Domain.Services;
@@ -26,8 +27,15 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
             _openAiService = openAiService;
         }
 
+        /// <summary>
+        /// 使用不同模型运行 OpenAI
+        /// </summary>
+        /// <param name="prompt">prompt 提示信息</param>
+        /// <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
+        /// <returns></returns>
+        /// <exception cref="NcfExceptionBase"></exception>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
-        public async Task<AppResponseBase<List<ChoiceResponse>>> TextDavinciV3Async(string prompt)
+        public async Task<AppResponseBase<List<ChoiceResponse>>> CreateCompletionAsync(string prompt, string model = null)
         {
             return await this.GetResponseAsync<AppResponseBase<List<ChoiceResponse>>, List<ChoiceResponse>>(async (response, logger) =>
             {
@@ -35,11 +43,16 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
 
                 var openAIService = await _openAiService.GetOpenAiServiceAsync();
 
-                openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
+                if (model.IsNullOrEmpty())
+                {
+                    model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3;
+                }
+
+                //openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
                 var completionResult = await openAIService.Completions.CreateCompletion(new CompletionCreateRequest()
                 {
                     Prompt = prompt,
-                    Model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3
+                    Model = model
                 });
 
                 if (completionResult.Successful)
@@ -62,13 +75,14 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         }
 
         /// <summary>
-        /// 运行 TextDavinciV3 模型
+        /// 使用不同模型运行 OpenAI（使用 Stream 方式）
         /// </summary>
         /// <param name="prompt">prompt 提示内容</param>
+        /// <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
         /// <returns></returns>
         /// <exception cref="NcfExceptionBase"></exception>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
-        public async Task<AppResponseBase<List<ChoiceResponse>>> TextDavinciV3StreamAsync(string prompt)
+        public async Task<AppResponseBase<List<ChoiceResponse>>> CreateCompletionStreamAsync(string prompt, string model = null)
         {
             return await this.GetResponseAsync<AppResponseBase<List<ChoiceResponse>>, List<ChoiceResponse>>(async (response, logger) =>
             {
@@ -76,11 +90,16 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
 
                 var openAIService = await _openAiService.GetOpenAiServiceAsync();
 
-                openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
+                if (model.IsNullOrEmpty())
+                {
+                    model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3;
+                }
+
+                //openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
                 var completionResult = openAIService.Completions.CreateCompletionAsStream(new CompletionCreateRequest()
                 {
                     Prompt = prompt,
-                    Model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3
+                    Model = model
                 });
 
                 List<ChoiceResponse> result = new List<ChoiceResponse>();
