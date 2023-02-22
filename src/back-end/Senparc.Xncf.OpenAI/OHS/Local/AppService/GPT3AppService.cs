@@ -1,5 +1,7 @@
-﻿using OpenAI.GPT3.Managers;
+﻿using Microsoft.CodeAnalysis;
+using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels.RequestModels;
+using OpenAI.GPT3.ObjectModels.ResponseModels;
 using OpenAI.GPT3.ObjectModels.SharedModels;
 using Senparc.CO2NET;
 using Senparc.Ncf.Core.AppServices;
@@ -59,10 +61,16 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
             });
         }
 
+        /// <summary>
+        /// 运行 TextDavinciV3 模型
+        /// </summary>
+        /// <param name="prompt">prompt 提示内容</param>
+        /// <returns></returns>
+        /// <exception cref="NcfExceptionBase"></exception>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
-        public async Task<AppResponseBase<string>> TextDavinciV3StreamAsync(string prompt)
+        public async Task<AppResponseBase<List<ChoiceResponse>>> TextDavinciV3StreamAsync(string prompt)
         {
-            return await this.GetResponseAsync<AppResponseBase<string>, string>(async (response, logger) =>
+            return await this.GetResponseAsync<AppResponseBase<List<ChoiceResponse>>, List<ChoiceResponse>>(async (response, logger) =>
             {
                 var dt1 = SystemTime.Now;//开始计时
 
@@ -75,13 +83,18 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
                     Model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3
                 });
 
-                var sb = new StringBuilder();
+                List<ChoiceResponse> result = new List<ChoiceResponse>();
+                //var sb = new StringBuilder();
 
                 await foreach (var completion in completionResult)
                 {
                     if (completion.Successful)
                     {
-                        sb.Append(completion.Choices.FirstOrDefault()?.Text);
+                        if (completion.Choices.FirstOrDefault() is ChoiceResponse first && first is not null)
+                        {
+                            result.Append(first);
+                        }
+                        //sb.Append(completion.Choices.FirstOrDefault()?.Text);
                     }
                     else
                     {
@@ -93,7 +106,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
                     }
                 }
 
-                return sb.ToString();
+                return result;
             });
         }
     }
