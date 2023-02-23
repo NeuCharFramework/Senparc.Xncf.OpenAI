@@ -6,19 +6,19 @@
             <el-container>
                 <el-header class="module-header">
                     <span class="start-title">
-                        <span class="module-header-v">标题标题标题</span>
+                        <span class="module-header-v">Senparc.Xncf.OpenAI</span>
                     </span>
                 </el-header>
             </el-container>
             <div class="textArea">
-                <span>功能描述-功能介绍</span>
+                <span>功能说明</span>
                 <!-- 获取appkey和organziation -->
                 <div class="obtain">
-                    <span>若要使用模块，需要验证APP Key和Organization ID。没有这两项内容？传送门：</span>
-                    <a href="https://platform.openai.com/account/api-keys">获取APP Key</a>
-                    <a href="https://platform.openai.com/account/api-keys">获取Organization ID</a>
-                    <span>。单个获取太麻烦？一键获取：</span>
-                    <span style="cursor: pointer; color: #5a738e;" @click="getkeyid">获取appkey，Organization</span>
+                    <span>若要使用 OpenAI，需要验证 API Key 和 Organization ID。没有这两项内容？传送门：</span>
+                    <a href="https://platform.openai.com/account/api-keys">获取 API Key</a>
+                    <a href="https://platform.openai.com/account/org-settings">获取 Organization ID</a>
+                    <!-- <span>。单个获取太麻烦？一键获取：</span> -->
+                    <!-- <span style="cursor: pointer; color: #5a738e;" @click="getkeyid">获取appkey，Organization</span> -->
                 </div>
             </div>
             <!-- 功能模块 -->
@@ -33,10 +33,10 @@
                         <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">设置信息</el-button>
                     </div>
 
-                    <!-- 搜索 -->
+                    <!-- 搜索-预留 -->
                     <el-input class="box-ipt" v-model="modelValue" placeholder="输入内容按下Enter" clearable
                               @keyup="searchModular"></el-input>
-                    <!-- 已登录展示数据  -->
+                    <!-- 已有Api key展示数据  -->
                     <div id="xncf-modules-area" v-if="yesno">
                         <el-col :span="6" :xs="24" :sm="12" :md="12" :lg="8" :xl="6" v-for="item in xncfOpenAIList"
                                 :key="item.uid">
@@ -49,7 +49,7 @@
                             </el-card>
                         </el-col>
                     </div>
-                    <!-- 未登录展示数据 -->
+                    <!-- 没有Api key展示数据 -->
                     <div id="xncf-modules-area-else" v-else>
                         <el-col :span="6" :xs="24" :sm="12" :md="12" :lg="8" :xl="6" v-for="item in xncfOpenAIList"
                                 :key="item.uid">
@@ -65,34 +65,23 @@
                 </el-card>
             </el-row>
         </main>
-        <el-dialog title="登录" :visible.sync="dialogVisible" width="50%" :before-close="handleClose">
-            <!-- 未登录 -->
-            <div class="dialogArea" v-if="passwordState == false">
+        <el-dialog title="设置" :visible.sync="dialogVisible" width="50%" :before-close="handleClose">
+            <div class="dialogArea">
                 <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-                    <el-form-item label="APPKEY" prop="appkey">
-                        <el-input v-model="ruleForm.appkey"></el-input>
-                    </el-form-item>
-                    <el-form-item label="Organization">
-                        <el-input v-model="ruleForm.Organization"></el-input>
-                    </el-form-item>
-                </el-form>
-            </div>
-            <!-- 已登录 -->
-            <div class="dialogArea" v-if="passwordState == true">
-                <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-                    <el-form-item label="APPKEY" prop="appkey">
+                    <el-form-item label="API KEY" prop="appkey">
                         <el-input v-model="ruleForm.appkey" show-password></el-input>
+                        <a href="https://platform.openai.com/account/api-keys">获取 API Key</a>
                     </el-form-item>
-                    <el-form-item label="Organization">
-                        <el-input v-model="ruleForm.Organization" show-password></el-input>
+                    <el-form-item label="Organization ID">
+                        <el-input v-model="ruleForm.Organization"></el-input>
+                        <a href="https://platform.openai.com/account/org-settings">获取 Organization ID</a>
+
                     </el-form-item>
-                    <span>这是一段信息描述,若修改Token请输入</span>
                 </el-form>
             </div>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="dialogVisible = false">取 消</el-button>
-                <el-button type="primary" v-if="passwordState == false" @click="submitForm('ruleForm')">确 定</el-button>
-                <el-button type="primary" v-if="passwordState == true" @click="putForm('ruleForm')">确 定</el-button>
+                <el-button type="primary" @click="putForm('ruleForm')">确 定</el-button>
             </span>
         </el-dialog>
     </div>
@@ -179,11 +168,7 @@ export default {
     methods: {
         //关闭弹出层
         handleClose(done) {
-            this.$confirm('确认关闭？')
-                .then(_ => {
-                    done();
-                })
-                .catch(_ => { });
+            done();
         },
         // 搜索模块内容-待定
         searchModular() {
@@ -199,7 +184,7 @@ export default {
                 console.log('spikey,id', this.saveData);
             }
         },
-        // 获取key，id
+        // get
         async getkeyid() {
             await getAppkeyOrganizationID().then((res) => {
                 if (res != null) {
@@ -212,11 +197,10 @@ export default {
                     this.saveData['apiKey'] = res.apiKey;
                     this.saveData['organizationID'] = res.organizationID;
                     console.log(this.saveData['apiKey'], this.saveData['organizationID']);
-                    // 提示
-                    this.$notify({
-                        title: '提示',
-                        message: `您的apiKey是:${this.saveData['apiKey']},您的organizationID是:${this.saveData['organizationID']}`,
-                        duration: 0
+
+                    this.$message({
+                        message: '成功',
+                        type: 'success'
                     });
                 }
             }).catch(() => {
@@ -227,7 +211,7 @@ export default {
                 });
             })
         },
-        // 登陆apikey
+        // post-apikey
         submitForm(formName) {
             this.$refs[formName].validate((valid) => {
                 if (valid) {
@@ -236,7 +220,7 @@ export default {
                     this.saveData['organizationID'] = this.ruleForm.Organization;
                     let keyId = {
                         appKey: this.saveData['apiKey'],
-                        organizaionID: this.saveData['organizationID']
+                        organizationID: this.saveData['organizationID']
                     }
                     // 请求
                     postAppkeyOrganizationID(keyId).then((res) => {
@@ -246,11 +230,11 @@ export default {
                                 type: "success",
                                 duration: 5 * 1000,
                             });
-                            this.$notify({
-                                title: '提示',
-                                message: `您的apiKey是:${this.saveData['apiKey']},您的organizationID是:${this.saveData['organizationID']}`,
-                                duration: 0
-                            });
+                            // this.$notify({
+                            //     title: '提示',
+                            //     message: `您的apiKey是:${this.saveData['apiKey']},您的organizationID是:${this.saveData['organizationID']}`,
+                            //     duration: 0
+                            // });
                         }
                     }).catch(() => {
                         Message({
@@ -268,22 +252,25 @@ export default {
                 }
             });
         },
-        // 修改apikey
+        // post-apikey-doing
         putForm(formName) {
             this.$refs[formName].validate((valid) => {
                 if (valid) {
                     // 验证appkey修改数值是否有变化
-                    if (this.ruleForm.appkey == this.saveData['apiKey']) {
-                        this.saveData['apiKey'] = null;
-                        this.saveData['organizationID'] = null;
-                    } else {
-                        this.saveData['apiKey'] = this.ruleForm.appkey;
-                        this.saveData['organizationID'] = this.ruleForm.Organization
-                    }
+                    // if (this.ruleForm.appkey == this.saveData['apiKey']) {
+                    //     this.saveData['apiKey'] = null;
+                    //     this.saveData['organizationID'] = null;
+                    // } else {
+                    //     this.saveData['apiKey'] = this.ruleForm.appkey;
+                    //     this.saveData['organizationID'] = this.ruleForm.Organization
+                    // }
+                    this.saveData['apiKey'] = this.ruleForm.appkey;
+                    this.saveData['organizationID'] = this.ruleForm.Organization
                     let keyId = {
                         appKey: this.saveData['apiKey'],
-                        organizaionID: this.saveData['organizationID']
+                        organizationID: this.saveData['organizationID']
                     }
+                    console.log('appkey', this.saveData['apiKey']);
                     // 请求
                     postAppkeyOrganizationID(keyId).then((res) => {
                         if (res != null) {
@@ -292,10 +279,9 @@ export default {
                                 type: "success",
                                 duration: 5 * 1000,
                             });
-                            this.$notify({
-                                title: '提示',
-                                message: `您的apiKey是:${this.saveData['apiKey']},您的organizationID是:${this.saveData['organizationID']}`,
-                                duration: 0
+                            this.$message({
+                                message: '成功',
+                                type: 'success'
                             });
                         }
                     }).catch(() => {
@@ -308,6 +294,7 @@ export default {
                     this.yesno = true;//可操作模块
                     this.dialogVisible = false;//关闭弹出层
                     this.passwordState = true;//token显示password状态
+                    // this.getkeyid();//自动调用获取appkey
                 } else {
                     console.log('error submit!!');
                     return false;
@@ -318,9 +305,9 @@ export default {
         goOpenAIdetail() {
             this.$router.push({
                 // admin路径
-                // path: '/OpenAI/detail',
+                path: '/OpenAI/detail',
                 // 分布式的路径
-                path: '/Module/b/opendetail',
+                // path: '/Module/b/opendetail',
                 query: {
                     appKey: this.saveData['apiKey'],
                     organizaionID: this.saveData['organizationID']
