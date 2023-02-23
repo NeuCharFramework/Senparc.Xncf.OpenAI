@@ -17,19 +17,22 @@
                     <span>若要使用模块，需要验证APP Key和Organization ID。没有这两项内容？传送门：</span>
                     <a href="https://platform.openai.com/account/api-keys">获取APP Key</a>
                     <a href="https://platform.openai.com/account/api-keys">获取Organization ID</a>
+                    <span>。单个获取太麻烦？一键获取：</span>
+                    <span style="cursor: pointer; color: #5a738e;" @click="getkeyid">获取appkey，Organization</span>
                 </div>
             </div>
             <!-- 功能模块 -->
             <el-row>
                 <el-card class="box-card mw-100">
-                    <div class="nav" v-if="yesno == false">
-                        <h3>使用该模块需验证登录 </h3>
-                        <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">设置信息</el-button>
-                    </div>
-                    <div class="nav" v-if="yesno == true">
+                    <div class="nav" v-if="yesno">
                         <h3>请单击需要使用的模块 </h3>
                         <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">更换信息</el-button>
                     </div>
+                    <div class="nav" v-else>
+                        <h3>使用该模块需验证登录 </h3>
+                        <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">设置信息</el-button>
+                    </div>
+
                     <!-- 搜索 -->
                     <el-input class="box-ipt" v-model="modelValue" placeholder="输入内容按下Enter" clearable
                               @keyup="searchModular"></el-input>
@@ -88,19 +91,20 @@
             </div>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="dialogVisible = false">取 消</el-button>
-                <el-button type="primary" @click="submitForm('ruleForm')">确 定</el-button>
+                <el-button type="primary" v-if="passwordState == false" @click="submitForm('ruleForm')">确 定</el-button>
+                <el-button type="primary" v-if="passwordState == true" @click="putForm('ruleForm')">确 定</el-button>
             </span>
         </el-dialog>
     </div>
 </template>
 <script>
 // 请求
-import { getAppkeyOrganizationID, postOpen, putOpen, deleteOpen } from "@/api/openIndex"
+import { getAppkeyOrganizationID, postAppkeyOrganizationID } from "@/api/openIndex"
+import { MessageBox, Message } from "element-ui";
 export default {
     data() {
         return {
-            modelValue: "",//输入框内容
-            // 模块数据
+            // 模块数据-待定
             xncfOpenAIList: [
                 {
                     menuName: "模块名称",//名称
@@ -143,47 +147,36 @@ export default {
                     version: "0.1",//版本
                 },
             ],
-            // 模块数据搜索筛选
+            modelValue: "",//搜索框内容-待定
+            // 模块数据搜索筛选-待定
             xncfOpenAIsearch: [],
             yesno: false,//是否可点击
-            token: '',//token
-            dialogVisible: false,//弹出层状态
             passwordState: false,//输入框是否显示password
+            dialogVisible: false,//弹出层状态
 
+            // dialog-iptValue
             ruleForm: {
                 appkey: '',
                 Organization: '',
             },
+            // dialog-iptValue-验证
             rules: {
                 appkey: [
                     { required: true, message: 'appkey为必填项', trigger: 'blur' },
                 ],
+            },
+            // 存储的key，id数据
+            saveData: {
+                apiKey: "",
+                organizationID: ""
             }
         }
     },
     created() {
         this.getToken();
-        this.getList();
+        // this.getkeyid();
     },
     methods: {
-        //获取Token
-        getToken() {
-            // console.log('router', this.$router.currentRoute.query.Token);
-            if (this.$router.currentRoute.query.Token) {
-                this.token = this.$router.currentRoute.query.Token;//token获取
-                this.yesno = true;//可以操作
-                this.passwordState = true;//token显示password状态
-            }
-        },
-        // 获取模块数据
-        async getList() {
-            // const xncfOpenAIList = await getOpen();
-            await getAppkeyOrganizationID().then((res) => {
-                console.log('请求结果', res);
-            }).catch(() => {
-                console.log('请求失败');
-            })
-        },
         //关闭弹出层
         handleClose(done) {
             this.$confirm('确认关闭？')
@@ -192,19 +185,81 @@ export default {
                 })
                 .catch(_ => { });
         },
-        // // 登录解锁
-        // login() {
-        //     if (this.token != '') {
-        //         this.yesno = true;//可操作
-        //         this.dialogVisible = false;//关闭弹出层
-        //         this.passwordState = true;//token显示password状态
-        //     }
-        // },
-        // 登录信息
+        // 搜索模块内容-待定
+        searchModular() {
+            // console.log(this.xncfOpenAIsearch);
+        },
+        //获取Token
+        getToken() {
+            if (this.$router.currentRoute.query) {
+                this.passwordState = true;//token显示password状态
+                // 赋值存储appkey，id
+                this.saveData.apiKey = this.$router.currentRoute.query.appKey;
+                this.saveData.organizationID = this.$router.currentRoute.query.organizationID;
+                console.log('spikey,id', this.saveData);
+            }
+        },
+        // 获取key，id
+        async getkeyid() {
+            await getAppkeyOrganizationID().then((res) => {
+                if (res != null) {
+                    Message({
+                        message: "请求成功",
+                        type: "success",
+                        duration: 5 * 1000,
+                    });
+                    console.log('请求结果', res);
+                    this.saveData['apiKey'] = res.apiKey;
+                    this.saveData['organizationID'] = res.organizationID;
+                    console.log(this.saveData['apiKey'], this.saveData['organizationID']);
+                    // 提示
+                    this.$notify({
+                        title: '提示',
+                        message: `您的apiKey是:${this.saveData['apiKey']},您的organizationID是:${this.saveData['organizationID']}`,
+                        duration: 0
+                    });
+                }
+            }).catch(() => {
+                Message({
+                    message: "获取失败了",
+                    type: "error",
+                    duration: 5 * 1000,
+                });
+            })
+        },
+        // 登陆apikey
         submitForm(formName) {
             this.$refs[formName].validate((valid) => {
                 if (valid) {
-                    this.yesno = true;//可操作
+                    // 保存数据
+                    this.saveData['apiKey'] = this.ruleForm.appkey;
+                    this.saveData['organizationID'] = this.ruleForm.Organization;
+                    let keyId = {
+                        appKey: this.saveData['apiKey'],
+                        organizaionID: this.saveData['organizationID']
+                    }
+                    // 请求
+                    postAppkeyOrganizationID(keyId).then((res) => {
+                        if (res != null) {
+                            Message({
+                                message: "修改信息成功",
+                                type: "success",
+                                duration: 5 * 1000,
+                            });
+                            this.$notify({
+                                title: '提示',
+                                message: `您的apiKey是:${this.saveData['apiKey']},您的organizationID是:${this.saveData['organizationID']}`,
+                                duration: 0
+                            });
+                        }
+                    }).catch(() => {
+                        Message({
+                            message: "修改信息失败了",
+                            type: "error",
+                            duration: 5 * 1000,
+                        });
+                    })
+                    this.yesno = true;//模块可操作
                     this.dialogVisible = false;//关闭弹出层
                     this.passwordState = true;//token显示password状态
                 } else {
@@ -213,28 +268,67 @@ export default {
                 }
             });
         },
-        // 关闭弹窗
-        resetForm(formName) {
-            this.$refs[formName].resetFields();
+        // 修改apikey
+        putForm(formName) {
+            this.$refs[formName].validate((valid) => {
+                if (valid) {
+                    // 验证appkey修改数值是否有变化
+                    if (this.ruleForm.appkey == this.saveData['apiKey']) {
+                        this.saveData['apiKey'] = null;
+                        this.saveData['organizationID'] = null;
+                    } else {
+                        this.saveData['apiKey'] = this.ruleForm.appkey;
+                        this.saveData['organizationID'] = this.ruleForm.Organization
+                    }
+                    let keyId = {
+                        appKey: this.saveData['apiKey'],
+                        organizaionID: this.saveData['organizationID']
+                    }
+                    // 请求
+                    postAppkeyOrganizationID(keyId).then((res) => {
+                        if (res != null) {
+                            Message({
+                                message: "修改信息成功",
+                                type: "success",
+                                duration: 5 * 1000,
+                            });
+                            this.$notify({
+                                title: '提示',
+                                message: `您的apiKey是:${this.saveData['apiKey']},您的organizationID是:${this.saveData['organizationID']}`,
+                                duration: 0
+                            });
+                        }
+                    }).catch(() => {
+                        Message({
+                            message: "修改信息失败了",
+                            type: "error",
+                            duration: 5 * 1000,
+                        });
+                    })
+                    this.yesno = true;//可操作模块
+                    this.dialogVisible = false;//关闭弹出层
+                    this.passwordState = true;//token显示password状态
+                } else {
+                    console.log('error submit!!');
+                    return false;
+                }
+            });
         },
         // 去到详情页
         goOpenAIdetail() {
             this.$router.push({
-                path: '/OpenAI/detail',
-                // 分布后的跳转路径
-                // path: '/Module/b/opendetail',
+                // admin路径
+                // path: '/OpenAI/detail',
+                // 分布式的路径
+                path: '/Module/b/opendetail',
                 query: {
-                    Token: this.token, //Token
+                    appKey: this.saveData['apiKey'],
+                    organizaionID: this.saveData['organizationID']
                 }
             })
         },
-        // 搜索模块内容
-        searchModular() {
-            // console.log(this.xncfOpenAIsearch);
-        }
     }
 }
-// indexOf()返回字符串中检索指定字符第一次出现的位置
 </script>
 <style scopen lang="scss">
 // 滚动条-共用样式
