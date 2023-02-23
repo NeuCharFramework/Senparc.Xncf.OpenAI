@@ -41,6 +41,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
 
             var dto = base.Mapper.Map<OpenAiConfigDto>(config);
             dto.ApiKey = config.GetOriginalAppKey().SubString(0, 5) + "...";
+            dto.OrganizationID = config.OrganizationID;
             return dto;
         }
 
@@ -48,19 +49,19 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// 更新
         /// </summary>
         /// <param name="appKey"></param>
-        /// <param name="organizaionID"></param>
+        /// <param name="organizationID"></param>
         /// <returns></returns>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
-        public async Task Update(string appKey, string organizaionID)
+        public async Task Update(string appKey, string organizationID)
         {
             var config = await GetObjectAsync();
             if (config == null)
             {
-                config = new OpenAiConfig(appKey, organizaionID);
+                config = new OpenAiConfig(appKey, organizationID);
             }
             else
             {
-                config.Update(appKey, organizaionID);
+                config.Update(appKey, organizationID);
             }
 
             await base.SaveObjectAsync(config);
