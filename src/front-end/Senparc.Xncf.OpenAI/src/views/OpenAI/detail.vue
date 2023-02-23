@@ -1,4 +1,5 @@
 <!-- open详情页 -->
+<!-- 此页面目前还剩对话部分，接口拿不到回复 -->
 <template>
     <div class="aisearch">
         <div class="showText" ref="showText">
@@ -23,7 +24,7 @@
                         <div class="messageList1item">
                             <div class="headPortrait"></div>
                             <div class="QA">
-                                盛派网络是一家中国的技术公司，主要提供微信公众号，小程序等微信生态系统相关的开发等等......
+                                {{ item.anserData }}
                             </div>
                         </div>
                     </div>
@@ -32,7 +33,7 @@
                         <div class="messageList2item">
                             <div class="headPortrait"></div>
                             <div class="QA">
-                                盛派网络是一家中国的技术公司，主要提供微信公众号，小程序等微信生态系统相关的开发等等......
+                                无法获取到该数据
                             </div>
                         </div>
                     </div>
@@ -50,24 +51,25 @@
             </div>
             <div class="iptArea" style="font-size: 14px;">
                 <span>您可以在这里输入想要查找的内容。</span>
-                <span style="color:gray" @click="showHistory">显示历史数据</span>
+                <span style="color:gray;cursor: pointer;" @click.once="showHistory">显示历史数据</span>
             </div>
         </div>
     </div>
 </template>
 <script>
 // 请求
-// import { getOpen, postOpen, putOpen, deleteOpen } from "@/api/openIndex"
+import { postNews } from "@/api/openDetail"
 export default {
     data() {
         return {
             input: "",
             idNum: 1,
-            firstQuestion: "",//问题
             dataState: [],//数据
             showState: false,//展示状态
             fullscreenLoading: false,//loading
             locastoreDatas: null,//本地存储历史shuju
+            firstsay: true,//第一次输入
+            textArea: '', // 所有输入过的文本
 
             // save请求到的数据
             saveData: {
@@ -101,31 +103,80 @@ export default {
             })
         },
         // 新增消息
-        findContent() {
-            this.showState = true;
-            this.idNum = this.idNum + 1;
-            this.input = null;// 清空
-            this.fullscreenLoading = true;
-            setTimeout(() => {
-                this.dataState.push({
-                    id: this.idNum,
-                    quesition: this.input,
-                    anserData: "没有可回复的内容",
-                    anserState: "2",
-                })
-                this.fullscreenLoading = false;
-            }, 100);
+        // 调用的时候/n去掉(展示时)，存储的时候把test保存至本地。下一次发送消息的时候不 把上次的问话放进去，以及回复。另外一种情况。
+        async findContent() {
+            this.showState = true;//显示信息列表
+            this.idNum = this.idNum + 1;//id
+
+            this.fullscreenLoading = true;//lodaing
+
+            this.firstsay ? this.textArea = this.input : this.textArea = this.textArea + '/n/n' + this.input
+            // console.log('1', this.textArea);
+            var requestData = {
+                prompt: this.textArea,
+                model: null,//暂时不做，后期选模型
+                maxTokens: 20,//稍等，最大消费50
+            }
+            this.textArea = requestData.prompt;//所有文字
+            console.log('调用接口的传参', requestData);
+
+            await postNews(requestData).then((res) => {
+                console.log('请求成功', res);
+                if (res.data.finish_reason == 'length') {
+                    this.$message({
+                        message: 'maxToken不够用啦,要设长点哦',
+                        type: 'warning'
+                    });
+                    this.dataState.push({
+                        id: this.idNum,
+                        quesition: this.input,
+                        anserData: res.data.text,
+                        anserState: 1,
+                    })
+                    this.showHistory();
+                    this.fullscreenLoading = false;//lodaing
+                } else {
+                    // 展示json新增
+                    this.dataState.push({
+                        id: this.idNum,
+                        quesition: this.input,
+                        anserData: res.data.text,
+                        anserState: 1,
+                    })
+                    this.fullscreenLoading = false;//lodaing
+                }
+                // 数据存储本地
+                localStorage.setItem('takeNotes', JSON.stringify(this.dataState));
+                this.showHistory();
+                this.firstsay = false;
+                this.fullscreenLoading = false;//lodaing
+            }).catch(() => {
+                console.log('请求失败');
+                this.fullscreenLoading = false;//lodaing
+            })
+            // 滚动最下面
             setTimeout(() => {
                 this.$refs.showText.scrollTop = this.$refs.showText.scrollHeight;//滚动
             }, 100)
-            // 数据需要存储本地
-            this.locastoreDatas = ['周一', { a: 1, b: 2 }, '周三', '周四', '周五'];
-            localStorage.setItem('weekDay', JSON.stringify(this.locastoreDatas));
+
+            this.input = null;// 清空输入框内容
         },
         // 显示历史数据内容
         showHistory() {
-            this.locastoreDatas = JSON.parse(localStorage.getItem('weekDay'));
-            console.log(this.locastoreDatas);
+            var arr = JSON.parse(localStorage.getItem('takeNotes'));
+
+            // 这里需要写一个数组去重
+            for (let i = 0; i < arr.length; i++) {
+                if (res.indexOf(arr[i]) == -1) {
+                    this.locastoreDatas.push(arr[i]);
+                }
+            }
+            console.log('local', this.locastoreDatas);
+            this.locastoreDatas.forEach(item => {
+                // item.
+                this.dataState.unshift(item);
+            });
+            // console.log('a', this.dataState);
         }
     },
 }
