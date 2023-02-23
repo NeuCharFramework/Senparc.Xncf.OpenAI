@@ -305,9 +305,9 @@ export default {
         goOpenAIdetail() {
             this.$router.push({
                 // admin路径
-                path: '/OpenAI/detail',
+                //path: '/OpenAI/detail',
                 // 分布式的路径
-                // path: '/Module/b/opendetail',
+                 path: '/Module/b/opendetail',
                 query: {
                     appKey: this.saveData['apiKey'],
                     organizaionID: this.saveData['organizationID']

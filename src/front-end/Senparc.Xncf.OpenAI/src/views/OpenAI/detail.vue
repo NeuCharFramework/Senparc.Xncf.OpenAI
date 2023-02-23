@@ -103,14 +103,16 @@ export default {
             })
         },
         // 新增消息
-        // 调用的时候/n去掉(展示时)，存储的时候把test保存至本地。下一次发送消息的时候不 把上次的问话放进去，以及回复。另外一种情况。
+        // 调用的时候\n去掉(展示时)，存储的时候把test保存至本地。下一次发送消息的时候不 把上次的问话放进去，以及回复。另外一种情况。
         async findContent() {
             this.showState = true;//显示信息列表
             this.idNum = this.idNum + 1;//id
 
             this.fullscreenLoading = true;//lodaing
 
-            this.firstsay ? this.textArea = this.input : this.textArea = this.textArea + '/n/n' + this.input
+            this.textArea = this.firstsay ? this.input : this.textArea + '\n\n' + this.input
+
+           //this.firstsay ? this.textArea = this.input : this.textArea = this.textArea + '\n\n' + this.input
             // console.log('1', this.textArea);
             var requestData = {
                 prompt: this.textArea,
