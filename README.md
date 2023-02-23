@@ -16,3 +16,10 @@ OpenAI 和 ChatGPT 等接口对接
 ### UI
 
 使用前后端分离版本的 UI项目（front-end），集成到 NCF 项目中，即可看到左侧菜单中的 `OpenAI`。（更新中）
+
+## 前端运行步骤-分布式
+## 注：Senparc.Xncf.OpenAI模块所有内容已全部配置，无需动任何代码
+1. 步骤一 ：在Senparc.Xncf.OpenAI模块中安装所有依赖 -命令： npm install
+2. 步骤二 ：建议使用 Senparc.Xncf.Admin 模块来进行配合分布式，打开并运行 Senparc.Xncf.Admin 模块
+3. 步骤三 ：打包 Senparc.Xncf.OpenAI 全部内容 -命令： npm run build:module
+4. 步骤四 ：在Senparc.Xncf.Admin模块下展开/Module/home路径，点击加载模块即可使用

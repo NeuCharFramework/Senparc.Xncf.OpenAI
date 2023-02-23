@@ -1,4 +1,5 @@
 <!-- open详情页 -->
+<!-- 此页面目前还剩对话部分，接口拿不到回复 -->
 <template>
     <div class="aisearch">
         <div class="showText" ref="showText">
@@ -23,7 +24,7 @@
                         <div class="messageList1item">
                             <div class="headPortrait"></div>
                             <div class="QA">
-                                盛派网络是一家中国的技术公司，主要提供微信公众号，小程序等微信生态系统相关的开发等等......
+                                {{ item.anserData }}
                             </div>
                         </div>
                     </div>
@@ -32,7 +33,7 @@
                         <div class="messageList2item">
                             <div class="headPortrait"></div>
                             <div class="QA">
-                                盛派网络是一家中国的技术公司，主要提供微信公众号，小程序等微信生态系统相关的开发等等......
+                                无法获取到该数据
                             </div>
                         </div>
                     </div>
@@ -50,25 +51,29 @@
             </div>
             <div class="iptArea" style="font-size: 14px;">
                 <span>您可以在这里输入想要查找的内容。</span>
-                <span style="color:gray" @click="showHistory">显示历史数据</span>
+                <span style="color:gray;cursor: pointer;" @click.once="showHistory">显示历史数据</span>
             </div>
         </div>
     </div>
 </template>
 <script>
 // 请求
-// import { getOpen, postOpen, putOpen, deleteOpen } from "@/api/openIndex"
+import { postNews } from "@/api/openDetail"
 export default {
     data() {
         return {
             input: "",
-            token: null,
             idNum: 1,
-            firstQuestion: "",//问题
             dataState: [],//数据
             showState: false,//展示状态
             fullscreenLoading: false,//loading
             locastoreDatas: null,//本地存储历史shuju
+
+            // save请求到的数据
+            saveData: {
+                apiKey: "",
+                organizationID: ""
+            }
         }
     },
     created() {
@@ -77,47 +82,74 @@ export default {
     methods: {
         // 获取路由传值参数
         getToken() {
-            if (this.$router.currentRoute.query.Token) {
-                this.token = this.$router.currentRoute.query.Token;
+            if (this.$router.currentRoute.query) {
+                this.saveData.apiKey = this.$router.currentRoute.query.appKey;
+                this.saveData.organizationID = this.$router.currentRoute.query.organizationID;
+                console.log('spikey,id', this.saveData);
             }
         },
         // 回到首页
         goOpenAImian() {
             this.$router.push({
-                path: '/OpenAI/index',
-                // 分布后的跳转路径
-                // path: '/Module/b/openindex',
+                // path: '/OpenAI/index',
+                // 分布式的跳转路径
+                path: '/Module/b/openindex',
                 query: {
-                    Token: this.token,//Token
+                    appKey: this.saveData['apiKey'],
+                    organizaionID: this.saveData['organizationID']
                 }
             })
         },
         // 新增消息
-        findContent() {
-            this.showState = true;
-            this.idNum = this.idNum + 1;
-            this.input = null;// 清空
-            this.fullscreenLoading = true;
-            setTimeout(() => {
+        async findContent() {
+            this.showState = true;//显示信息列表
+            this.idNum = this.idNum + 1;//id
+
+            this.fullscreenLoading = true;//lodaing
+            var requestData = {
+                prompt: this.input,
+                model: this.input,
+            }
+            await postNews(requestData).then((res) => {
+                console.log('请求成功', res);
+                var takenotes = null;//调用结果是否可展示状态
+                if (res.data.text == '') {
+                    takenotes = '2';
+                } else {
+                    takenotes = '1';
+                }
+                // 展示json新增
                 this.dataState.push({
                     id: this.idNum,
                     quesition: this.input,
-                    anserData: "没有可回复的内容",
-                    anserState: "2",
+                    anserData: res.data.text,
+                    anserState: takenotes,
                 })
-                this.fullscreenLoading = false;
-            }, 100);
+                this.fullscreenLoading = false;//lodaing
+                // console.log('展示数组', this.dataState);
+
+                // 数据存储本地
+                localStorage.setItem('takeNotes', JSON.stringify(this.dataState));
+
+            }).catch(() => {
+                console.log('失败');
+            })
+
             setTimeout(() => {
                 this.$refs.showText.scrollTop = this.$refs.showText.scrollHeight;//滚动
             }, 100)
-            // 数据需要存储本地
-            this.locastoreDatas = ['周一', { a: 1, b: 2 }, '周三', '周四', '周五'];
-            localStorage.setItem('weekDay', JSON.stringify(this.locastoreDatas));
+
+            this.input = null;// 清空输入框内容
         },
         // 显示历史数据内容
         showHistory() {
-            this.locastoreDatas = JSON.parse(localStorage.getItem('weekDay'));
-            console.log(this.locastoreDatas);
+            this.locastoreDatas = JSON.parse(localStorage.getItem('takeNotes'));
+            // console.log('local', this.locastoreDatas);
+            this.locastoreDatas.forEach(item => {
+                this.dataState.unshift(item);
+            });
+            console.log('a', this.dataState);
+            alert('输入问题后历史数据将显示');
         }
     },
 }
