@@ -146,7 +146,7 @@ export default {
                 // 赋值存储appkey，id
                 this.saveData.apiKey = this.$router.currentRoute.query.appKey;
                 this.saveData.organizationID = this.$router.currentRoute.query.organizationID;
-                console.log('spikey,id', this.saveData);
+                // console.log('spikey,id', this.saveData);
             }
         },
         // get
@@ -158,10 +158,10 @@ export default {
                         type: "success",
                         duration: 5 * 1000,
                     });
-                    console.log('请求结果', res);
+                    // console.log('请求结果', res);
                     this.saveData['apiKey'] = res.apiKey;
                     this.saveData['organizationID'] = res.organizationID;
-                    console.log(this.saveData['apiKey'], this.saveData['organizationID']);
+                    // console.log(this.saveData['apiKey'], this.saveData['organizationID']);
 
                     this.$message({
                         message: '成功',
@@ -212,7 +212,7 @@ export default {
                     this.dialogVisible = false;//关闭弹出层
                     this.passwordState = true;//token显示password状态
                 } else {
-                    console.log('error submit!!');
+                    // console.log('error submit!!');
                     return false;
                 }
             });
@@ -235,7 +235,7 @@ export default {
                         appKey: this.saveData['apiKey'],
                         organizationID: this.saveData['organizationID']
                     }
-                    console.log('appkey', this.saveData['apiKey']);
+                    // console.log('appkey', this.saveData['apiKey']);
                     // 请求
                     postAppkeyOrganizationID(keyId).then((res) => {
                         if (res != null) {
@@ -261,7 +261,7 @@ export default {
                     this.passwordState = true;//token显示password状态
                     // this.getkeyid();//自动调用获取appkey
                 } else {
-                    console.log('error submit!!');
+                    // console.log('error submit!!');
                     return false;
                 }
             });

@@ -6,7 +6,7 @@ import store from './store'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-import '@antv/x6-vue-shape'//antv-shape
+// import '@antv/x6-vue-shape'//antv-shape
 
 Vue.use(ElementUI);
 const app = new Vue({

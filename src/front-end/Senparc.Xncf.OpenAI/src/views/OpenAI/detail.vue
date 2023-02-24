@@ -119,10 +119,10 @@ export default {
                 maxTokens: 20,//稍等，最大消费50
             }
             this.textArea = requestData.prompt;//所有文字
-            console.log('调用接口的传参', requestData);
+            // console.log('调用接口的传参', requestData);
 
             await postNews(requestData).then((res) => {
-                console.log('请求成功', res);
+                // console.log('请求成功', res);
                 if (res.data.finish_reason == 'length') {
                     this.$message({
                         message: 'maxToken不够用啦,要设长点哦',
@@ -152,7 +152,7 @@ export default {
                 this.firstsay = false;
                 this.fullscreenLoading = false;//lodaing
             }).catch(() => {
-                console.log('请求失败');
+                // console.log('请求失败');
                 this.fullscreenLoading = false;//lodaing
             })
             // 滚动最下面
@@ -172,7 +172,7 @@ export default {
                     this.locastoreDatas.push(arr[i]);
                 }
             }
-            console.log('local', this.locastoreDatas);
+            // console.log('local', this.locastoreDatas);
             this.locastoreDatas.forEach(item => {
                 // item.
                 this.dataState.unshift(item);

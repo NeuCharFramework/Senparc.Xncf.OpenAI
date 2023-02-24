@@ -18,30 +18,3 @@ export function postAppkeyOrganizationID(data = {}) {
         method: 'post'
     })
 }
-
-export function postOpen(data = {}) {
-    console.log(data);
-    return request({
-        url: "",
-        data,
-        method: 'post'
-    })
-}
-
-export function putOpen(data = {}) {
-    console.log(data);
-    return request({
-        url: "",
-        data,
-        method: 'put'
-    })
-}
-
-export function deleteOpen(data = {}) {
-    console.log(data);
-    return request({
-        url: "",
-        data,
-        method: 'delete'
-    })
-}
