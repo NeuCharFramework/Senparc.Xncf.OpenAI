@@ -12,7 +12,7 @@
             </el-container>
             <div class="textArea">
                 <span>
-                    功能说明:Senparc.Xncf.OpenAI 模块用于提供对 OpenAI、ChatGPT等接口的统一管理和测试。同时，本模块可用于其他模块接入 OpenAI，作为公共子领域使用。（ChatGTP
+                    Senparc.Xncf.OpenAI 模块用于提供对 OpenAI、ChatGPT等接口的统一管理和测试。同时，本模块可用于其他模块接入 OpenAI，作为公共子领域使用。（ChatGTP
                     接口须等待官方 SDK 正式上线后发布）。
                 </span>
                 <!-- 获取appkey和organziation -->
@@ -46,9 +46,8 @@
                             <el-card class="moduleItem">
                                 <div slot="header" class="xncf-item-top svgimg greencolor" @click="goOpenAIdetail">
                                     <span class="moudelName">{{ item.menuName }}</span>
-                                    <small class="version">v{{ item.version }}</small>
                                 </div>
-                                <span class="detail" @click="goOpenAIdetail">描述描述描述</span>
+                                <span class="detail" @click="goOpenAIdetail">OpenAI GPT3 API，以对话方式呈现</span>
                             </el-card>
                         </el-col>
                     </div>
@@ -59,9 +58,8 @@
                             <el-card class="moduleItem">
                                 <div slot="header" class="xncf-item-top svgimg greencolor">
                                     <span class="moudelName">{{ item.menuName }}</span>
-                                    <small class="version">v{{ item.version }}</small>
                                 </div>
-                                <div class="detail">描述描述描述描述描述</div>
+                                <div class="detail">OpenAI GPT3 API，以对话方式呈现</div>
                             </el-card>
                         </el-col>
                     </div>
@@ -99,45 +97,9 @@ export default {
             // 模块数据-待定
             xncfOpenAIList: [
                 {
-                    menuName: "模块名称",//名称
-                    version: "0.1",//版本
+                    menuName: "XncfStore OpenAI",//名称
                 },
-                {
-                    menuName: "模块名称",//名称
-                    version: "0.1",//版本
-                },
-                {
-                    menuName: "模块名称",//名称
-                    version: "0.1",//版本
-                },
-                {
-                    menuName: "模块名称",//名称
-                    version: "0.1",//版本
-                },
-                {
-                    menuName: "模块名称",//名称
-                    version: "0.1",//版本
-                },
-                {
-                    menuName: "模块名称",//名称
-                    version: "0.1",//版本
-                },
-                {
-                    menuName: "模块名称",//名称
-                    version: "0.1",//版本
-                },
-                {
-                    menuName: "模块名称",//名称
-                    version: "0.1",//版本
-                },
-                {
-                    menuName: "模块名称",//名称
-                    version: "0.1",//版本
-                },
-                {
-                    menuName: "模块名称",//名称
-                    version: "0.1",//版本
-                },
+              
             ],
             modelValue: "",//搜索框内容-待定
             // 模块数据搜索筛选-待定
@@ -352,7 +314,7 @@ export default {
         .nav {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             width: 100%;
             height: 40px;
             padding: 10px;

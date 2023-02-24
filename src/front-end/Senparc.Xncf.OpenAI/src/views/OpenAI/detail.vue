@@ -1,5 +1,4 @@
 <!-- open详情页 -->
-<!-- 此页面目前还剩对话部分，接口拿不到回复 -->
 <template>
     <div class="aisearch">
         <div class="showText" ref="showText">
