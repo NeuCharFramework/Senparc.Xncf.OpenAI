@@ -11,7 +11,10 @@
                 </el-header>
             </el-container>
             <div class="textArea">
-                <span>功能说明</span>
+                <span>
+                    功能说明:Senparc.Xncf.OpenAI 模块用于提供对 OpenAI、ChatGPT等接口的统一管理和测试。同时，本模块可用于其他模块接入 OpenAI，作为公共子领域使用。（ChatGTP
+                    接口须等待官方 SDK 正式上线后发布）。
+                </span>
                 <!-- 获取appkey和organziation -->
                 <div class="obtain">
                     <span>若要使用 OpenAI，需要验证 API Key 和 Organization ID。没有这两项内容？传送门：</span>
