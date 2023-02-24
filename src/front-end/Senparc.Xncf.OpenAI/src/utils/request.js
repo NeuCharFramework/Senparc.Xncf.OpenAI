@@ -1,6 +1,6 @@
 import axios from "axios";
 import { MessageBox, Message } from "element-ui";
-import store from "@/store";
+// import store from "../store";
 // import { getToken, isHaveToken } from "@/utils/auth";
 
 
@@ -13,12 +13,6 @@ const service = axios.create({
 
 // request interceptor  请求拦截
 service.interceptors.request.use((config) => {
-  // console.log('token', store.getters.token);
-  if (store.getters.token) {
-    // 让每个请求携带令牌 ['X-Token'] 是自定义标题键
-    // const _token = getToken();
-    // config.headers["Authorization"] = `Bearer ${_token}`;
-  }
   return config;
 },
   (error) => {

@@ -91,7 +91,7 @@
 </template>
 <script>
 // 请求
-import { getAppkeyOrganizationID, postAppkeyOrganizationID } from "@/api/openIndex"
+import { getAppkeyOrganizationID, postAppkeyOrganizationID } from "../../api/openIndex"
 import { MessageBox, Message } from "element-ui";
 export default {
     data() {

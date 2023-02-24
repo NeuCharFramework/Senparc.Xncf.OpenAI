@@ -58,7 +58,7 @@
 </template>
 <script>
 // 请求
-import { postNews } from "@/api/openDetail"
+import { postNews } from "../../api/openDetail"
 export default {
     data() {
         return {

@@ -1,4 +1,4 @@
-import request from "@/utils/request"
+import request from "../utils/request"
 // const baseUrl = ""//共用链接前缀-待定
 
 // 获取appkey和organizationID
