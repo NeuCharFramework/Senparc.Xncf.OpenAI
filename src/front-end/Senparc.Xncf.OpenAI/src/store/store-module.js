@@ -1,7 +1,7 @@
 export default {
   namespaced: true,
   state: {
-    title: 'vue-module'
+    title: 'ncf-module'
   },
   mutations: {}
 }

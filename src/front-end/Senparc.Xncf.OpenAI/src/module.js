@@ -1,4 +1,4 @@
-import Logo from './components/Logo.vue'
+// import Logo from './components/Logo.vue'
 import routes from './router/routes'
 import storeModule from './store/store-module'
 export default function (Vue) {

@@ -24,10 +24,11 @@ export default {
     };
   },
   methods: {
+    // 暂时尤文
     goshopping() {
-      this.$router.push({
-        path: "/appstore",
-      });
+      // this.$router.push({
+      //   path: "/appstore",
+      // });
     },
   },
 };

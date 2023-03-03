@@ -40,13 +40,13 @@ export default [
   // },
   // OpenAI模块加载路由
   {
-    path: 'b/openindex',
+    path: 'XncfStoreOpenAI/openindex',
     name: 'Open首页',
     component: () =>
       import(/* webpackChunkName: "about" */ '../views/OpenAI/index.vue')
   },
   {
-    path: 'b/opendetail',
+    path: 'XncfStoreOpenAI/opendetail',
     name: 'Open详情',
     component: () =>
       import(/* webpackChunkName: "about" */ '../views/OpenAI/detail.vue')

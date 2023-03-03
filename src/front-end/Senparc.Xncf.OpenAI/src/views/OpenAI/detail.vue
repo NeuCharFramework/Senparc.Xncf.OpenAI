@@ -1,5 +1,4 @@
 <!-- open详情页 -->
-<!-- 此页面目前还剩对话部分，接口拿不到回复 -->
 <template>
     <div class="aisearch">
         <div class="showText" ref="showText">
@@ -45,20 +44,18 @@
             <div class="iptArea">
                 <el-input placeholder="请输入内容" v-model="input">
                     <el-button slot="append" icon="el-icon-position" @click="findContent"
-                               v-loading.fullscreen.lock="fullscreenLoading"></el-button>
+                               :loading="loadingState"></el-button>
                 </el-input>
                 <el-button type="primary" @click="goOpenAImian">返回</el-button>
             </div>
             <div class="iptArea" style="font-size: 14px;">
-                <span>您可以在这里输入想要查找的内容。</span>
+                <span>您可以在输入框内输入想要查找的内容。查看历史数据：</span>
                 <span style="color:gray;cursor: pointer;" @click.once="showHistory">显示历史数据</span>
             </div>
         </div>
     </div>
 </template>
 <script>
-// 请求
-import { postNews } from "@/api/openDetail"
 export default {
     data() {
         return {
@@ -66,20 +63,21 @@ export default {
             idNum: 1,
             dataState: [],//数据
             showState: false,//展示状态
-            fullscreenLoading: false,//loading
+            loadingState: false,//加载状态
             locastoreDatas: null,//本地存储历史shuju
-            firstsay: true,//第一次输入
+            firstsay: true,//第一次输入状态
             textArea: '', // 所有输入过的文本
-
-            // save请求到的数据
+            // 路由传值参数
             saveData: {
                 apiKey: "",
-                organizationID: ""
+                organizationID: ""//
             }
         }
     },
     created() {
         this.getToken();
+        // this.testfunction();
+        // testfunction();
     },
     methods: {
         // 获取路由传值参数
@@ -87,15 +85,14 @@ export default {
             if (this.$router.currentRoute.query) {
                 this.saveData.apiKey = this.$router.currentRoute.query.appKey;
                 this.saveData.organizationID = this.$router.currentRoute.query.organizationID;
-                console.log('spikey,id', this.saveData);
+                // console.log('spikey,id', this.saveData);
             }
         },
         // 回到首页
         goOpenAImian() {
             this.$router.push({
-                // path: '/OpenAI/index',
-                // 分布式的跳转路径
-                path: '/Module/b/openindex',
+                // 分布式路径
+                path: '/Module/XncfStoreOpenAI/openindex',
                 query: {
                     appKey: this.saveData['apiKey'],
                     organizaionID: this.saveData['organizationID']
@@ -103,57 +100,80 @@ export default {
             })
         },
         // 新增消息
-        // 调用的时候/n去掉(展示时)，存储的时候把test保存至本地。下一次发送消息的时候不 把上次的问话放进去，以及回复。另外一种情况。
+        // 调用的时候\n去掉(展示时)，存储的时候把test保存至本地。下一次发送消息的时候不 把上次的问话放进去，以及回复。另外一种情况。
         async findContent() {
             this.showState = true;//显示信息列表
             this.idNum = this.idNum + 1;//id
-
-            this.fullscreenLoading = true;//lodaing
-
-            this.firstsay ? this.textArea = this.input : this.textArea = this.textArea + '/n/n' + this.input
-            // console.log('1', this.textArea);
+            this.loadingState = true;//lodaing
+            this.textArea = this.firstsay ? this.input : this.textArea + '/n/n' + this.input
+            console.log('输入问题', this.textArea);
             var requestData = {
                 prompt: this.textArea,
-                model: null,//暂时不做，后期选模型
-                maxTokens: 20,//稍等，最大消费50
+                model: null,//暂时不做，后期选模型预留
+                maxTokens: 20,//最大消费50
             }
             this.textArea = requestData.prompt;//所有文字
-            console.log('调用接口的传参', requestData);
-
-            await postNews(requestData).then((res) => {
-                console.log('请求成功', res);
-                if (res.data.finish_reason == 'length') {
+            console.log('json', JSON.stringify(requestData));
+            this.$axios.post('/api/Senparc.Xncf.OpenAI/GPT3AppService/Xncf.OpenAI_GPT3AppService.CreateCompletionAsync', JSON.stringify(requestData))
+                .then(res => {
+                    console.log('发送信息成功', res.data);
+                    if (res.data.finish_reason == 'length') {
+                        console.log('if');
+                        this.$message({
+                            message: 'maxToken不够用啦,要设长点哦',
+                            type: 'warning'
+                        });
+                        this.dataState.push({
+                            id: this.idNum,
+                            quesition: this.input,
+                            anserData: res.data.text,
+                            anserState: 1,
+                        })
+                        // 数据存储本地
+                        localStorage.setItem('takeNotes', JSON.stringify(this.dataState));
+                        this.firstsay = false;//记录输入-不是第一次
+                        this.loadingState = false;//lodaing
+                    } else if (res.data == null) {
+                        console.log('else if');
+                        this.$message({
+                            message: '服务器暂未连接',
+                            type: 'error'
+                        });
+                        this.dataState.push({
+                            id: this.idNum,
+                            quesition: this.textArea,
+                            anserData: '服务器异常',
+                            anserState: 2,
+                        })
+                        // 数据存储本地
+                        localStorage.setItem('takeNotes', JSON.stringify(this.dataState));
+                        this.firstsay = false;//记录输入-不是第一次
+                        this.loadingState = false;//lodaing
+                    } else {
+                        console.log('else');
+                        // 展示json新增
+                        this.dataState.push({
+                            id: this.idNum,
+                            quesition: this.input,
+                            anserData: res.data.text,
+                            anserState: 1,
+                        })
+                        this.$message({
+                            message: '发送信息成功',
+                            type: 'success'
+                        });
+                        this.loadingState = false;//lodaing
+                        this.firstsay = false;//记录输入-不是第一次
+                    }
+                }).catch((err) => {
                     this.$message({
-                        message: 'maxToken不够用啦,要设长点哦',
-                        type: 'warning'
+                        message: '发送信息失败了',
+                        type: 'error'
                     });
-                    this.dataState.push({
-                        id: this.idNum,
-                        quesition: this.input,
-                        anserData: res.data.text,
-                        anserState: 1,
-                    })
-                    this.showHistory();
-                    this.fullscreenLoading = false;//lodaing
-                } else {
-                    // 展示json新增
-                    this.dataState.push({
-                        id: this.idNum,
-                        quesition: this.input,
-                        anserData: res.data.text,
-                        anserState: 1,
-                    })
-                    this.fullscreenLoading = false;//lodaing
-                }
-                // 数据存储本地
-                localStorage.setItem('takeNotes', JSON.stringify(this.dataState));
-                this.showHistory();
-                this.firstsay = false;
-                this.fullscreenLoading = false;//lodaing
-            }).catch(() => {
-                console.log('请求失败');
-                this.fullscreenLoading = false;//lodaing
-            })
+                    console.log('发送失败了', err);
+                    this.loadingState = false;//lodaing
+                    this.firstsay = false;//记录输入-不是第一次
+                })
             // 滚动最下面
             setTimeout(() => {
                 this.$refs.showText.scrollTop = this.$refs.showText.scrollHeight;//滚动
@@ -164,14 +184,13 @@ export default {
         // 显示历史数据内容
         showHistory() {
             var arr = JSON.parse(localStorage.getItem('takeNotes'));
-
             // 这里需要写一个数组去重
             for (let i = 0; i < arr.length; i++) {
-                if (res.indexOf(arr[i]) == -1) {
+                if (arr.indexOf(arr[i]) == -1) {
                     this.locastoreDatas.push(arr[i]);
                 }
             }
-            console.log('local', this.locastoreDatas);
+            // console.log('local', this.locastoreDatas);
             this.locastoreDatas.forEach(item => {
                 // item.
                 this.dataState.unshift(item);
