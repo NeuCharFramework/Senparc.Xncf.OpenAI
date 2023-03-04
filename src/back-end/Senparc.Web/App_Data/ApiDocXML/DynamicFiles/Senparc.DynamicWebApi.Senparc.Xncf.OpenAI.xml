@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Senparc.DynamicWebApi.Senparc.Xncf.OpenAI</name>
+  </assembly>
+  <members>
+    <member name="M:Senparc.Xncf.OpenAIController.Senparc_Xncf_OpenAI_GPT3AppService_CreateCompletionAsync(System.String,System.String,System.Int32)">
+      <summary>
+            使用不同模型运行 OpenAI
+            </summary>
+      <param name="prompt">prompt 提示信息</param>
+      <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
+      <param name="maxTokens">最大消费 Token 数量。默认为 50</param>
+      <returns></returns>
+      <exception cref="T:Senparc.Ncf.Core.Exceptions.NcfExceptionBase"></exception>
+    </member>
+    <member name="M:Senparc.Xncf.OpenAIController.Senparc_Xncf_OpenAI_GPT3AppService_CreateCompletionStreamAsync(System.String,System.String,System.Int32)">
+      <summary>
+            使用不同模型运行 OpenAI（使用 Stream 方式）
+            </summary>
+      <param name="prompt">prompt 提示内容</param>
+      <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
+      <param name="maxTokens">最大消费 Token 数量。默认为 50</param>
+      <returns></returns>
+      <exception cref="T:Senparc.Ncf.Core.Exceptions.NcfExceptionBase"></exception>
+    </member>
+    <member name="M:Senparc.Xncf.OpenAIController.Senparc_Xncf_OpenAI_OpenAiConfigService_Update(System.String,System.String)">
+      <summary>
+            更新
+            </summary>
+      <param name="appKey"></param>
+      <param name="organizationID"></param>
+      <returns></returns>
+    </member>
+  </members>
+</doc>
