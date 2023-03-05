@@ -3,10 +3,12 @@ using OpenAI.GPT3;
 using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels.RequestModels;
 using OpenAI.GPT3.ObjectModels.ResponseModels;
+using Senparc.CO2NET.Cache;
 using Senparc.CO2NET.Extensions;
 using Senparc.Ncf.Core.Exceptions;
 using Senparc.Ncf.Repository;
 using Senparc.Ncf.Service;
+using Senparc.Xncf.OpenAI.Domain.Models.CacheModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +19,13 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
 {
     public class OpenAiService : ServiceBase<OpenAiConfig>
     {
-        private OpenAIService _openAiService;
+        private readonly OpenAIService _openAiService;
+
+        private readonly IBaseObjectCacheStrategy _cache;
 
         public OpenAiService(IRepositoryBase<OpenAiConfig> repo, IServiceProvider serviceProvider) : base(repo, serviceProvider)
         {
+            _cache = CacheStrategyFactory.GetObjectCacheStrategyInstance();
         }
 
         /// <summary>
@@ -52,33 +57,85 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <summary>
         /// 获取 ChatGPT 结果
         /// </summary>
-        /// <param name="fromSystem"></param>
-        /// <param name="fromUser"></param>
+        /// <param name="userId"></param>
+        /// <param name="prompt"></param>
+        /// <param name="startNewConversation"></param>
         /// <param name="maxTokens"></param>
         /// <returns></returns>
-        public async Task<ChatCompletionCreateResponse> GetChatGPTResultAsync(string fromSystem, string fromUser, int maxTokens = 50)
+        public async Task<string> GetChatGPTResultAsync(string userId, string prompt, bool startNewConversation = false, int maxTokens = 50)
         {
-            var openAiService = await this.GetOpenAiServiceAsync();
 
-            var completionResult = await openAiService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
+            var cacheKey = ChatGPTMessages.GetCacheKey(userId);
+            ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
+            messages ??= new ChatGPTMessages(userId);
+
+            var chatRequest = new ChatCompletionCreateRequest
             {
-                Messages = new List<ChatMessage>
-                            {
-                                ChatMessage.FromSystem("You are a helpful assistant."),
-                                ChatMessage.FromUser("Who won the world series in 2020?"),
-                                ChatMessage.FromAssistance("The Los Angeles Dodgers won the World Series in 2020."),
-                                ChatMessage.FromUser("Where was it played?")
-                            },
+                Messages = new List<ChatMessage>(),
                 Model = global::OpenAI.GPT3.ObjectModels.Models.ChatGpt3_5Turbo,
-                MaxTokens = 50//optional
-            });
+                MaxTokens = 200//optional
+            };
+
+            foreach (var msg in messages.Messages)
+            {
+                chatRequest.Messages.Add(msg);
+            }
+
+            chatRequest.Messages.Add(ChatMessage.FromUser(prompt));
+
+            var openAiService = await this.GetOpenAiServiceAsync();
+            var completionResult = await openAiService.ChatCompletion.CreateCompletion(chatRequest);
+
+            string finalMessage = null;
 
             if (completionResult.Successful)
             {
-                Console.WriteLine(completionResult.Choices.First().Message.Content);
+                finalMessage = completionResult.Choices.First().Message.Content;
+                messages.Messages.Add(ChatMessage.FromAssistance(finalMessage));
+                await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
             }
 
-            return completionResult;
+            return finalMessage;
+        }
+
+        /// <summary>
+        /// 清空消息
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public async Task CleanChatGPT(string userId)
+        {
+            var cacheKey = ChatGPTMessages.GetCacheKey(userId);
+            ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
+            if (messages != null)
+            {
+                await _cache.RemoveFromCacheAsync(cacheKey);
+            }
+        }
+
+        /// <summary>
+        /// 清除上一条消息
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public async Task CleanLastChatGPT(string userId)
+        {
+            var cacheKey = ChatGPTMessages.GetCacheKey(userId);
+            ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
+            if (messages != null)
+            {
+                //清除一次对话（两次）
+                if (messages.Messages.Count >= 1)
+                {
+                    messages.Messages.RemoveAt(messages.Messages.Count - 1);
+                }
+                if (messages.Messages.Count >= 1)
+                {
+                    messages.Messages.RemoveAt(messages.Messages.Count - 1);
+                }
+                
+                await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
+            }
         }
     }
 }

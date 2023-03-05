@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
 {
+    //[BackendJwtAuthorize]
     [ApiBind]
     public class GPT3AppService : AppServiceBase
     {
@@ -150,15 +151,29 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         /// <returns></returns>
         /// <exception cref="NcfExceptionBase"></exception>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
-        public async Task<AppResponseBase<ChatCompletionCreateResponse>> ChatGPTAsync(string prompt, int maxTokens = 50)
+        public async Task<AppResponseBase<string>> ChatGPTAsync(string prompt, int maxTokens = 50)
         {
-            return await this.GetResponseAsync<AppResponseBase<ChatCompletionCreateResponse>, ChatCompletionCreateResponse>(async (response, logger) =>
+            return await this.GetResponseAsync<AppResponseBase<string>, string>(async (response, logger) =>
             {
-                var dt1 = SystemTime.Now;//开始计时
 
-                var result = await _openAiService.GetChatGPTResultAsync("System", "User");
+                var result = await _openAiService.GetChatGPTResultAsync("DefaultUser", prompt);
 
                 return result;
+            });
+        }
+
+        /// <summary>
+        /// ChatGPT 接口
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NcfExceptionBase"></exception>
+        [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
+        public async Task<AppResponseBase<string>> CleanLastChatGPTAsync()
+        {
+            return await this.GetResponseAsync<AppResponseBase<string>, string>(async (response, logger) =>
+            {
+                await _openAiService.CleanChatGPT("DefaultUser");
+                return "OK";
             });
         }
     }
