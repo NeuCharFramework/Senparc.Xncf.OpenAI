@@ -1,6 +1,8 @@
 ﻿using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using OpenAI.GPT3;
 using OpenAI.GPT3.Managers;
+using OpenAI.GPT3.ObjectModels.RequestModels;
+using OpenAI.GPT3.ObjectModels.ResponseModels;
 using Senparc.CO2NET.Extensions;
 using Senparc.Ncf.Core.Exceptions;
 using Senparc.Ncf.Repository;
@@ -45,6 +47,38 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
 
             }
             return _openAiService;
+        }
+
+        /// <summary>
+        /// 获取 ChatGPT 结果
+        /// </summary>
+        /// <param name="fromSystem"></param>
+        /// <param name="fromUser"></param>
+        /// <param name="maxTokens"></param>
+        /// <returns></returns>
+        public async Task<ChatCompletionCreateResponse> GetChatGPTResultAsync(string fromSystem, string fromUser, int maxTokens = 50)
+        {
+            var openAiService = await this.GetOpenAiServiceAsync();
+
+            var completionResult = await openAiService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
+            {
+                Messages = new List<ChatMessage>
+                            {
+                                ChatMessage.FromSystem("You are a helpful assistant."),
+                                ChatMessage.FromUser("Who won the world series in 2020?"),
+                                ChatMessage.FromAssistance("The Los Angeles Dodgers won the World Series in 2020."),
+                                ChatMessage.FromUser("Where was it played?")
+                            },
+                Model = global::OpenAI.GPT3.ObjectModels.Models.ChatGpt3_5Turbo,
+                MaxTokens = 50//optional
+            });
+
+            if (completionResult.Successful)
+            {
+                Console.WriteLine(completionResult.Choices.First().Message.Content);
+            }
+
+            return completionResult;
         }
     }
 }

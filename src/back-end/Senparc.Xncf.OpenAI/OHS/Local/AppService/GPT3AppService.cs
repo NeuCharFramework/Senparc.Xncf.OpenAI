@@ -1,4 +1,5 @@
 ﻿using OpenAI.GPT3.ObjectModels.RequestModels;
+using OpenAI.GPT3.ObjectModels.ResponseModels;
 using OpenAI.GPT3.ObjectModels.SharedModels;
 using Senparc.CO2NET;
 using Senparc.CO2NET.Extensions;
@@ -136,6 +137,28 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
                 };
 
                 return choiceResponse;
+            });
+        }
+
+
+        /// <summary>
+        /// ChatGPT 接口
+        /// </summary>
+        /// <param name="prompt">prompt 提示信息</param>
+        /// <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
+        /// <param name="maxTokens">最大消费 Token 数量。默认为 50</param>
+        /// <returns></returns>
+        /// <exception cref="NcfExceptionBase"></exception>
+        [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
+        public async Task<AppResponseBase<ChatCompletionCreateResponse>> ChatGPTAsync(string prompt, int maxTokens = 50)
+        {
+            return await this.GetResponseAsync<AppResponseBase<ChatCompletionCreateResponse>, ChatCompletionCreateResponse>(async (response, logger) =>
+            {
+                var dt1 = SystemTime.Now;//开始计时
+
+                var result = await _openAiService.GetChatGPTResultAsync("System", "User");
+
+                return result;
             });
         }
     }
