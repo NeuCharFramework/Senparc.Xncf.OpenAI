@@ -19,7 +19,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
 {
     public class OpenAiService : ServiceBase<OpenAiConfig>
     {
-        private readonly OpenAIService _openAiService;
+        private OpenAIService _openAiService;
 
         private readonly IBaseObjectCacheStrategy _cache;
 
