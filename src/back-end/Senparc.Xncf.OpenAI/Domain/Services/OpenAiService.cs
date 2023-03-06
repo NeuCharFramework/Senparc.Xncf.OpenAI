@@ -73,7 +73,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
             {
                 Messages = new List<ChatMessage>(),
                 Model = global::OpenAI.GPT3.ObjectModels.Models.ChatGpt3_5Turbo,
-                MaxTokens = 200//optional
+                MaxTokens = maxTokens//optional
             };
 
             foreach (var msg in messages.Messages)
@@ -118,22 +118,34 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task CleanLastChatGPT(string userId)
+        public async Task CleanLastChatGPT(string userId, int chatNumber = 1)
         {
             var cacheKey = ChatGPTMessages.GetCacheKey(userId);
             ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
             if (messages != null)
             {
-                //清除一次对话（两次）
-                if (messages.Messages.Count >= 1)
+                if (chatNumber==0)
                 {
-                    messages.Messages.RemoveAt(messages.Messages.Count - 1);
+                    messages.CleanMessage();
                 }
-                if (messages.Messages.Count >= 1)
+                else
                 {
-                    messages.Messages.RemoveAt(messages.Messages.Count - 1);
+                    for (int i = 0; i < chatNumber; i++)
+                    {
+                        //清除一次对话（两次）
+                        if (messages.Messages.Count >= 1)
+                        {
+                            //删除上一条系统回复
+                            messages.Messages.RemoveAt(messages.Messages.Count - 1);
+                        }
+                        if (messages.Messages.Count >= 1)
+                        {
+                            //删除上一条用户对话
+                            messages.Messages.RemoveAt(messages.Messages.Count - 1);
+                        }
+                    }
                 }
-                
+               
                 await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
             }
         }
