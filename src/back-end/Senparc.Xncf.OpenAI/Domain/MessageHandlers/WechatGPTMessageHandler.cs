@@ -9,6 +9,7 @@ using Senparc.Weixin.MP.MessageContexts;
 using Senparc.Weixin.MP.MessageHandlers;
 using Senparc.Xncf.OpenAI.Domain.Models.CacheModels;
 using Senparc.Xncf.OpenAI.Domain.Services;
+using Senparc.Xncf.WeixinManager;
 using System;
 using System.IO;
 using System.Threading.Tasks;
