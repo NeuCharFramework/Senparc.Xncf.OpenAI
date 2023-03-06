@@ -7,3 +7,4 @@
 bin/
 obj/
 /BuildOutPut
+**/node_modules

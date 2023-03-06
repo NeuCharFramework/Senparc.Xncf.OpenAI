@@ -5,11 +5,28 @@ import Home from '../views/Home.vue'
 Vue.use(VueRouter)
 
 let routes = [
+
   {
     path: '/',
-    name: 'home',
-    component: Home
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/Home.vue')
   },
+  // OpenAI路由
+  {
+    path: '/Module/XncfStoreOpenAI/openindex',
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/OpenAI/index.vue')
+  },
+  {
+    path: '/Module/XncfStoreOpenAI/opendetail',
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/OpenAI/detail.vue')
+  },
+  // {
+  //   path: '/',
+  //   name: 'home',
+  //   component: Home
+  // },
   // XncfStore路由
   // {
   //   path: '/appstore',
@@ -36,17 +53,12 @@ let routes = [
   //   component: () =>
   //     import(/* webpackChunkName: "about" */ '../views/XncfStore/operation/application.vue')
   // },
-  // OpenAI路由
-  {
-    path: '/openindex',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/OpenAI/index.vue')
-  },
-  {
-    path: '/opendetail',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/OpenAI/detail.vue')
-  },
+  // {
+  //   path: '/',
+  //   name: 'home',
+  //   component: Home
+  // },
+
 
 ]
 const router = new VueRouter({

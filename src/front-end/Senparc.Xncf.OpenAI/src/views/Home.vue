@@ -1,34 +1,29 @@
 <template>
-  <div class="app-container home">
-    <h1>{{ title }}1</h1>
-    <!-- 加载动态组件 -->
-    <!--    <component :is="$store.state.dynamicComponent.GLOBAL.logo"></component>-->
-    <HelloWorld msg="我是远程加载的!" />
-
-    <el-button type="primary" @click="goshopping">去商城</el-button>
+  <div>
+    <h1>{{ title }}</h1>
+    <div class="li" v-for="(item) in ulli" :key="item.name">
+      <span>{{ item.name }}</span>:
+      <span>{{ item.path }}</span>
+    </div>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "home",
-  components: {
-    HelloWorld,
-  },
   data() {
     return {
-      title: process.env.VUE_APP_TITLE,
+      title: "Senparc.Xncf.OpenAI",
+      ulli: [
+        {
+          name: 'Senparc.Xncf.OpenAI首页',
+          path: "/Module/XncfStoreOpenAI/openindex"
+        },
+        {
+          name: 'Senparc.Xncf.OpenAI对话页',
+          path: "/Module/XncfStoreOpenAI/opendetail"
+        },
+      ]
     };
-  },
-  methods: {
-    goshopping() {
-      this.$router.push({
-        path: "/appstore",
-      });
-    },
   },
 };
 </script>
