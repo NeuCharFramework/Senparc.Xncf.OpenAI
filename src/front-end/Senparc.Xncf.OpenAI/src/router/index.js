@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -9,57 +8,19 @@ let routes = [
   {
     path: '/',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Home.vue')
+      import('../views/Home.vue')
   },
   // OpenAI路由
   {
     path: '/Module/XncfStoreOpenAI/openindex',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/OpenAI/index.vue')
+      import('../views/OpenAI/index.vue')
   },
   {
     path: '/Module/XncfStoreOpenAI/opendetail',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/OpenAI/detail.vue')
+      import('../views/OpenAI/detail.vue')
   },
-  // {
-  //   path: '/',
-  //   name: 'home',
-  //   component: Home
-  // },
-  // XncfStore路由
-  // {
-  //   path: '/appstore',
-  //   component: () =>
-  //     import('../views/XncfStore/shopping/Index.vue')
-  // },
-  // {
-  //   path: '/shoppingIndex',
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ '../views/XncfStore/shopping/Index.vue')
-  // },
-  // {
-  //   path: '/shoppingdetail',
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ '../views/XncfStore/shopping/detail.vue')
-  // },
-  // {
-  //   path: '/shoppingapplication',
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ '../views/XncfStore/shopping/application.vue')
-  // },
-  // {
-  //   path: '/application',
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ '../views/XncfStore/operation/application.vue')
-  // },
-  // {
-  //   path: '/',
-  //   name: 'home',
-  //   component: Home
-  // },
-
-
 ]
 const router = new VueRouter({
   routes

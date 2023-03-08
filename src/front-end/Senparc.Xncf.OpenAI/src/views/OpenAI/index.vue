@@ -185,7 +185,7 @@ export default {
         // 去到详情页
         goOpenAIdetail() {
             this.$router.push({
-                path: '/Module/XncfStoreOpenAI/opendetail',
+                path: '/Module/SenparcXncf/opendetail',
                 query: {
                     appKey: this.saveData['apiKey'],
                     organizaionID: this.saveData['organizationID']

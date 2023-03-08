@@ -88,7 +88,7 @@ export default {
         // 回到首页
         goOpenAImian() {
             this.$router.push({
-                path: '/Module/XncfStoreOpenAI/openindex',
+                path: '/Module/SenparcXncf/openindex',
                 query: {
                     appKey: this.saveData['apiKey'],
                     organizaionID: this.saveData['organizationID']

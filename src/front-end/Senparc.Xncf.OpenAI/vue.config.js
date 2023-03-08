@@ -1,11 +1,17 @@
 module.exports = {
   publicPath: './', // 这个值被设置为空字符串 ('') 或是相对路径 ('./')，这样所有的资源都会被链接为相对路径，这样打出来的包可以被部署在任意路径。
-  outputDir: '../Senparc.Xncf.Admin/public/dist',
+  // outputDir: '../Senparc.Xncf.Admin/public/dist',
+  outputDir: 'dist',
   assetsDir: 'static',
+
+  // pages: {
+  //   filename: 'SenparcXncfOpenAI.html'
+  // },
+
+  // indexPath: 'SenparcXncfOpenAI.html', //就是这条
 
   devServer: {
     https: false,
-    // port: port,
     open: true,
     disableHostCheck: true, // 是否开启域名检查
     overlay: {
@@ -22,6 +28,11 @@ module.exports = {
           '^/api': ''
         }
       }
+    },
+    pages: {
+      entry: 'src/main.js',// page 的入口
+      filename: './SenparcXncfOpenAI.html',//html文件名
+      title: 'SenparcXncfOpenAI',//标题
     }
   },
 }

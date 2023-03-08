@@ -16,11 +16,11 @@ export default {
       ulli: [
         {
           name: 'Senparc.Xncf.OpenAI首页',
-          path: "/Module/XncfStoreOpenAI/openindex"
+          path: "/Module/SenparcXncf/openindex"
         },
         {
           name: 'Senparc.Xncf.OpenAI对话页',
-          path: "/Module/XncfStoreOpenAI/opendetail"
+          path: "/Module/SenparcXncf/opendetail"
         },
       ]
     };
