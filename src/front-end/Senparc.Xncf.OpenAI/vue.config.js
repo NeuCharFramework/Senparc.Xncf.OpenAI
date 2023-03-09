@@ -47,8 +47,6 @@ module.exports = {
   //   },
   // },
 
-
-
   // configureWebpack: {
   //   output: {
   //     plugins: [

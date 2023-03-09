@@ -50,7 +50,9 @@
             </div>
             <div class="iptArea" style="font-size: 14px;">
                 <span>您可以在输入框内输入想要查找的内容。查看历史数据：</span>
-                <span style="color:gray;cursor: pointer;" @click.once="showHistory">显示历史数据</span>
+                <!-- <span style="color:gray;cursor: pointer;" @click.once="showHistory">显示历史数据</span> -->
+                <!-- 等待对话接口调整后展开本地数据查看 -->
+                <span style="color:gray;cursor: pointer;">显示历史数据</span>
             </div>
         </div>
     </div>
