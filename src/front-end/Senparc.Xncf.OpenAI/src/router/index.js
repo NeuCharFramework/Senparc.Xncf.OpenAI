@@ -12,12 +12,12 @@ let routes = [
   },
   // OpenAI路由
   {
-    path: '/Module/XncfStoreOpenAI/openindex',
+    path: '/Module/SenparcXncf/openindex',
     component: () =>
       import('../views/OpenAI/index.vue')
   },
   {
-    path: '/Module/XncfStoreOpenAI/opendetail',
+    path: '/Module/SenparcXncf/opendetail',
     component: () =>
       import('../views/OpenAI/detail.vue')
   },
@@ -25,5 +25,4 @@ let routes = [
 const router = new VueRouter({
   routes
 })
-
 export default router

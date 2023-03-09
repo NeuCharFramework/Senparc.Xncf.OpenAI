@@ -78,6 +78,7 @@ export default {
     },
     created() {
         this.getToken();
+        console.log('对话加载');
     },
     methods: {
         // 获取路由传值参数

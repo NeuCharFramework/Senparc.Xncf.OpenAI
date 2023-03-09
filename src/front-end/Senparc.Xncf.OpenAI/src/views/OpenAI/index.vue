@@ -107,6 +107,7 @@ export default {
         }
     },
     created() {
+        console.log('模块加载');
         this.getToken();
     },
     methods: {
