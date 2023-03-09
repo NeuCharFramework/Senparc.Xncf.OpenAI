@@ -1,5 +1,5 @@
-<!-- open首页 -->
 <template>
+    <!-- open首页 -->
     <div class="openai">
         <!-- 首页-功能描述页 -->
         <main>
@@ -11,34 +11,20 @@
                 </el-header>
             </el-container>
             <div class="textArea">
-                <span>
-                    Senparc.Xncf.OpenAI 模块用于提供对 OpenAI、ChatGPT等接口的统一管理和测试。同时，本模块可用于其他模块接入 OpenAI，作为公共子领域使用。（ChatGTP
-                    接口须等待官方 SDK 正式上线后发布）。
-                </span>
-                <!-- 获取appkey和organziation -->
+                <span>说明</span>
                 <div class="obtain">
                     <span>若要使用 OpenAI，需要验证 API Key 和 Organization ID。没有这两项内容？传送门：</span>
                     <a href="https://platform.openai.com/account/api-keys">获取 API Key</a>
                     <a href="https://platform.openai.com/account/org-settings">获取 Organization ID</a>
-                    <!-- <span>。单个获取太麻烦？一键获取：</span> -->
-                    <!-- <span style="cursor: pointer; color: #5a738e;" @click="getkeyid">获取appkey，Organization</span> -->
                 </div>
             </div>
             <!-- 功能模块 -->
             <el-row>
                 <el-card class="box-card mw-100">
-                    <div class="nav" v-if="yesno">
-                        <h3>请单击需要使用的模块 </h3>
-                        <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">更换信息</el-button>
+                    <div class="nav">
+                        <h3>功能模块</h3>
+                        <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">设置API Key</el-button>
                     </div>
-                    <div class="nav" v-else>
-                        <h3>使用该模块需验证登录 </h3>
-                        <el-button el-button type=" primary" size="mini" @click="dialogVisible = true">设置信息</el-button>
-                    </div>
-
-                    <!-- 搜索-预留 -->
-                    <el-input class="box-ipt" v-model="modelValue" placeholder="输入内容按下Enter" clearable
-                              @keyup="searchModular"></el-input>
                     <!-- 已有Api key展示数据  -->
                     <div id="xncf-modules-area" v-if="yesno">
                         <el-col :span="6" :xs="24" :sm="12" :md="12" :lg="8" :xl="6" v-for="item in xncfOpenAIList"
@@ -47,7 +33,7 @@
                                 <div slot="header" class="xncf-item-top svgimg greencolor" @click="goOpenAIdetail">
                                     <span class="moudelName">{{ item.menuName }}</span>
                                 </div>
-                                <span class="detail" @click="goOpenAIdetail">OpenAI GPT3 API，以对话方式呈现</span>
+                                <span class="detail" @click="goOpenAIdetail">描述描述描述</span>
                             </el-card>
                         </el-col>
                     </div>
@@ -59,7 +45,7 @@
                                 <div slot="header" class="xncf-item-top svgimg greencolor">
                                     <span class="moudelName">{{ item.menuName }}</span>
                                 </div>
-                                <div class="detail">OpenAI GPT3 API，以对话方式呈现</div>
+                                <div class="detail">描述描述描述描述描述</div>
                             </el-card>
                         </el-col>
                     </div>
@@ -76,7 +62,6 @@
                     <el-form-item label="Organization ID">
                         <el-input v-model="ruleForm.Organization"></el-input>
                         <a href="https://platform.openai.com/account/org-settings">获取 Organization ID</a>
-
                     </el-form-item>
                 </el-form>
             </div>
@@ -88,20 +73,15 @@
     </div>
 </template>
 <script>
-// 请求
-import { getAppkeyOrganizationID, postAppkeyOrganizationID } from "../../api/openIndex"
-import { MessageBox, Message } from "element-ui";
 export default {
     data() {
         return {
             // 模块数据-待定
             xncfOpenAIList: [
                 {
-                    menuName: "XncfStore OpenAI",//名称
+                    menuName: "模块名称",//名称
                 },
-              
             ],
-            modelValue: "",//搜索框内容-待定
             // 模块数据搜索筛选-待定
             xncfOpenAIsearch: [],
             yesno: false,//是否可点击
@@ -127,141 +107,78 @@ export default {
         }
     },
     created() {
+        console.log('模块加载');
         this.getToken();
-        // this.getkeyid();
     },
     methods: {
         //关闭弹出层
         handleClose(done) {
             done();
         },
-        // 搜索模块内容-待定
-        searchModular() {
-            // console.log(this.xncfOpenAIsearch);
-        },
         //获取Token
         getToken() {
             if (this.$router.currentRoute.query) {
-                this.passwordState = true;//token显示password状态
-                // 赋值存储appkey，id
+                //token显示password状态
+                this.passwordState = true;
+                // 赋值appkey，id
                 this.saveData.apiKey = this.$router.currentRoute.query.appKey;
                 this.saveData.organizationID = this.$router.currentRoute.query.organizationID;
-                // console.log('spikey,id', this.saveData);
             }
         },
         // get
         async getkeyid() {
-            await getAppkeyOrganizationID().then((res) => {
-                if (res != null) {
-                    Message({
-                        message: "请求成功",
-                        type: "success",
-                        duration: 5 * 1000,
-                    });
-                    // console.log('请求结果', res);
-                    this.saveData['apiKey'] = res.apiKey;
-                    this.saveData['organizationID'] = res.organizationID;
-                    // console.log(this.saveData['apiKey'], this.saveData['organizationID']);
-
+            this.$axios.get('/api/Senparc.Xncf.OpenAI/OpenAiConfigService/Xncf.OpenAI_OpenAiConfigService.GetOpenAiConfigDtoAsync')
+                .then(res => {
+                    console.log('首页请求成功', res.data);
                     this.$message({
                         message: '成功',
                         type: 'success'
                     });
-                }
-            }).catch(() => {
-                Message({
-                    message: "获取失败了",
-                    type: "error",
-                    duration: 5 * 1000,
-                });
-            })
+                }).catch((err) => {
+                    console.log('首页请求失败', err);
+                    this.$message({
+                        message: '失败了',
+                        type: 'error'
+                    });
+                })
         },
-        // post-apikey
-        submitForm(formName) {
-            this.$refs[formName].validate((valid) => {
-                if (valid) {
-                    // 保存数据
-                    this.saveData['apiKey'] = this.ruleForm.appkey;
-                    this.saveData['organizationID'] = this.ruleForm.Organization;
-                    let keyId = {
-                        appKey: this.saveData['apiKey'],
-                        organizationID: this.saveData['organizationID']
-                    }
-                    // 请求
-                    postAppkeyOrganizationID(keyId).then((res) => {
-                        if (res != null) {
-                            Message({
-                                message: "修改信息成功",
-                                type: "success",
-                                duration: 5 * 1000,
-                            });
-                            // this.$notify({
-                            //     title: '提示',
-                            //     message: `您的apiKey是:${this.saveData['apiKey']},您的organizationID是:${this.saveData['organizationID']}`,
-                            //     duration: 0
-                            // });
-                        }
-                    }).catch(() => {
-                        Message({
-                            message: "修改信息失败了",
-                            type: "error",
-                            duration: 5 * 1000,
-                        });
-                    })
-                    this.yesno = true;//模块可操作
-                    this.dialogVisible = false;//关闭弹出层
-                    this.passwordState = true;//token显示password状态
-                } else {
-                    // console.log('error submit!!');
-                    return false;
-                }
-            });
-        },
-        // post-apikey-doing
+        // post
         putForm(formName) {
             this.$refs[formName].validate((valid) => {
                 if (valid) {
                     // 验证appkey修改数值是否有变化
-                    // if (this.ruleForm.appkey == this.saveData['apiKey']) {
-                    //     this.saveData['apiKey'] = null;
-                    //     this.saveData['organizationID'] = null;
-                    // } else {
-                    //     this.saveData['apiKey'] = this.ruleForm.appkey;
-                    //     this.saveData['organizationID'] = this.ruleForm.Organization
-                    // }
+                    if (this.ruleForm.appkey == this.saveData['apiKey']) {
+                        this.saveData['apiKey'] = null;
+                        this.saveData['organizationID'] = null;
+                    } else {
+                        this.saveData['apiKey'] = this.ruleForm.appkey;
+                        this.saveData['organizationID'] = this.ruleForm.Organization
+                    }
                     this.saveData['apiKey'] = this.ruleForm.appkey;
                     this.saveData['organizationID'] = this.ruleForm.Organization
                     let keyId = {
                         appKey: this.saveData['apiKey'],
                         organizationID: this.saveData['organizationID']
                     }
-                    // console.log('appkey', this.saveData['apiKey']);
-                    // 请求
-                    postAppkeyOrganizationID(keyId).then((res) => {
-                        if (res != null) {
-                            Message({
-                                message: "修改信息成功",
-                                type: "success",
-                                duration: 5 * 1000,
-                            });
+                    this.$axios.post('/api/Senparc.Xncf.OpenAI/OpenAiConfigService/Xncf.OpenAI_OpenAiConfigService.Update', JSON.stringify(keyId))
+                        .then(res => {
+                            console.log('修改信息成功', res.data);
                             this.$message({
-                                message: '成功',
+                                message: '修改信息成功',
                                 type: 'success'
                             });
-                        }
-                    }).catch(() => {
-                        Message({
-                            message: "修改信息失败了",
-                            type: "error",
-                            duration: 5 * 1000,
-                        });
-                    })
+                        }).catch((err) => {
+                            console.log('修改信息失败了', err);
+                            this.$message({
+                                message: '修改信息失败',
+                                type: 'error'
+                            });
+                        })
                     this.yesno = true;//可操作模块
                     this.dialogVisible = false;//关闭弹出层
                     this.passwordState = true;//token显示password状态
-                    // this.getkeyid();//自动调用获取appkey
                 } else {
-                    // console.log('error submit!!');
+                    console.log('error submit!!');
                     return false;
                 }
             });
@@ -269,10 +186,7 @@ export default {
         // 去到详情页
         goOpenAIdetail() {
             this.$router.push({
-                // admin路径
-                //path: '/OpenAI/detail',
-                // 分布式的路径
-                 path: '/Module/b/opendetail',
+                path: '/Module/SenparcXncf/opendetail',
                 query: {
                     appKey: this.saveData['apiKey'],
                     organizaionID: this.saveData['organizationID']
@@ -314,7 +228,7 @@ export default {
         .nav {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
             width: 100%;
             height: 40px;
             padding: 10px;
@@ -387,6 +301,7 @@ export default {
                 display: flex;
                 flex-direction: row;
                 font-weight: bold !important;
+                justify-content: flex-start;
                 flex-wrap: nowrap;
                 gap: 10px;
             }

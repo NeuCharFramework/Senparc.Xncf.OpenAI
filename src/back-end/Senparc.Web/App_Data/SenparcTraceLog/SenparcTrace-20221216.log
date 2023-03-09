@@ -1,0 +1,5120 @@
+[[[系统日志]]]
+[2022/12/16 14:01:35.3281]
+[线程：1]
+NeuCharFramework 系统启动
+
+[[[自动注册扩展缓存完成]]]
+[2022/12/16 14:01:35.3304]
+[线程：1]
+注册总用时：0.0014ms
+自动扫描程序集：0个
+扩展缓存：
+
+[[[启动线程]]]
+[2022/12/16 14:01:35.3439]
+[线程：21]
+Senparc.Xncf.DatabaseToolkit-定时备份
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.2625]
+[线程：14]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3874]
+[线程：14]
+Senparc.Xncf.SystemManager.Domain.FeedbackConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3883]
+[线程：14]
+Senparc.Areas.Admin.Models.AdminUserInfoConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3906]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Areas.Admin.Domain.Models.AdminUserInfo, Senparc.Areas.Admin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3907]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.DatabaseToolkit.DbConfig, Senparc.Xncf.DatabaseToolkit, Version=0.16.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3916]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysMenu, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3939]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysButton, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3947]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.SystemConfig, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3957]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.SystemManager.Domain.DatabaseModel.FeedBack, Senparc.Xncf.SystemManager, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3957]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRoleAdminUserInfo, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3965]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRolePermission, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3974]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRole, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3982]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.Tenant.Domain.DataBaseModel.TenantInfo, Senparc.Xncf.Tenant, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.3990]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.XncfBuilder.Config, Senparc.Xncf.XncfBuilder, Version=0.13.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:01:36.4001]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.XncfModule, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[SenparcEntities 数据库实体注入]]]
+[2022/12/16 14:01:36.4001]
+[线程：14]
+耗时：15.7358ms
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.4847]
+[线程：7]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:01:36.4869]
+[线程：7]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.6942]
+[线程：14]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.6942]
+[线程：7]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.6949]
+[线程：32]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.6950]
+[线程：13]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.6982]
+[线程：17]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.6985]
+[线程：26]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.6985]
+[线程：16]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.6985]
+[线程：36]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.6986]
+[线程：37]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.6989]
+[线程：39]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:01:36.7004]
+[线程：34]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:00.2613]
+[线程：8]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:00.2749]
+[线程：8]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:00.3415]
+[线程：51]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:00.3417]
+[线程：3]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:00.3417]
+[线程：50]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:00.3419]
+[线程：53]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:00.3434]
+[线程：54]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:00.4169]
+[线程：55]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:01.9719]
+[线程：8]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:03.2419]
+[线程：3]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:06.4901]
+[线程：3]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:02:06.4903]
+[线程：3]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:02:32.7853]
+[线程：65]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:36.5037]
+[线程：65]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:02:36.5040]
+[线程：65]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:02:48.4839]
+[线程：52]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:48.5354]
+[线程：52]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:48.5749]
+[线程：63]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:48.5750]
+[线程：68]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:48.5833]
+[线程：10]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:48.5875]
+[线程：52]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:48.6100]
+[线程：52]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:48.7179]
+[线程：63]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:48.7179]
+[线程：10]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:48.7304]
+[线程：63]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:52.7062]
+[线程：52]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[管理员登录]]]
+[2022/12/16 14:02:52.8487]
+[线程：63]
+[2022/12/16/周五 14:02:52 +08:00]	管理员登录：SenparcCoreAdmin42
+[2022/12/16/周五 14:02:52 +08:00]	结果：True
+
+
+[[[BaseException]]]
+[2022/12/16 14:02:52.8717]
+[线程：66]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:53.2286]
+[线程：66]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:53.5345]
+[线程：59]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:02:53.5345]
+[线程：63]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:03:06.5174]
+[线程：59]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:03:06.5176]
+[线程：59]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:03:36.5187]
+[线程：56]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:03:36.5190]
+[线程：56]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:03:38.5959]
+[线程：59]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:03:38.9523]
+[线程：52]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:03:38.9523]
+[线程：56]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:03:39.2524]
+[线程：59]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:04:06.5345]
+[线程：74]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:04:06.5348]
+[线程：74]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:04:36.5480]
+[线程：83]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:04:36.5483]
+[线程：83]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:05:06.5570]
+[线程：28]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:05:06.5572]
+[线程：28]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:05:36.5673]
+[线程：87]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:05:36.5675]
+[线程：87]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:06:06.5698]
+[线程：88]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:06:06.5700]
+[线程：88]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:06:36.5830]
+[线程：94]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:06:36.5832]
+[线程：94]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:06:43.8429]
+[线程：98]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:53.7423]
+[线程：98]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:56.7643]
+[线程：94]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.6176]
+[线程：98]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.6825]
+[线程：96]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.6825]
+[线程：28]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.6852]
+[线程：93]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.6852]
+[线程：96]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.6853]
+[线程：28]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.6854]
+[线程：94]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.6897]
+[线程：94]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.7322]
+[线程：89]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.7625]
+[线程：93]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.7626]
+[线程：96]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:06:59.7786]
+[线程：96]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:07:06.5895]
+[线程：92]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:07:06.5897]
+[线程：92]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:07:36.5979]
+[线程：93]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:07:36.5981]
+[线程：93]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:08:05.9456]
+[线程：79]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:08:06.2588]
+[线程：79]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:08:06.2588]
+[线程：56]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:08:06.5646]
+[线程：56]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:08:06.6044]
+[线程：79]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:08:06.6045]
+[线程：79]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:08:36.6143]
+[线程：59]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:08:36.6146]
+[线程：59]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:09:06.6157]
+[线程：64]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:09:06.6159]
+[线程：64]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:09:23.9107]
+[线程：52]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:23.9891]
+[线程：8]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:23.9925]
+[线程：44]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:23.9925]
+[线程：62]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:23.9926]
+[线程：52]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:23.9927]
+[线程：54]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:23.9957]
+[线程：54]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:23.9957]
+[线程：62]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:24.0319]
+[线程：54]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:24.0551]
+[线程：62]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:24.0551]
+[线程：54]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:24.0610]
+[线程：62]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:09:36.6274]
+[线程：52]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:09:36.6277]
+[线程：52]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:10:06.6414]
+[线程：34]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:10:06.6416]
+[线程：34]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:10:36.6583]
+[线程：24]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:10:36.6585]
+[线程：24]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:11:06.6628]
+[线程：12]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:11:06.6630]
+[线程：12]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[系统日志]]]
+[2022/12/16 14:11:15.2544]
+[线程：1]
+NeuCharFramework 系统启动
+
+[[[自动注册扩展缓存完成]]]
+[2022/12/16 14:11:15.2564]
+[线程：1]
+注册总用时：0.0005ms
+自动扫描程序集：0个
+扩展缓存：
+
+[[[启动线程]]]
+[2022/12/16 14:11:15.2689]
+[线程：18]
+Senparc.Xncf.DatabaseToolkit-定时备份
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.1354]
+[线程：12]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2615]
+[线程：12]
+Senparc.Xncf.SystemManager.Domain.FeedbackConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2623]
+[线程：12]
+Senparc.Areas.Admin.Models.AdminUserInfoConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2644]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Areas.Admin.Domain.Models.AdminUserInfo, Senparc.Areas.Admin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2645]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.DatabaseToolkit.DbConfig, Senparc.Xncf.DatabaseToolkit, Version=0.16.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2653]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysMenu, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2675]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysButton, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2683]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.SystemConfig, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2693]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.SystemManager.Domain.DatabaseModel.FeedBack, Senparc.Xncf.SystemManager, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2693]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRoleAdminUserInfo, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2701]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRolePermission, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2709]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRole, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2717]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.Tenant.Domain.DataBaseModel.TenantInfo, Senparc.Xncf.Tenant, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2725]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.XncfBuilder.Config, Senparc.Xncf.XncfBuilder, Version=0.13.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:16.2735]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.XncfModule, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[SenparcEntities 数据库实体注入]]]
+[2022/12/16 14:11:16.2736]
+[线程：12]
+耗时：15.0507ms
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.3481]
+[线程：7]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:11:16.3504]
+[线程：7]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.5909]
+[线程：4]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.5910]
+[线程：23]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.6015]
+[线程：11]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.6015]
+[线程：29]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.6016]
+[线程：30]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.6079]
+[线程：29]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.6478]
+[线程：30]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.6478]
+[线程：10]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.6869]
+[线程：30]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.6869]
+[线程：10]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.6914]
+[线程：10]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:16.7985]
+[线程：30]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[系统日志]]]
+[2022/12/16 14:11:27.7601]
+[线程：1]
+NeuCharFramework 系统启动
+
+[[[自动注册扩展缓存完成]]]
+[2022/12/16 14:11:27.7622]
+[线程：1]
+注册总用时：0.0005ms
+自动扫描程序集：0个
+扩展缓存：
+
+[[[启动线程]]]
+[2022/12/16 14:11:27.7748]
+[线程：20]
+Senparc.Xncf.DatabaseToolkit-定时备份
+
+[[[BaseException]]]
+[2022/12/16 14:11:28.6075]
+[线程：13]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7309]
+[线程：13]
+Senparc.Xncf.SystemManager.Domain.FeedbackConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7317]
+[线程：13]
+Senparc.Areas.Admin.Models.AdminUserInfoConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7338]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Areas.Admin.Domain.Models.AdminUserInfo, Senparc.Areas.Admin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7339]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.DatabaseToolkit.DbConfig, Senparc.Xncf.DatabaseToolkit, Version=0.16.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7346]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysMenu, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7367]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysButton, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7376]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.SystemConfig, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7385]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.SystemManager.Domain.DatabaseModel.FeedBack, Senparc.Xncf.SystemManager, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7385]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRoleAdminUserInfo, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7392]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRolePermission, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7400]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRole, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7408]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.Tenant.Domain.DataBaseModel.TenantInfo, Senparc.Xncf.Tenant, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7416]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.XncfBuilder.Config, Senparc.Xncf.XncfBuilder, Version=0.13.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:28.7426]
+[线程：13]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.XncfModule, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[SenparcEntities 数据库实体注入]]]
+[2022/12/16 14:11:28.7426]
+[线程：13]
+耗时：14.7712ms
+
+[[[BaseException]]]
+[2022/12/16 14:11:28.8350]
+[线程：12]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:11:28.8372]
+[线程：12]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:11:29.0264]
+[线程：13]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:11:29.0560]
+[线程：4]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[系统日志]]]
+[2022/12/16 14:11:44.9069]
+[线程：1]
+NeuCharFramework 系统启动
+
+[[[自动注册扩展缓存完成]]]
+[2022/12/16 14:11:44.9090]
+[线程：1]
+注册总用时：0.0006ms
+自动扫描程序集：0个
+扩展缓存：
+
+[[[启动线程]]]
+[2022/12/16 14:11:44.9214]
+[线程：20]
+Senparc.Xncf.DatabaseToolkit-定时备份
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9736]
+[线程：12]
+Senparc.Xncf.SystemManager.Domain.FeedbackConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9744]
+[线程：12]
+Senparc.Areas.Admin.Models.AdminUserInfoConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9765]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Areas.Admin.Domain.Models.AdminUserInfo, Senparc.Areas.Admin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9765]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.DatabaseToolkit.DbConfig, Senparc.Xncf.DatabaseToolkit, Version=0.16.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9773]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysMenu, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9795]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysButton, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9803]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.SystemConfig, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9811]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.SystemManager.Domain.DatabaseModel.FeedBack, Senparc.Xncf.SystemManager, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9812]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRoleAdminUserInfo, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9819]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRolePermission, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9827]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRole, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9835]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.Tenant.Domain.DataBaseModel.TenantInfo, Senparc.Xncf.Tenant, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9843]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.XncfBuilder.Config, Senparc.Xncf.XncfBuilder, Version=0.13.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2022/12/16 14:11:45.9853]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.XncfModule, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[SenparcEntities 数据库实体注入]]]
+[2022/12/16 14:11:45.9853]
+[线程：12]
+耗时：14.7225ms
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:12:00.5510]
+[线程：13]
+The maximum number of retries (5) was exceeded while executing database operations with 'SqlServerRetryingExecutionStrategy'. See the inner exception for the most recent failure.
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Senparc.Ncf.Core.Cache.FullXncfModuleCache.InsertObjectToCacheAsync(String key)
+   at Senparc.Ncf.Core.Cache.BaseDictionaryCache`3.GetObjectAsync(TKey key)
+   at Senparc.Ncf.XncfBase.XncfRegisterManager.CheckOpenStateAsync(String xncfName)
+   at Senparc.Ncf.XncfBase.XncfRegisterManager.CheckXncfValiable(IXncfRegister xncfRegister)
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+
+[[[BaseException]]]
+[2022/12/16 14:12:01.6390]
+[线程：13]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:01.7449]
+[线程：13]
+	NcfUninstallException
+	Message：FullSystemConfigCache 访问数据库异常，推测系统未安装或未正确配置数据库
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:01.7451]
+[线程：13]
+	NcfUninstallException
+	Message：NCF 系统未初始化，请先执行 https://localhost:44311/Install 进行数据初始化
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:01.7627]
+[线程：13]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:01.8452]
+[线程：12]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:04.1592]
+[线程：13]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[AdminSenparcEntities_SqlServer.Database.GenerateCreateScript]]]
+[2022/12/16 14:12:04.2060]
+[线程：12]
+CREATE TABLE [ADMIN_AdminUserInfos] (
+    [Id] int NOT NULL IDENTITY,
+    [UserName] nvarchar(max) NULL,
+    [Password] nvarchar(max) NULL,
+    [PasswordSalt] nvarchar(max) NULL,
+    [RealName] nvarchar(max) NULL,
+    [Phone] nvarchar(max) NULL,
+    [Note] nvarchar(max) NULL,
+    [ThisLoginTime] datetime2 NOT NULL,
+    [ThisLoginIp] nvarchar(max) NULL,
+    [LastLoginTime] datetime2 NOT NULL,
+    [LastLoginIp] nvarchar(max) NULL,
+    [Flag] bit NOT NULL,
+    [AddTime] datetime2 NOT NULL,
+    [LastUpdateTime] datetime2 NOT NULL,
+    [TenantId] int NOT NULL,
+    [AdminRemark] nvarchar(300) NULL,
+    [Remark] nvarchar(300) NULL,
+    CONSTRAINT [PK_ADMIN_AdminUserInfos] PRIMARY KEY ([Id])
+);
+GO
+
+
+
+
+[[[SystemPermissionSenparcEntities_SqlServer.Database.GenerateCreateScript]]]
+[2022/12/16 14:12:04.5632]
+[线程：16]
+CREATE TABLE [SysRoleAdminUserInfos] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleCode] nvarchar(20) NULL,
+    [AccountId] int NOT NULL,
+    [RoleId] nvarchar(50) NULL,
+    [Flag] bit NOT NULL,
+    [AddTime] datetime2 NOT NULL,
+    [LastUpdateTime] datetime2 NOT NULL,
+    [TenantId] int NOT NULL,
+    [AdminRemark] nvarchar(300) NULL,
+    [Remark] nvarchar(300) NULL,
+    CONSTRAINT [PK_SysRoleAdminUserInfos] PRIMARY KEY ([Id])
+);
+GO
+
+
+CREATE TABLE [SysRolePermissions] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleCode] nvarchar(20) NULL,
+    [ResourceCode] nvarchar(20) NULL,
+    [RoleId] nvarchar(50) NULL,
+    [IsMenu] bit NOT NULL,
+    [PermissionId] nvarchar(50) NULL,
+    [Flag] bit NOT NULL,
+    [AddTime] datetime2 NOT NULL,
+    [LastUpdateTime] datetime2 NOT NULL,
+    [TenantId] int NOT NULL,
+    [AdminRemark] nvarchar(300) NULL,
+    [Remark] nvarchar(300) NULL,
+    CONSTRAINT [PK_SysRolePermissions] PRIMARY KEY ([Id])
+);
+GO
+
+
+CREATE TABLE [SysRoles] (
+    [Id] nvarchar(50) NOT NULL,
+    [Enabled] bit NOT NULL,
+    [RoleName] nvarchar(50) NULL,
+    [RoleCode] nvarchar(20) NULL,
+    [Flag] bit NOT NULL,
+    [AddTime] datetime2 NOT NULL,
+    [LastUpdateTime] datetime2 NOT NULL,
+    [TenantId] int NOT NULL,
+    [AdminRemark] nvarchar(300) NULL,
+    [Remark] nvarchar(300) NULL,
+    CONSTRAINT [PK_SysRoles] PRIMARY KEY ([Id])
+);
+GO
+
+
+
+
+[[[MenuSenparcEntities_SqlServer.Database.GenerateCreateScript]]]
+[2022/12/16 14:12:04.5826]
+[线程：12]
+CREATE TABLE [SysButtons] (
+    [Id] nvarchar(450) NOT NULL,
+    [MenuId] nvarchar(50) NULL,
+    [ButtonName] nvarchar(50) NOT NULL,
+    [OpearMark] nvarchar(50) NULL,
+    [Url] nvarchar(350) NULL,
+    [Flag] bit NOT NULL,
+    [AddTime] datetime2 NOT NULL,
+    [LastUpdateTime] datetime2 NOT NULL,
+    [TenantId] int NOT NULL,
+    [AdminRemark] nvarchar(300) NULL,
+    [Remark] nvarchar(300) NULL,
+    CONSTRAINT [PK_SysButtons] PRIMARY KEY ([Id])
+);
+GO
+
+
+CREATE TABLE [SysMenus] (
+    [Id] nvarchar(50) NOT NULL,
+    [MenuName] nvarchar(150) NOT NULL,
+    [ParentId] nvarchar(50) NULL,
+    [Url] nvarchar(350) NULL,
+    [Icon] nvarchar(50) NULL,
+    [IsLocked] bit NOT NULL,
+    [MenuType] int NOT NULL,
+    [ResourceCode] nvarchar(30) NULL,
+    [Sort] int NOT NULL,
+    [Visible] bit NOT NULL,
+    [Flag] bit NOT NULL,
+    [AddTime] datetime2 NOT NULL,
+    [LastUpdateTime] datetime2 NOT NULL,
+    [TenantId] int NOT NULL,
+    [AdminRemark] nvarchar(300) NULL,
+    [Remark] nvarchar(300) NULL,
+    CONSTRAINT [PK_SysMenus] PRIMARY KEY ([Id])
+);
+GO
+
+
+
+
+[[[XncfModuleManagerSenparcEntities_SqlServer.Database.GenerateCreateScript]]]
+[2022/12/16 14:12:04.7808]
+[线程：16]
+CREATE TABLE [XncfModules] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Uid] nvarchar(100) NOT NULL,
+    [MenuName] nvarchar(100) NULL,
+    [Version] nvarchar(100) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [UpdateLog] ntext NOT NULL,
+    [AllowRemove] bit NOT NULL,
+    [MenuId] nvarchar(100) NULL,
+    [Icon] nvarchar(100) NULL,
+    [State] int NOT NULL,
+    [Flag] bit NOT NULL,
+    [AddTime] datetime2 NOT NULL,
+    [LastUpdateTime] datetime2 NOT NULL,
+    [TenantId] int NOT NULL,
+    [AdminRemark] nvarchar(300) NULL,
+    [Remark] nvarchar(300) NULL,
+    CONSTRAINT [PK_XncfModules] PRIMARY KEY ([Id])
+);
+GO
+
+
+
+
+[[[安装或更新模块（安装）]]]
+[2022/12/16 14:12:05.0672]
+[线程：13]
+[2022/12/16/周五 14:12:04 +08:00] 开始扫描 XncfModules
+[2022/12/16/周五 14:12:04 +08:00] 扫描到 IXncfRegister：Senparc.Areas.Admin.Register
+[2022/12/16/周五 14:12:04 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:04 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Tenant.Register
+[2022/12/16/周五 14:12:04 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:04 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemCore.Register
+[2022/12/16/周五 14:12:04 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:04 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemManager.Register
+[2022/12/16/周五 14:12:04 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:04 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemPermission.Register
+[2022/12/16/周五 14:12:04 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:04 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.AreasBase.Register
+[2022/12/16/周五 14:12:04 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:04 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfModuleManager.Register
+[2022/12/16/周五 14:12:04 +08:00] 符合尝试安装/更新要求，继续执行
+[2022/12/16/周五 14:12:04 +08:00] 是否更新版本：Install
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Menu.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfBuilder.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Swagger.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Installer.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.DatabaseToolkit.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Terminal.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000004]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描结束，共新增或更新 1 个程序集
+
+
+[[[安装或更新模块（安装）]]]
+[2022/12/16 14:12:05.0955]
+[线程：12]
+[2022/12/16/周五 14:12:05 +08:00] 开始扫描 XncfModules
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Areas.Admin.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Tenant.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemCore.Register
+[2022/12/16/周五 14:12:05 +08:00] 符合尝试安装/更新要求，继续执行
+[2022/12/16/周五 14:12:05 +08:00] 是否更新版本：Install
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemPermission.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.AreasBase.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfModuleManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Menu.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfBuilder.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Swagger.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Installer.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.DatabaseToolkit.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Terminal.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描结束，共新增或更新 1 个程序集
+
+
+[[[SystemManagerSenparcEntities_SqlServer.Database.GenerateCreateScript]]]
+[2022/12/16 14:12:05.1019]
+[线程：12]
+CREATE TABLE [FeedBacks] (
+    [Id] int NOT NULL IDENTITY,
+    [AccountId] int NOT NULL,
+    [Content] nvarchar(max) NULL,
+    [Flag] bit NOT NULL,
+    [AddTime] datetime2 NOT NULL,
+    [LastUpdateTime] datetime2 NOT NULL,
+    [TenantId] int NOT NULL,
+    [AdminRemark] nvarchar(300) NULL,
+    [Remark] nvarchar(300) NULL,
+    CONSTRAINT [PK_FeedBacks] PRIMARY KEY ([Id])
+);
+GO
+
+
+CREATE TABLE [SystemConfigs] (
+    [Id] int NOT NULL IDENTITY,
+    [SystemName] nvarchar(100) NOT NULL,
+    [MchId] nvarchar(100) NULL,
+    [MchKey] nvarchar(300) NULL,
+    [TenPayAppId] nvarchar(100) NULL,
+    [HideModuleManager] bit NULL,
+    [Flag] bit NOT NULL,
+    [AddTime] datetime2 NOT NULL,
+    [LastUpdateTime] datetime2 NOT NULL,
+    [TenantId] int NOT NULL,
+    [AdminRemark] nvarchar(300) NULL,
+    [Remark] nvarchar(300) NULL,
+    CONSTRAINT [PK_SystemConfigs] PRIMARY KEY ([Id])
+);
+GO
+
+
+
+
+[[[安装或更新模块（安装）]]]
+[2022/12/16 14:12:05.1250]
+[线程：11]
+[2022/12/16/周五 14:12:05 +08:00] 开始扫描 XncfModules
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Areas.Admin.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Tenant.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemCore.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 符合尝试安装/更新要求，继续执行
+[2022/12/16/周五 14:12:05 +08:00] 是否更新版本：Install
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemPermission.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.AreasBase.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfModuleManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Menu.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfBuilder.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Swagger.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Installer.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.DatabaseToolkit.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Terminal.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000002]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描结束，共新增或更新 1 个程序集
+
+
+[[[安装或更新模块（安装）]]]
+[2022/12/16 14:12:05.1359]
+[线程：13]
+[2022/12/16/周五 14:12:05 +08:00] 开始扫描 XncfModules
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Areas.Admin.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Tenant.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemCore.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemPermission.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.AreasBase.Register
+[2022/12/16/周五 14:12:05 +08:00] 符合尝试安装/更新要求，继续执行
+[2022/12/16/周五 14:12:05 +08:00] 是否更新版本：Install
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfModuleManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Menu.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfBuilder.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Swagger.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Installer.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.DatabaseToolkit.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Terminal.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000006]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描结束，共新增或更新 1 个程序集
+
+
+[[[安装或更新模块（安装）]]]
+[2022/12/16 14:12:05.1468]
+[线程：12]
+[2022/12/16/周五 14:12:05 +08:00] 开始扫描 XncfModules
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Areas.Admin.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Tenant.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemCore.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemPermission.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.AreasBase.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfModuleManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Menu.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfBuilder.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Swagger.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Installer.Register
+[2022/12/16/周五 14:12:05 +08:00] 符合尝试安装/更新要求，继续执行
+[2022/12/16/周五 14:12:05 +08:00] 是否更新版本：Install
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.DatabaseToolkit.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Terminal.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[62FBB022-B04E-423F-82FE-926D418A0815]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描结束，共新增或更新 1 个程序集
+
+
+[[[安装或更新模块（安装）]]]
+[2022/12/16 14:12:05.1585]
+[线程：12]
+[2022/12/16/周五 14:12:05 +08:00] 开始扫描 XncfModules
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Areas.Admin.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Tenant.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemCore.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemPermission.Register
+[2022/12/16/周五 14:12:05 +08:00] 符合尝试安装/更新要求，继续执行
+[2022/12/16/周五 14:12:05 +08:00] 是否更新版本：Install
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.AreasBase.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfModuleManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Menu.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfBuilder.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Swagger.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Installer.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.DatabaseToolkit.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Terminal.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000003]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描结束，共新增或更新 1 个程序集
+
+
+[[[安装或更新模块（安装）]]]
+[2022/12/16 14:12:05.1705]
+[线程：10]
+[2022/12/16/周五 14:12:05 +08:00] 开始扫描 XncfModules
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Areas.Admin.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Tenant.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemCore.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemPermission.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.AreasBase.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfModuleManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Menu.Register
+[2022/12/16/周五 14:12:05 +08:00] 符合尝试安装/更新要求，继续执行
+[2022/12/16/周五 14:12:05 +08:00] 是否更新版本：Install
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfBuilder.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Swagger.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Installer.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.DatabaseToolkit.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Terminal.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0000-0001-000000000005]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描结束，共新增或更新 1 个程序集
+
+
+[[[安装或更新模块（安装）]]]
+[2022/12/16 14:12:05.1829]
+[线程：11]
+[2022/12/16/周五 14:12:05 +08:00] 开始扫描 XncfModules
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Areas.Admin.Register
+[2022/12/16/周五 14:12:05 +08:00] 符合尝试安装/更新要求，继续执行
+[2022/12/16/周五 14:12:05 +08:00] 是否更新版本：Install
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Tenant.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemCore.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.SystemPermission.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.AreasBase.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfModuleManager.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Menu.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.XncfBuilder.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Swagger.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Installer.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.DatabaseToolkit.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描到 IXncfRegister：Senparc.Xncf.Terminal.Register
+[2022/12/16/周五 14:12:05 +08:00] 由于只要求更新 uid：[00000000-0000-0001-0001-000000000001]，此模块跳过
+[2022/12/16/周五 14:12:05 +08:00] 扫描结束，共新增或更新 1 个程序集
+
+
+[[[BaseException]]]
+[2022/12/16 14:12:30.5594]
+[线程：28]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:12:30.5597]
+[线程：28]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:12:31.0221]
+[线程：32]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:31.0674]
+[线程：8]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:31.1142]
+[线程：32]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:31.2126]
+[线程：35]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:31.2154]
+[线程：8]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:39.9342]
+[线程：39]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:40.0201]
+[线程：39]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:40.0563]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:55.8590]
+[线程：39]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:55.9271]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:55.9582]
+[线程：39]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:58.3381]
+[线程：34]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:58.3862]
+[线程：39]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:12:58.4120]
+[线程：34]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:00.5644]
+[线程：34]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:13:00.5646]
+[线程：34]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3063]
+[线程：34]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3305]
+[线程：42]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3306]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3306]
+[线程：48]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3310]
+[线程：41]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3323]
+[线程：41]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3323]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3324]
+[线程：42]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3587]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3738]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3790]
+[线程：41]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:14.3929]
+[线程：42]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:15.5858]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:15.6269]
+[线程：8]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:15.6535]
+[线程：41]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:15.6536]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:17.9296]
+[线程：41]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:17.9742]
+[线程：41]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:17.9908]
+[线程：39]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:18.0266]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:13:30.5808]
+[线程：39]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:13:30.5810]
+[线程：39]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:14:00.5974]
+[线程：56]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:14:00.5976]
+[线程：56]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:14:30.6108]
+[线程：60]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:14:30.6110]
+[线程：60]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:15:00.6138]
+[线程：65]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:15:00.6140]
+[线程：65]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:15:18.3775]
+[线程：66]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[管理员登录]]]
+[2022/12/16 14:15:18.5312]
+[线程：66]
+[2022/12/16/周五 14:15:18 +08:00]	管理员登录：SenparcCoreAdmin96
+[2022/12/16/周五 14:15:18 +08:00]	结果：True
+
+
+[[[BaseException]]]
+[2022/12/16 14:15:18.6849]
+[线程：65]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:18.9362]
+[线程：59]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:19.2494]
+[线程：59]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:19.2494]
+[线程：66]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:30.6242]
+[线程：59]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:15:30.6244]
+[线程：59]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.4781]
+[线程：36]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.5284]
+[线程：59]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.5381]
+[线程：65]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.5381]
+[线程：74]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.5394]
+[线程：36]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.5394]
+[线程：70]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.5414]
+[线程：70]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.5437]
+[线程：75]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.5955]
+[线程：78]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.6367]
+[线程：78]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.6368]
+[线程：79]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.6688]
+[线程：70]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.6966]
+[线程：70]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:15:36.7161]
+[线程：78]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:00.6279]
+[线程：74]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:16:00.6281]
+[线程：74]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:16:06.4287]
+[线程：81]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:06.6210]
+[线程：78]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:06.6211]
+[线程：80]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:06.9238]
+[线程：78]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:21.3460]
+[线程：80]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:21.3895]
+[线程：90]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:21.3897]
+[线程：87]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:21.3922]
+[线程：84]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:21.3923]
+[线程：67]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:21.3923]
+[线程：87]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:21.3924]
+[线程：86]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:21.3925]
+[线程：74]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:21.4158]
+[线程：84]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:21.4462]
+[线程：84]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:22.5616]
+[线程：84]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:22.5920]
+[线程：84]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:22.6169]
+[线程：74]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:22.9059]
+[线程：86]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:22.9338]
+[线程：86]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:22.9576]
+[线程：74]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:16:30.6374]
+[线程：74]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:16:30.6377]
+[线程：74]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:17:00.6494]
+[线程：81]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:17:00.6497]
+[线程：81]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:17:30.6590]
+[线程：81]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:17:30.6592]
+[线程：81]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:18:00.6591]
+[线程：98]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:18:00.6593]
+[线程：98]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:18:30.6733]
+[线程：98]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:18:30.6735]
+[线程：98]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:19:00.6894]
+[线程：95]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:19:00.6896]
+[线程：95]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:19:13.0743]
+[线程：106]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:19:13.1125]
+[线程：104]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:19:30.6970]
+[线程：104]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:19:30.6972]
+[线程：104]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:20:00.7048]
+[线程：102]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:20:00.7050]
+[线程：102]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:20:30.7200]
+[线程：102]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:20:30.7202]
+[线程：102]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:21:00.7347]
+[线程：111]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:21:00.7349]
+[线程：111]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:21:10.1582]
+[线程：115]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:10.1821]
+[线程：118]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:13.7594]
+[线程：102]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:13.9410]
+[线程：102]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:13.9410]
+[线程：118]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:14.2358]
+[线程：114]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:30.7373]
+[线程：114]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:21:30.7375]
+[线程：114]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:21:37.0317]
+[线程：102]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:37.0855]
+[线程：119]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:41.4067]
+[线程：119]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:41.7598]
+[线程：114]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:41.9958]
+[线程：111]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:21:42.0705]
+[线程：102]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:22:00.7389]
+[线程：114]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:22:00.7391]
+[线程：114]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:22:30.7389]
+[线程：114]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:22:30.7392]
+[线程：114]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:22:57.9637]
+[线程：113]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:22:58.3538]
+[线程：122]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:22:58.3540]
+[线程：113]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:22:58.6525]
+[线程：122]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:23:00.7417]
+[线程：113]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:23:00.7419]
+[线程：113]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:23:30.7525]
+[线程：117]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:23:30.7527]
+[线程：117]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:23:39.5182]
+[线程：126]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:23:39.5486]
+[线程：117]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:23:43.9956]
+[线程：122]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:23:44.3193]
+[线程：117]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:23:44.5657]
+[线程：122]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:23:44.6289]
+[线程：117]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:00.7678]
+[线程：122]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:24:00.7679]
+[线程：122]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:24:13.1545]
+[线程：129]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:13.4876]
+[线程：113]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:13.7324]
+[线程：113]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:13.7970]
+[线程：130]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:29.6783]
+[线程：129]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:29.7031]
+[线程：122]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:30.7682]
+[线程：126]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:24:30.7684]
+[线程：126]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:24:33.7329]
+[线程：122]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:34.0615]
+[线程：130]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:34.3001]
+[线程：130]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:34.3632]
+[线程：126]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:53.8070]
+[线程：130]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:24:53.9448]
+[线程：130]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:25:00.7748]
+[线程：126]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:25:00.7750]
+[线程：126]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:25:30.7819]
+[线程：117]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:25:30.7821]
+[线程：117]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:26:00.7956]
+[线程：125]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:26:00.7958]
+[线程：125]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:26:30.7973]
+[线程：117]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:26:30.7975]
+[线程：117]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:26:51.5493]
+[线程：128]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:26:51.8031]
+[线程：117]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:26:51.8830]
+[线程：128]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:27:00.8128]
+[线程：135]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:27:00.8130]
+[线程：135]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:27:22.6108]
+[线程：139]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:27:22.9314]
+[线程：140]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:27:23.1864]
+[线程：139]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:27:30.8218]
+[线程：143]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:27:30.8221]
+[线程：143]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:27:45.3808]
+[线程：140]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:27:45.5377]
+[线程：136]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:27:48.5088]
+[线程：141]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:28:00.8283]
+[线程：138]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:28:00.8284]
+[线程：138]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:28:30.8312]
+[线程：138]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:28:30.8313]
+[线程：138]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:28:35.6238]
+[线程：137]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:28:35.6459]
+[线程：138]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:29:00.8445]
+[线程：138]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:29:00.8448]
+[线程：138]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:29:30.8485]
+[线程：142]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:29:30.8487]
+[线程：142]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:30:00.8584]
+[线程：148]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:30:00.8586]
+[线程：148]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:30:30.8614]
+[线程：148]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:30:30.8616]
+[线程：148]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:30:57.8539]
+[线程：154]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:30:57.8790]
+[线程：158]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:31:00.8612]
+[线程：158]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:31:00.8613]
+[线程：158]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:31:20.9176]
+[线程：157]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:31:20.9378]
+[线程：161]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:31:30.6836]
+[线程：162]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:31:30.8636]
+[线程：162]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:31:30.8639]
+[线程：162]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:31:30.8688]
+[线程：162]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:31:30.8688]
+[线程：161]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:31:54.5238]
+[线程：160]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:31:54.6648]
+[线程：162]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:32:00.8652]
+[线程：162]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:32:00.8653]
+[线程：162]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:32:22.2296]
+[线程：165]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:32:22.2519]
+[线程：170]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:32:30.6596]
+[线程：162]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:32:30.6843]
+[线程：162]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:32:30.8675]
+[线程：162]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:32:30.8678]
+[线程：162]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:32:34.8581]
+[线程：170]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:32:34.9975]
+[线程：162]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:33:00.8789]
+[线程：170]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:33:00.8791]
+[线程：170]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:33:30.8901]
+[线程：170]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:33:30.8902]
+[线程：170]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:34:00.8926]
+[线程：170]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:34:00.8928]
+[线程：170]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:34:30.8981]
+[线程：172]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:34:30.8983]
+[线程：172]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:34:31.1612]
+[线程：175]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:34:31.3161]
+[线程：181]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:35:00.9072]
+[线程：181]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:35:00.9074]
+[线程：181]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:35:30.9220]
+[线程：185]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:35:30.9222]
+[线程：185]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:36:00.9252]
+[线程：185]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:36:00.9254]
+[线程：185]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:36:30.9390]
+[线程：179]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:36:30.9392]
+[线程：179]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:37:00.9410]
+[线程：191]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:37:00.9412]
+[线程：191]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:37:30.9545]
+[线程：194]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:37:30.9547]
+[线程：194]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:38:00.9582]
+[线程：197]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:38:00.9584]
+[线程：197]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:38:30.9707]
+[线程：200]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:38:30.9709]
+[线程：200]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:39:00.9737]
+[线程：203]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:39:00.9739]
+[线程：203]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:39:30.9862]
+[线程：206]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:39:30.9864]
+[线程：206]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:40:01.0009]
+[线程：207]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:40:01.0011]
+[线程：207]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:40:31.0029]
+[线程：212]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:40:31.0031]
+[线程：212]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:41:01.0146]
+[线程：215]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:41:01.0148]
+[线程：215]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:41:31.0181]
+[线程：218]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:41:31.0183]
+[线程：218]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:42:01.0351]
+[线程：218]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:42:01.0353]
+[线程：218]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:42:31.0529]
+[线程：218]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:42:31.0531]
+[线程：218]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:43:01.0638]
+[线程：225]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:43:01.0640]
+[线程：225]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:43:19.9627]
+[线程：223]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:43:20.2111]
+[线程：218]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:43:20.2111]
+[线程：225]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:43:20.5103]
+[线程：228]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:43:31.0737]
+[线程：225]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:43:31.0739]
+[线程：225]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:43:40.0317]
+[线程：225]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:43:40.4850]
+[线程：228]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:44:01.0868]
+[线程：228]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:44:01.0869]
+[线程：228]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:44:31.0948]
+[线程：234]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:44:31.0950]
+[线程：234]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:45:01.0964]
+[线程：234]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:45:01.0966]
+[线程：234]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:45:31.0980]
+[线程：234]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:45:31.0982]
+[线程：234]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:45:32.3934]
+[线程：234]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:45:32.6764]
+[线程：238]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:46:01.1109]
+[线程：238]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:46:01.1111]
+[线程：238]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:46:31.1123]
+[线程：238]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:46:31.1125]
+[线程：238]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:46:55.3824]
+[线程：242]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:46:55.6779]
+[线程：246]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:47:01.1152]
+[线程：246]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:47:01.1155]
+[线程：246]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:47:03.8697]
+[线程：238]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:47:04.1424]
+[线程：250]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:47:31.1289]
+[线程：250]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:47:31.1291]
+[线程：250]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:47:36.4681]
+[线程：248]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:47:36.7284]
+[线程：250]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:48:01.1433]
+[线程：250]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:48:01.1435]
+[线程：250]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:48:31.1602]
+[线程：250]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:48:31.1604]
+[线程：250]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:49:01.1775]
+[线程：252]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:49:01.1777]
+[线程：252]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:49:31.1874]
+[线程：252]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:49:31.1876]
+[线程：252]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:50:01.1889]
+[线程：252]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:50:01.1891]
+[线程：252]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:50:31.1945]
+[线程：252]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:50:31.1947]
+[线程：252]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.0348]
+[线程：265]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.0790]
+[线程：252]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.0825]
+[线程：252]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.0825]
+[线程：277]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.0851]
+[线程：282]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.0854]
+[线程：272]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.0885]
+[线程：275]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.0885]
+[线程：283]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.1323]
+[线程：275]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.1594]
+[线程：283]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.1595]
+[线程：282]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:39.1676]
+[线程：283]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:40.5827]
+[线程：283]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:40.6262]
+[线程：282]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:50:40.6526]
+[线程：275]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:51:01.1973]
+[线程：283]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:51:01.1975]
+[线程：283]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:51:31.2087]
+[线程：288]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:51:31.2092]
+[线程：288]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:51:48.9513]
+[线程：284]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:51:49.2126]
+[线程：293]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2022/12/16 14:52:01.2099]
+[线程：292]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:52:01.2101]
+[线程：292]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:52:31.2119]
+[线程：292]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:52:31.2121]
+[线程：292]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:53:01.2218]
+[线程：291]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:53:01.2221]
+[线程：291]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:53:31.2249]
+[线程：291]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:53:31.2251]
+[线程：291]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:54:01.2404]
+[线程：291]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:54:01.2406]
+[线程：291]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:54:31.2580]
+[线程：287]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:54:31.2582]
+[线程：287]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:55:01.2686]
+[线程：287]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:55:01.2688]
+[线程：287]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:55:31.2833]
+[线程：288]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:55:31.2835]
+[线程：288]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:56:01.2993]
+[线程：278]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:56:01.2995]
+[线程：278]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:56:31.3008]
+[线程：278]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:56:31.3009]
+[线程：278]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:57:01.3126]
+[线程：278]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:57:01.3128]
+[线程：278]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:57:31.3141]
+[线程：275]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:57:31.3143]
+[线程：275]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:58:01.3315]
+[线程：279]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:58:01.3317]
+[线程：279]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:58:31.3458]
+[线程：265]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:58:31.3460]
+[线程：265]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:59:01.3606]
+[线程：265]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:59:01.3608]
+[线程：265]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 14:59:31.3615]
+[线程：265]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 14:59:31.3617]
+[线程：265]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:00:01.3764]
+[线程：264]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:00:01.3766]
+[线程：264]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:00:31.3785]
+[线程：260]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:00:31.3787]
+[线程：260]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:01:01.3951]
+[线程：251]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:01:01.3953]
+[线程：251]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:01:31.4098]
+[线程：251]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:01:31.4099]
+[线程：251]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:02:01.4102]
+[线程：251]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:02:01.4104]
+[线程：251]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:02:31.4230]
+[线程：255]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:02:31.4233]
+[线程：255]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:03:01.4368]
+[线程：247]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:03:01.4370]
+[线程：247]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:03:31.4423]
+[线程：242]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:03:31.4426]
+[线程：242]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:04:01.4531]
+[线程：246]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:04:01.4533]
+[线程：246]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:04:31.4609]
+[线程：246]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:04:31.4611]
+[线程：246]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:05:01.4706]
+[线程：244]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:05:01.4708]
+[线程：244]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:05:31.4842]
+[线程：238]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:05:31.4844]
+[线程：238]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:06:01.4879]
+[线程：235]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:06:01.4882]
+[线程：235]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:06:31.4900]
+[线程：229]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:06:31.4902]
+[线程：229]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:07:01.4924]
+[线程：228]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:07:01.4926]
+[线程：228]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:07:31.5002]
+[线程：228]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:07:31.5004]
+[线程：228]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:08:01.5159]
+[线程：228]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:08:01.5160]
+[线程：228]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:08:31.5178]
+[线程：228]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:08:31.5179]
+[线程：228]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:09:01.5293]
+[线程：224]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:09:01.5295]
+[线程：224]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:09:31.5322]
+[线程：224]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:09:31.5323]
+[线程：224]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:10:01.5488]
+[线程：224]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:10:01.5490]
+[线程：224]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:10:31.5497]
+[线程：224]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:10:31.5499]
+[线程：224]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:11:01.5641]
+[线程：216]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:11:01.5643]
+[线程：216]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:11:31.5699]
+[线程：216]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:11:31.5701]
+[线程：216]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:12:01.5787]
+[线程：210]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:12:01.5789]
+[线程：210]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:12:31.5957]
+[线程：216]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:12:31.5959]
+[线程：216]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:13:01.6087]
+[线程：200]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:13:01.6089]
+[线程：200]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:13:31.6123]
+[线程：200]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:13:31.6124]
+[线程：200]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:14:01.6256]
+[线程：201]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:14:01.6258]
+[线程：201]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:14:31.6421]
+[线程：198]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:14:31.6423]
+[线程：198]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:15:01.6426]
+[线程：193]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:15:01.6428]
+[线程：193]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:15:31.6600]
+[线程：189]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:15:31.6602]
+[线程：189]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:16:01.6719]
+[线程：189]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:16:01.6721]
+[线程：189]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:16:31.6736]
+[线程：187]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:16:31.6738]
+[线程：187]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:17:01.6913]
+[线程：186]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:17:01.6915]
+[线程：186]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:17:31.6919]
+[线程：179]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:17:31.6921]
+[线程：179]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:18:01.7064]
+[线程：181]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:18:01.7066]
+[线程：181]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:18:31.7085]
+[线程：180]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:18:31.7087]
+[线程：180]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:19:01.7238]
+[线程：180]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:19:01.7239]
+[线程：180]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:19:31.7366]
+[线程：180]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:19:31.7368]
+[线程：180]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:20:01.7394]
+[线程：169]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:20:01.7396]
+[线程：169]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:20:31.7403]
+[线程：169]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:20:31.7405]
+[线程：169]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2022/12/16 15:21:01.7518]
+[线程：164]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2022/12/16 15:21:01.7520]
+[线程：164]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+

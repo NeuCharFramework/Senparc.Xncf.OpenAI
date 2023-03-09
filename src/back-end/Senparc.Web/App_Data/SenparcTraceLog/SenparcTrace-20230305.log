@@ -1,0 +1,2349 @@
+[[[系统日志]]]
+[2023/03/05 00:06:54.1748]
+[线程：1]
+NeuCharFramework 系统启动
+
+[[[自动注册扩展缓存完成]]]
+[2023/03/05 00:06:54.1771]
+[线程：1]
+注册总用时：0.0003ms
+自动扫描程序集：0个
+扩展缓存：
+
+[[[启动线程]]]
+[2023/03/05 00:06:54.1984]
+[线程：23]
+Senparc.Xncf.DatabaseToolkit-定时备份
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2689]
+[线程：14]
+Senparc.Areas.Admin.Models.AdminUserInfoConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2740]
+[线程：14]
+Senparc.Xncf.SystemManager.Domain.FeedbackConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2757]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Areas.Admin.Domain.Models.AdminUserInfo, Senparc.Areas.Admin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2758]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.DatabaseToolkit.DbConfig, Senparc.Xncf.DatabaseToolkit, Version=0.16.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2771]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysMenu, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2809]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysButton, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2824]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.OpenAI.OpenAiConfig, Senparc.Xncf.OpenAI, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2834]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.SystemManager.Domain.DatabaseModel.FeedBack, Senparc.Xncf.SystemManager, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2837]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.SystemConfig, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2859]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRolePermission, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2896]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRoleAdminUserInfo, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2915]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRole, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2930]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.Tenant.Domain.DataBaseModel.TenantInfo, Senparc.Xncf.Tenant, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2947]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.XncfBuilder.Config, Senparc.Xncf.XncfBuilder, Version=0.13.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:06:55.2975]
+[线程：14]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.XncfModule, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[SenparcEntities 数据库实体注入]]]
+[2023/03/05 00:06:55.2976]
+[线程：14]
+耗时：33.7299ms
+
+[[[BaseException]]]
+[2023/03/05 00:06:55.7500]
+[线程：15]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:06:55.7624]
+[线程：15]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:06:55.7903]
+[线程：14]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:05.4262]
+[线程：14]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:05.4647]
+[线程：13]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:25.7791]
+[线程：14]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:07:25.7793]
+[线程：14]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:07:34.7826]
+[线程：31]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:34.9142]
+[线程：9]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:35.1442]
+[线程：31]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:35.3380]
+[线程：33]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:35.3380]
+[线程：34]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:45.8586]
+[线程：31]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[管理员登录]]]
+[2023/03/05 00:07:46.1015]
+[线程：34]
+[2023/3/5/周日 0:07:46 +08:00]	管理员登录：SenparcCoreAdmin06
+[2023/3/5/周日 0:07:46 +08:00]	结果：True
+
+
+[[[BaseException]]]
+[2023/03/05 00:07:46.1386]
+[线程：31]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:46.8031]
+[线程：13]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:46.8032]
+[线程：34]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:46.8062]
+[线程：31]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:07:55.7910]
+[线程：31]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:07:55.7913]
+[线程：31]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:08:25.7987]
+[线程：31]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:08:25.7989]
+[线程：31]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:08:37.9908]
+[线程：42]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:08:55.7993]
+[线程：31]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:08:55.7995]
+[线程：31]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:09:25.8004]
+[线程：31]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:09:25.8006]
+[线程：31]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[系统日志]]]
+[2023/03/05 00:17:25.4035]
+[线程：1]
+NeuCharFramework 系统启动
+
+[[[自动注册扩展缓存完成]]]
+[2023/03/05 00:17:25.4071]
+[线程：1]
+注册总用时：0.0022ms
+自动扫描程序集：0个
+扩展缓存：
+
+[[[启动线程]]]
+[2023/03/05 00:17:25.4337]
+[线程：23]
+Senparc.Xncf.DatabaseToolkit-定时备份
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6322]
+[线程：12]
+Senparc.Areas.Admin.Models.AdminUserInfoConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6347]
+[线程：12]
+Senparc.Xncf.SystemManager.Domain.FeedbackConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6355]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Areas.Admin.Domain.Models.AdminUserInfo, Senparc.Areas.Admin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6356]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.DatabaseToolkit.DbConfig, Senparc.Xncf.DatabaseToolkit, Version=0.16.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6364]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysMenu, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6423]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysButton, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6441]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.OpenAI.OpenAiConfig, Senparc.Xncf.OpenAI, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6449]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.SystemManager.Domain.DatabaseModel.FeedBack, Senparc.Xncf.SystemManager, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6450]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.SystemConfig, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6464]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRolePermission, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6479]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRoleAdminUserInfo, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6493]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRole, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6529]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.Tenant.Domain.DataBaseModel.TenantInfo, Senparc.Xncf.Tenant, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6579]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.XncfBuilder.Config, Senparc.Xncf.XncfBuilder, Version=0.13.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:17:26.6619]
+[线程：12]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.XncfModule, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[SenparcEntities 数据库实体注入]]]
+[2023/03/05 00:17:26.6621]
+[线程：12]
+耗时：36.0607ms
+
+[[[BaseException]]]
+[2023/03/05 00:17:27.2774]
+[线程：19]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:17:27.2817]
+[线程：19]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:17:27.3182]
+[线程：12]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:17:29.7382]
+[线程：4]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:17:29.7702]
+[线程：19]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:17:57.2852]
+[线程：3]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:17:57.2855]
+[线程：3]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:18:27.2853]
+[线程：36]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:18:27.2855]
+[线程：36]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:18:30.5453]
+[线程：26]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:18:30.6398]
+[线程：33]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:18:30.7695]
+[线程：33]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:18:30.8650]
+[线程：41]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:18:30.8650]
+[线程：35]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:18:35.7714]
+[线程：26]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[管理员登录]]]
+[2023/03/05 00:18:35.9599]
+[线程：26]
+[2023/3/5/周日 0:18:35 +08:00]	管理员登录：SenparcCoreAdmin06
+[2023/3/5/周日 0:18:35 +08:00]	结果：True
+
+
+[[[BaseException]]]
+[2023/03/05 00:18:35.9903]
+[线程：41]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:18:36.3250]
+[线程：26]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:18:36.6325]
+[线程：35]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:18:36.6354]
+[线程：33]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:18:57.2865]
+[线程：48]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:18:57.2868]
+[线程：48]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:19:27.3004]
+[线程：47]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:19:27.3006]
+[线程：47]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:19:39.3087]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:19:39.5416]
+[线程：47]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:19:39.8450]
+[线程：34]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:19:39.8452]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:19:53.7714]
+[线程：40]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:19:57.3117]
+[线程：35]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:19:57.3119]
+[线程：35]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:20:27.3146]
+[线程：34]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:20:27.3149]
+[线程：34]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:20:57.3280]
+[线程：29]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:20:57.3283]
+[线程：29]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:21:27.3410]
+[线程：51]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:21:27.3413]
+[线程：51]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:21:57.3556]
+[线程：54]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:21:57.3559]
+[线程：54]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:22:27.3691]
+[线程：59]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:22:27.3693]
+[线程：59]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:22:57.3815]
+[线程：61]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:22:57.3817]
+[线程：61]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:23:27.3945]
+[线程：70]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:23:27.3947]
+[线程：70]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:23:57.3961]
+[线程：73]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:23:57.3963]
+[线程：73]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:24:27.3982]
+[线程：78]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:24:27.3984]
+[线程：78]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:24:57.4003]
+[线程：77]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:24:57.4005]
+[线程：77]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:25:27.4059]
+[线程：81]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:25:27.4061]
+[线程：81]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:25:57.4203]
+[线程：92]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:25:57.4205]
+[线程：92]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:26:27.4293]
+[线程：96]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:26:27.4295]
+[线程：96]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:26:57.4404]
+[线程：98]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:26:57.4406]
+[线程：98]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:27:27.4528]
+[线程：99]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:27:27.4531]
+[线程：99]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:27:57.4569]
+[线程：104]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:27:57.4573]
+[线程：104]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:28:27.4702]
+[线程：112]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:28:27.4704]
+[线程：112]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:28:57.4880]
+[线程：113]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:28:57.4882]
+[线程：113]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:29:27.5021]
+[线程：124]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:29:27.5023]
+[线程：124]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:29:57.5208]
+[线程：121]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:29:57.5210]
+[线程：121]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:30:27.5365]
+[线程：126]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:30:27.5367]
+[线程：126]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:30:57.5501]
+[线程：130]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:30:57.5503]
+[线程：130]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:31:27.5640]
+[线程：139]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:31:27.5643]
+[线程：139]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[系统日志]]]
+[2023/03/05 00:31:55.0248]
+[线程：1]
+NeuCharFramework 系统启动
+
+[[[自动注册扩展缓存完成]]]
+[2023/03/05 00:31:55.0278]
+[线程：1]
+注册总用时：0.0009ms
+自动扫描程序集：0个
+扩展缓存：
+
+[[[启动线程]]]
+[2023/03/05 00:31:55.0522]
+[线程：21]
+Senparc.Xncf.DatabaseToolkit-定时备份
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1444]
+[线程：15]
+Senparc.Areas.Admin.Models.AdminUserInfoConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1467]
+[线程：15]
+Senparc.Xncf.SystemManager.Domain.FeedbackConfigurationMapping
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1476]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Areas.Admin.Domain.Models.AdminUserInfo, Senparc.Areas.Admin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1476]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.DatabaseToolkit.DbConfig, Senparc.Xncf.DatabaseToolkit, Version=0.16.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1484]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysMenu, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1514]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysButton, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1524]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.OpenAI.OpenAiConfig, Senparc.Xncf.OpenAI, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1536]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.SystemManager.Domain.DatabaseModel.FeedBack, Senparc.Xncf.SystemManager, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1539]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.SystemConfig, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1577]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRolePermission, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1591]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRoleAdminUserInfo, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1605]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.SysRole, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1619]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.Tenant.Domain.DataBaseModel.TenantInfo, Senparc.Xncf.Tenant, Version=0.3.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1633]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Xncf.XncfBuilder.Config, Senparc.Xncf.XncfBuilder, Version=0.13.6.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[监测到 ApplyAllAutoConfigurationMapping 执行]]]
+[2023/03/05 00:31:56.1651]
+[线程：15]
+Senparc.Ncf.Core.Models.DataBaseModel.BlankEntityTypeConfiguration`1[[Senparc.Ncf.Core.Models.DataBaseModel.XncfModule, Senparc.Ncf.Core, Version=0.11.4.0, Culture=neutral, PublicKeyToken=null]]
+
+[[[SenparcEntities 数据库实体注入]]]
+[2023/03/05 00:31:56.1652]
+[线程：15]
+耗时：24.293ms
+
+[[[BaseException]]]
+[2023/03/05 00:31:56.6181]
+[线程：15]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:31:56.6260]
+[线程：15]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:31:56.6541]
+[线程：13]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:32:16.8110]
+[线程：12]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:32:16.9485]
+[线程：13]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:32:17.0357]
+[线程：29]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:32:17.0380]
+[线程：15]
+	NcfUninstallException
+	Message：fullTenantInfoCache.GetDataAsync 读取失败，推测系统未安装
+	StackTrace：
+
+[[[BaseException]]]
+[2023/03/05 00:32:26.6436]
+[线程：34]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:32:26.6439]
+[线程：34]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:32:56.6575]
+[线程：8]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:32:56.6578]
+[线程：8]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:33:26.6608]
+[线程：43]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:33:26.6611]
+[线程：43]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:33:56.6618]
+[线程：47]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:33:56.6621]
+[线程：47]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:34:26.6646]
+[线程：49]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:34:26.6648]
+[线程：49]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:34:56.6661]
+[线程：52]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:34:56.6663]
+[线程：52]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:35:26.6806]
+[线程：51]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:35:26.6808]
+[线程：51]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:35:56.6932]
+[线程：55]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:35:56.6934]
+[线程：55]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:36:26.7033]
+[线程：58]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:36:26.7036]
+[线程：58]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:36:56.7056]
+[线程：64]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:36:56.7058]
+[线程：64]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:37:26.7192]
+[线程：66]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:37:26.7195]
+[线程：66]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:37:56.7381]
+[线程：71]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:37:56.7383]
+[线程：71]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:38:26.7526]
+[线程：71]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:38:26.7529]
+[线程：71]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:38:56.7677]
+[线程：66]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:38:56.7679]
+[线程：66]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:39:26.7813]
+[线程：67]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:39:26.7816]
+[线程：67]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:39:56.7891]
+[线程：64]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:39:56.7894]
+[线程：64]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:40:26.7997]
+[线程：58]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:40:26.7999]
+[线程：58]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:40:56.8140]
+[线程：69]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:40:56.8142]
+[线程：69]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:41:26.8296]
+[线程：73]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:41:26.8298]
+[线程：73]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:41:56.8423]
+[线程：71]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:41:56.8425]
+[线程：71]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:42:26.8455]
+[线程：36]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:42:26.8457]
+[线程：36]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:42:56.8592]
+[线程：51]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:42:56.8595]
+[线程：51]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:43:26.8646]
+[线程：52]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:43:26.8648]
+[线程：52]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:43:56.8767]
+[线程：43]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:43:56.8770]
+[线程：43]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:44:26.8783]
+[线程：41]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:44:26.8785]
+[线程：41]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:44:56.8921]
+[线程：8]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:44:56.8923]
+[线程：8]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:45:26.9078]
+[线程：31]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:45:26.9080]
+[线程：31]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:45:56.9083]
+[线程：15]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:45:56.9085]
+[线程：15]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:46:26.9238]
+[线程：13]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:46:26.9241]
+[线程：13]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:46:56.9397]
+[线程：9]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:46:56.9400]
+[线程：9]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:47:26.9531]
+[线程：78]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:47:26.9533]
+[线程：78]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:47:56.9681]
+[线程：79]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:47:56.9682]
+[线程：79]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:48:26.9698]
+[线程：80]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:48:26.9700]
+[线程：80]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:48:56.9882]
+[线程：9]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:48:56.9885]
+[线程：9]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:49:27.0003]
+[线程：4]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:49:27.0007]
+[线程：4]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:49:57.0195]
+[线程：17]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:49:57.0197]
+[线程：17]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:50:27.0337]
+[线程：16]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:50:27.0339]
+[线程：16]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:50:57.0375]
+[线程：39]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:50:57.0378]
+[线程：39]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:51:27.0492]
+[线程：38]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:51:27.0494]
+[线程：38]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:51:57.0520]
+[线程：44]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:51:57.0522]
+[线程：44]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:52:27.0542]
+[线程：43]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:52:27.0545]
+[线程：43]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:52:57.0638]
+[线程：36]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:52:57.0640]
+[线程：36]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:53:27.0821]
+[线程：63]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:53:27.0824]
+[线程：63]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:53:57.0951]
+[线程：57]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:53:57.0954]
+[线程：57]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:54:27.1130]
+[线程：75]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:54:27.1133]
+[线程：75]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:54:57.1268]
+[线程：61]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:54:57.1270]
+[线程：61]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:55:27.1429]
+[线程：67]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:55:27.1431]
+[线程：67]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:55:57.1570]
+[线程：30]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:55:57.1572]
+[线程：30]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:56:27.1591]
+[线程：74]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:56:27.1594]
+[线程：74]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:56:57.1760]
+[线程：88]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:56:57.1763]
+[线程：88]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:57:27.1888]
+[线程：94]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:57:27.1891]
+[线程：94]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:57:57.2043]
+[线程：99]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:57:57.2045]
+[线程：99]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:58:27.2199]
+[线程：90]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:58:27.2202]
+[线程：90]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:58:57.2361]
+[线程：107]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:58:57.2366]
+[线程：107]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:59:27.2379]
+[线程：110]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:59:27.2381]
+[线程：110]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 00:59:57.2536]
+[线程：109]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 00:59:57.2539]
+[线程：109]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:00:27.2665]
+[线程：117]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:00:27.2668]
+[线程：117]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:00:57.2692]
+[线程：123]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:00:57.2694]
+[线程：123]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:01:27.2833]
+[线程：127]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:01:27.2836]
+[线程：127]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:01:57.2861]
+[线程：134]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:01:57.2863]
+[线程：134]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:02:27.3008]
+[线程：131]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:02:27.3010]
+[线程：131]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:02:57.3145]
+[线程：143]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:02:57.3147]
+[线程：143]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:03:27.3289]
+[线程：147]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:03:27.3291]
+[线程：147]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:03:57.3461]
+[线程：145]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:03:57.3464]
+[线程：145]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:04:27.3621]
+[线程：148]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:04:27.3624]
+[线程：148]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:04:57.3758]
+[线程：158]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:04:57.3761]
+[线程：158]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:05:27.3777]
+[线程：162]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:05:27.3780]
+[线程：162]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:05:57.3929]
+[线程：167]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:05:57.3932]
+[线程：167]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:06:27.3948]
+[线程：172]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:06:27.3950]
+[线程：172]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:06:57.4070]
+[线程：169]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:06:57.4073]
+[线程：169]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:07:27.4104]
+[线程：175]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:07:27.4106]
+[线程：175]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:07:57.4243]
+[线程：181]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:07:57.4246]
+[线程：181]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:08:27.4266]
+[线程：180]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:08:27.4268]
+[线程：180]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:08:57.4287]
+[线程：193]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:08:57.4289]
+[线程：193]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:09:27.4292]
+[线程：190]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:09:27.4294]
+[线程：190]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:09:57.4398]
+[线程：194]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:09:57.4401]
+[线程：194]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:10:27.4542]
+[线程：206]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:10:27.4544]
+[线程：206]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:10:57.4724]
+[线程：204]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:10:57.4726]
+[线程：204]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:11:27.4868]
+[线程：208]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:11:27.4870]
+[线程：208]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:11:57.5041]
+[线程：213]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:11:57.5044]
+[线程：213]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:12:27.5162]
+[线程：216]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:12:27.5164]
+[线程：216]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:12:57.5201]
+[线程：222]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:12:57.5203]
+[线程：222]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+
+[[[BaseException]]]
+[2023/03/05 01:13:27.5337]
+[线程：229]
+	NcfModuleException
+	Message：数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+	StackTrace：
+
+[[[DatabaseToolkit]]]
+[2023/03/05 01:13:27.5340]
+[线程：229]
+数据库工具包 模块当前不可用，跳过数据库自动备份轮询
+   at Senparc.Xncf.DatabaseToolkit.Register.<ThreadConfig>b__24_0(IApplicationBuilder app, ThreadInfo threadInfo)
+   at Senparc.Ncf.XncfBase.Threads.XncfThreadBuilder.<>c__DisplayClass2_1.<<Build>b__0>d.MoveNext()
+
+

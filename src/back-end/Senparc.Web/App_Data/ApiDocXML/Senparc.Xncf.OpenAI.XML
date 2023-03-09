@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senparc.Xncf.OpenAI</name>
+    </assembly>
+    <members>
+        <member name="M:Senparc.Xncf.OpenAI.Domain.Services.OpenAiConfigService.GetOpenAiConfigDtoAsync">
+            <summary>
+            获取 OpenAiConfig 配置信息。其中 AppKey 为部分信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Xncf.OpenAI.Domain.Services.OpenAiConfigService.Update(System.String,System.String)">
+            <summary>
+            更新
+            </summary>
+            <param name="appKey"></param>
+            <param name="organizationID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.Xncf.OpenAI.Domain.Services.OpenAiService.GetOpenAiServiceAsync">
+            <summary>
+            获取 OpenAIService 对象
+            </summary>
+            <returns></returns>
+            <exception cref="T:Senparc.Ncf.Core.Exceptions.NcfExceptionBase"></exception>
+        </member>
+        <member name="T:Senparc.Xncf.OpenAI.OpenAiConfig">
+            <summary>
+            OpenAiConfig 实体类
+            </summary>
+        </member>
+        <member name="M:Senparc.Xncf.OpenAI.OpenAiConfig.Update(System.String,System.String)">
+            <summary>
+            更新信息
+            </summary>
+            <param name="apiKey"></param>
+            <param name="organizationID"></param>
+        </member>
+        <member name="M:Senparc.Xncf.OpenAI.OpenAiConfig.GetOriginalAppKey">
+            <summary>
+            获取原始的 AppId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Senparc.Xncf.OpenAI.Models.SenparcDbContextFactory_MySql">
+            <summary>
+            设计时 DbContext 创建（仅在开发时创建 Code-First 的数据库 Migration 使用，在生产环境不会执行）
+            <para>1、切换至 Debug 模式</para>
+            <para>2、运行：PM> add-migration [更新名称] -c OpenAISenparcEntities_MySql -o Domain/Migrations/Migrations.MySql </para>
+            </summary>
+        </member>
+        <member name="T:Senparc.Xncf.OpenAI.Models.SenparcDbContextFactory_Oracle">
+            <summary>
+            设计时 DbContext 创建（仅在开发时创建 Code-First 的数据库 Migration 使用，在生产环境不会执行）
+            <para>1、切换至 Debug 模式</para>
+            <para>2、运行：PM> add-migration [更新名称] -c OpenAISenparcEntities_Oracle -o Domain/Migrations/Migrations.Oracle </para>
+            </summary>
+        </member>
+        <member name="T:Senparc.Xncf.OpenAI.Models.SenparcDbContextFactory_PostgreSQL">
+            <summary>
+            设计时 DbContext 创建（仅在开发时创建 Code-First 的数据库 Migration 使用，在生产环境不会执行）
+            <para>1、切换至 Debug 模式</para>
+            <para>2、运行：PM> add-migration [更新名称] -c OpenAISenparcEntities_PostgreSQL -o Migrations/Migrations.PostgreSQL </para>
+            </summary>
+        </member>
+        <member name="T:Senparc.Xncf.OpenAI.Models.SenparcDbContextFactory_Sqlite">
+            <summary>
+            设计时 DbContext 创建（仅在开发时创建 Code-First 的数据库 Migration 使用，在生产环境不会执行）
+            <para>1、切换至 Debug 模式</para>
+            <para>2、运行：PM> add-migration [更新名称] -c OpenAISenparcEntities_Sqlite -o Domain/Migrations/Migrations.Sqlite </para>
+            </summary>
+        </member>
+        <member name="T:Senparc.Xncf.OpenAI.Models.SenparcDbContextFactory_SqlServer">
+            <summary>
+            设计时 DbContext 创建（仅在开发时创建 Code-First 的数据库 Migration 使用，在生产环境不会执行）
+            <para>1、切换至 Debug 模式</para>
+            <para>2、运行：PM> add-migration [更新名称] -c OpenAISenparcEntities_SqlServer -o Domain/Migrations/Migrations.SqlServer </para>
+            </summary>
+        </member>
+        <member name="T:Senparc.Xncf.OpenAI.Models.SenparcDbContextFactoryConfig">
+            <summary>
+            SenparcDbContextFactory 的公共配置
+            </summary>
+        </member>
+        <member name="P:Senparc.Xncf.OpenAI.Models.SenparcDbContextFactoryConfig.RootDictionaryPath">
+            <summary>
+            用于寻找 App_Data 文件夹，从而找到数据库连接字符串配置信息
+            </summary>
+        </member>
+        <member name="M:Senparc.Xncf.OpenAI.OHS.Local.AppService.GPT3AppService.CreateCompletionAsync(System.String,System.String,System.Int32)">
+            <summary>
+            使用不同模型运行 OpenAI
+            </summary>
+            <param name="prompt">prompt 提示信息</param>
+            <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
+            <param name="maxTokens">最大消费 Token 数量。默认为 50</param>
+            <returns></returns>
+            <exception cref="T:Senparc.Ncf.Core.Exceptions.NcfExceptionBase"></exception>
+        </member>
+        <member name="M:Senparc.Xncf.OpenAI.OHS.Local.AppService.GPT3AppService.CreateCompletionStreamAsync(System.String,System.String,System.Int32)">
+            <summary>
+            使用不同模型运行 OpenAI（使用 Stream 方式）
+            </summary>
+            <param name="prompt">prompt 提示内容</param>
+            <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
+            <param name="maxTokens">最大消费 Token 数量。默认为 50</param>
+            <returns></returns>
+            <exception cref="T:Senparc.Ncf.Core.Exceptions.NcfExceptionBase"></exception>
+        </member>
+        <member name="F:Senparc.Xncf.OpenAI.Register.DATABASE_PREFIX">
+            <summary>
+            数据库前缀
+            </summary>
+        </member>
+        <member name="P:Senparc.Xncf.OpenAI.Register.DatabaseUniquePrefix">
+            <summary>
+            数据库前缀
+            </summary>
+        </member>
+        <member name="P:Senparc.Xncf.OpenAI.Register.TryGetXncfDatabaseDbContextType">
+            <summary>
+            动态获取数据库上下文
+            </summary>
+        </member>
+    </members>
+</doc>
