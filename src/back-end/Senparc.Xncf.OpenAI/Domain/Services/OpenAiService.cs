@@ -1,6 +1,7 @@
 ﻿using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using OpenAI.GPT3;
 using OpenAI.GPT3.Managers;
+using OpenAI.GPT3.ObjectModels;
 using OpenAI.GPT3.ObjectModels.RequestModels;
 using OpenAI.GPT3.ObjectModels.ResponseModels;
 using Senparc.CO2NET.Cache;
@@ -11,6 +12,7 @@ using Senparc.Ncf.Service;
 using Senparc.Xncf.OpenAI.Domain.Models.CacheModels;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -83,19 +85,28 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
 
             chatRequest.Messages.Add(ChatMessage.FromUser(prompt));
 
-            var openAiService = await this.GetOpenAiServiceAsync();
-            var completionResult = await openAiService.ChatCompletion.CreateCompletion(chatRequest);
-
             string finalMessage = null;
-
-            if (completionResult.Successful)
+            try
             {
-                finalMessage = completionResult.Choices.First().Message.Content;
-                messages.Messages.Add(ChatMessage.FromAssistance(finalMessage));
-                await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
-            }
+                var openAiService = await this.GetOpenAiServiceAsync();
+                var completionResult = await openAiService.ChatCompletion.CreateCompletion(chatRequest);
 
+                if (completionResult.Successful)
+                {
+                    finalMessage = completionResult.Choices.First().Message.Content;
+                    messages.Messages.Add(ChatMessage.FromAssistance(finalMessage));
+                    await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
+                }
+            }
+            catch (Exception ex)
+            {
+                finalMessage = $"OpenAI GPT-3 服务出错：{ex.Message}";
+            }
+            finally
+            {
+            }
             return finalMessage;
+
         }
 
         /// <summary>
@@ -124,7 +135,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
             ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
             if (messages != null)
             {
-                if (chatNumber==0)
+                if (chatNumber == 0)
                 {
                     messages.CleanMessage();
                 }
@@ -145,9 +156,66 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
                         }
                     }
                 }
-               
+
                 await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
             }
+        }
+
+        /// <summary>
+        /// 使用 Dall·E 接口绘图
+        /// </summary>
+        /// <param name="prompt"></param>
+        /// <param name="user"></param>
+        /// <param name="size"></param>
+        /// <returns></returns>
+        public async Task<(List<Stream> streamList, string errorMessage)> GetDallEResult(string prompt, string user, string size = "512x512")
+        {
+            var openAiService = await this.GetOpenAiServiceAsync();
+
+            var imageResult = await openAiService.Image.CreateImage(new ImageCreateRequest
+            {
+                Prompt = prompt,
+                N = 2,
+                Size = size,
+                ResponseFormat = StaticValues.ImageStatics.ResponseFormat.Url,
+                User = user
+            });
+
+            List<Stream> streamResult = new List<Stream>();
+            string errorMessage = String.Empty;
+            if (imageResult.Successful)
+            {
+                var urls = imageResult.Results.Select(r => r.Url);
+                foreach (var url in urls)
+                {
+                    try
+                    {
+                        var memoryStream = new MemoryStream();
+
+                        await Senparc.CO2NET.HttpUtility.Get.DownloadAsync(base._serviceProvider, url, memoryStream);
+                        memoryStream.Seek(0, SeekOrigin.Begin);
+                        streamResult.Add(memoryStream);
+                    }
+                    catch
+                    {
+                        //TODO:显示错误信息
+                    }
+                }
+            }
+            else
+            {
+                if (imageResult.Error == null)
+                {
+                    //TODO: OpenApi Exception
+                    new NcfExceptionBase("OpenAI Error: Unknown Error");
+                }
+                else
+                {
+                    errorMessage = $"{imageResult.Error.Code} {imageResult.Error.Message}";
+                    new NcfExceptionBase($"OpenAI Error: {errorMessage}");
+                }
+            }
+            return (streamResult, errorMessage);
         }
     }
 }
