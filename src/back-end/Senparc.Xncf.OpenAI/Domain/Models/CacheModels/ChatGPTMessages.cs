@@ -46,5 +46,14 @@ namespace Senparc.Xncf.OpenAI.Domain.Models.CacheModels
         {
             Messages.Add(message);
         }
+
+        /// <summary>
+        /// 清空消息
+        /// </summary>
+        public void CleanMessage()
+        {
+            Messages = new List<ChatMessage>();
+        }
+       
     }
 }

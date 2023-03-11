@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
-		<Version>0.1.4-beta1</Version>
+		<Version>0.1.5-beta1</Version>
 		<AssemblyName>Senparc.Xncf.OpenAI</AssemblyName>
 		<RootNamespace>Senparc.Xncf.OpenAI</RootNamespace>
 		<GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
@@ -40,11 +40,11 @@
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Senparc.Ncf.DatabasePlant" Version="0.11.5-beta8" />
+		<PackageReference Include="Senparc.Ncf.DatabasePlant" Version="0.11.6.1-beta9" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Senparc.Ncf.XncfBase" Version="0.11.4-beta8" />
-		<PackageReference Include="Senparc.Ncf.AreaBase" Version="0.11.4-beta8" />
+		<PackageReference Include="Senparc.Ncf.XncfBase" Version="0.11.5.1-beta9" />
+		<PackageReference Include="Senparc.Ncf.AreaBase" Version="0.11.5.1-beta9" />
 		<None Include="App_Data\SenparcTraceLog\*" />
 	</ItemGroup>
 	<ItemGroup>
@@ -55,6 +55,9 @@
 		<PackageReference Include="Microsoft.NET.Sdk.Razor" Version="3.1.10" />
 	</ItemGroup>
 	<ItemGroup>
+		<PackageReference Include="Senparc.Weixin.AspNet" Version="0.8.5.8" />
+		<PackageReference Include="Senparc.Weixin.MP" Version="16.18.10.6" />
+		<PackageReference Include="Senparc.Xncf.WeixinManager" Version="0.8.0-beta1" />
 		<Folder Include="Domain\Models\DatabaseModel\Mapping\" />
 	</ItemGroup>
 </Project>

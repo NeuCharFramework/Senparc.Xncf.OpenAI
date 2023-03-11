@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
 {
-    [BackendJwtAuthorize]
+    //[BackendJwtAuthorize]
     [ApiBind]
     public class GPT3AppService : AppServiceBase
     {
