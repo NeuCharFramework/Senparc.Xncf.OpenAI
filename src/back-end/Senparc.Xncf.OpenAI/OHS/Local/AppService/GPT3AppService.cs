@@ -82,7 +82,6 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         /// <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
         /// <param name="maxTokens">最大消费 Token 数量。默认为 50</param>
         /// <returns></returns>
-        /// <exception cref="NcfExceptionBase"></exception>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
         public async Task<AppResponseBase<ChoiceResponse>> CreateCompletionStreamAsync(string prompt, string model = null, int maxTokens = 50)
         {
@@ -146,10 +145,8 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         /// ChatGPT 接口
         /// </summary>
         /// <param name="prompt">prompt 提示信息</param>
-        /// <param name="model">选用模型，如果留空则默认使用 text-davinci-v3</param>
         /// <param name="maxTokens">最大消费 Token 数量。默认为 50</param>
         /// <returns></returns>
-        /// <exception cref="NcfExceptionBase"></exception>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
         public async Task<AppResponseBase<string>> ChatGPTAsync(string prompt, int maxTokens = 50)
         {
@@ -166,7 +163,6 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         /// ChatGPT 接口
         /// </summary>
         /// <returns></returns>
-        /// <exception cref="NcfExceptionBase"></exception>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
         public async Task<AppResponseBase<string>> CleanLastChatGPTAsync()
         {
