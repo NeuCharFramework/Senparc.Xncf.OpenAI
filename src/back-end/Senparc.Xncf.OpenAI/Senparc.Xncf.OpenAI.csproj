@@ -4,6 +4,7 @@
 		<Version>0.1.7-beta1</Version>
 		<AssemblyName>Senparc.Xncf.OpenAI</AssemblyName>
 		<RootNamespace>Senparc.Xncf.OpenAI</RootNamespace>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
 		<GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
 		<DocumentationFile>..\..\..\BuildOutPut\Senparc.Xncf.OpenAI.XML</DocumentationFile>
 		<Description>OpenAI 和 ChatGPT 接口</Description>
@@ -38,9 +39,6 @@
 		<!--<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />-->
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
-	</ItemGroup>
-	<ItemGroup>
 		<PackageReference Include="Senparc.Ncf.DatabasePlant" Version="0.11.6.1-beta9" />
 	</ItemGroup>
 	<ItemGroup>
@@ -53,7 +51,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.1" />
 		<!-- 为解决 VS 2019 v16.8 的一个bug，需要添加下方引用 -->
-		<PackageReference Include="Microsoft.NET.Sdk.Razor" Version="3.1.10" />
+		<!--<PackageReference Include="Microsoft.NET.Sdk.Razor" Version="3.1.10" />-->
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Senparc.Weixin.AspNet" Version="0.8.5.8" />
