@@ -1,34 +1,48 @@
 <template>
-  <div class="app-container home">
-    <h1>{{ title }}1</h1>
-    <!-- 加载动态组件 -->
-    <!--    <component :is="$store.state.dynamicComponent.GLOBAL.logo"></component>-->
-    <HelloWorld msg="我是远程加载的!" />
-
-    <el-button type="primary" @click="goshopping">去商城</el-button>
+  <div>
+    <h1>{{ title }}</h1>
+    <div class="li" @click="goOpenAImian">
+      <span>{{ ulli.mianname }}</span>:
+      <span>{{ ulli.mianpath }}</span>
+    </div>
+    <div class="li" @click="goOpenAIdetail">
+      <span>{{ ulli.detailname }}</span>:
+      <span>{{ ulli.detailpath }}</span>
+    </div>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "home",
-  components: {
-    HelloWorld,
-  },
   data() {
     return {
-      title: process.env.VUE_APP_TITLE,
+      title: "Senparc.Xncf.OpenAI",
+      ulli: {
+        mianname: 'Senparc.Xncf.OpenAI首页',
+        mianpath: "/Module/SenparcXncf/openindex",
+        detailname: 'Senparc.Xncf.OpenAI对话页',
+        detailpath: "/Module/SenparcXncf/opendetail",
+      },
     };
   },
   methods: {
-    goshopping() {
+    // 回到首页
+    goOpenAImian() {
       this.$router.push({
-        path: "/appstore",
-      });
+        path: '/Module/SenparcXncf/openindex',
+      })
+    },
+    // 去到详情页
+    goOpenAIdetail() {
+      this.$router.push({
+        path: '/Module/SenparcXncf/opendetail',
+      })
     },
   },
 };
 </script>
+<style scoped>
+.li {
+  cursor: pointer;
+}
+</style>
