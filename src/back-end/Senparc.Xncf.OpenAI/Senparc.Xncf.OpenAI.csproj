@@ -59,4 +59,8 @@
 		<PackageReference Include="Senparc.Xncf.WeixinManager" Version="0.8.0.17-beta1" />
 		<Folder Include="Domain\Models\DatabaseModel\Mapping\" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\..\Senparc.AI\src\Senparc.AI.Kernel\Senparc.AI.Kernel.csproj" />
+	  <ProjectReference Include="..\..\..\..\Senparc.AI\src\Senparc.AI\Senparc.AI.csproj" />
+	</ItemGroup>
 </Project>
