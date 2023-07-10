@@ -159,48 +159,11 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <returns></returns>
         public async Task CleanChatGPT(string userId)
         {
-            var cacheKey = ChatGPTMessages.GetCacheKey(userId);
-            ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
-            if (messages != null)
+            var cacheKey = ChatHistory.GetCacheKey(userId);
+            ChatHistory history = await _cache.GetAsync<ChatHistory>(cacheKey);
+            if (history != null)
             {
                 await _cache.RemoveFromCacheAsync(cacheKey);
-            }
-        }
-
-        /// <summary>
-        /// 清除上一条消息
-        /// </summary>
-        /// <param name="userId"></param>
-        /// <returns></returns>
-        public async Task CleanLastChatGPT(string userId, int chatNumber = 1)
-        {
-            var cacheKey = ChatGPTMessages.GetCacheKey(userId);
-            ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
-            if (messages != null)
-            {
-                if (chatNumber == 0)
-                {
-                    messages.CleanMessage();
-                }
-                else
-                {
-                    for (int i = 0; i < chatNumber; i++)
-                    {
-                        //清除一次对话（两次）
-                        if (messages.Messages.Count >= 1)
-                        {
-                            //删除上一条系统回复
-                            messages.Messages.RemoveAt(messages.Messages.Count - 1);
-                        }
-                        if (messages.Messages.Count >= 1)
-                        {
-                            //删除上一条用户对话
-                            messages.Messages.RemoveAt(messages.Messages.Count - 1);
-                        }
-                    }
-                }
-
-                await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
             }
         }
 
