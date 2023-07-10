@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.SemanticKernel.AI.ImageGeneration;
+﻿using Microsoft.SemanticKernel.AI.ImageGeneration;
 using OpenAI.GPT3;
 using OpenAI.GPT3.Managers;
-using OpenAI.GPT3.ObjectModels;
-using OpenAI.GPT3.ObjectModels.RequestModels;
 using Senparc.AI;
 using Senparc.AI.Entities;
 using Senparc.AI.Kernel;
@@ -18,9 +15,6 @@ using Senparc.Xncf.OpenAI.Domain.Models.CacheModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Security.Policy;
 using System.Threading.Tasks;
 
 namespace Senparc.Xncf.OpenAI.Domain.Services

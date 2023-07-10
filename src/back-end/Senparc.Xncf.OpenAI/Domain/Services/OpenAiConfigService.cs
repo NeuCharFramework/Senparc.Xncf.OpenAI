@@ -1,14 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Update.Internal;
-using Senparc.CO2NET;
-using Senparc.Ncf.Core.Exceptions;
+﻿using Senparc.CO2NET;
 using Senparc.Ncf.Core.Extensions;
 using Senparc.Ncf.Repository;
 using Senparc.Ncf.Service;
 using Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel.Dto;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Senparc.Xncf.OpenAI.Domain.Services

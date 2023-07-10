@@ -1,5 +1,4 @@
 ﻿using OpenAI.GPT3.ObjectModels.RequestModels;
-using OpenAI.GPT3.ObjectModels.ResponseModels;
 using OpenAI.GPT3.ObjectModels.SharedModels;
 using Senparc.CO2NET;
 using Senparc.CO2NET.Extensions;
