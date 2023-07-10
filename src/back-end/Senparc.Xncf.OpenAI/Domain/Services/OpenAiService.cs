@@ -98,7 +98,9 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         {
             var cacheKey = ChatHistory.GetCacheKey(userId);
             ChatHistory history = await _cache.GetAsync<ChatHistory>(cacheKey);
-            history ??= new ChatHistory(userId);
+
+            if (history == null || startNewConversation)
+                history = new ChatHistory(userId);
 
             var promptParameter = new PromptConfigParameter()
             {
@@ -108,6 +110,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
             };
 
             var semanticAiHandler = await GetSemanticAiHandlerAsync();
+
             var iWantToRun = semanticAiHandler
                 .IWantTo()
                 .ConfigModel(ConfigModel.TextCompletion, userId, "text-davinci-003")
@@ -169,8 +172,6 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <param name="width"></param>
         /// <param name="height"></param>
         /// <param name="imageCount"></param>
-        /// <param name="user"></param>
-        /// <param name="size"></param>
         /// <returns></returns>
         public async Task<(List<Stream> streamList, string errorMessage)> GetDallEResult(string prompt, string userId, int width = 512, int height = 512, int imageCount = 1)
         {
@@ -198,7 +199,6 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
                 catch (Exception ex)
                 {
                     errorMessage = $"OpenAI Error: {ex.Message}";
-                    new NcfExceptionBase($"OpenAI Error: {errorMessage}");
                 }
             }
             return (streamList, errorMessage);
