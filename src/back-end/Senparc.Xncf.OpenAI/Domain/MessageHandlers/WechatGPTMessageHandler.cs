@@ -104,7 +104,7 @@ Xncf.OpenAI模块：https://github.com/NeuCharFramework/Senparc.Xncf.OpenAI
 
                         _ = CustomApi.SendTextAsync(_appId, OpenId, $"已收到请求，请等待约 1 分钟，期间您可以正常进行其他对话，不会打乱我的思路 :)");
 
-                        var streamResult = await _openAiService.GetDallEResult(keyword, OpenId, "512x512");
+                        var streamResult = await _openAiService.GetDallEResult(keyword, OpenId, 512, 512 , 1);
                         var streamList = streamResult.streamList;
                         //TODO:拼接图片
 

@@ -1,11 +1,14 @@
-﻿using Microsoft.IdentityModel.Protocols.OpenIdConnect;
-using Senparc.AI.Interfaces;
-using Senparc.AI.Kernel;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.SemanticKernel.AI.ImageGeneration;
 using OpenAI.GPT3;
 using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels;
 using OpenAI.GPT3.ObjectModels.RequestModels;
-using OpenAI.GPT3.ObjectModels.ResponseModels;
+using Senparc.AI;
+using Senparc.AI.Entities;
+using Senparc.AI.Kernel;
+using Senparc.AI.Kernel.Handlers;
+using Senparc.AI.Kernel.Helpers;
 using Senparc.CO2NET.Cache;
 using Senparc.CO2NET.Extensions;
 using Senparc.Ncf.Core.Exceptions;
@@ -16,12 +19,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
+using System.Net;
+using System.Security.Policy;
 using System.Threading.Tasks;
-using Senparc.AI.Kernel.Helpers;
-using Senparc.AI;
-using Senparc.AI.Entities;
-using Senparc.AI.Kernel.Handlers;
 
 namespace Senparc.Xncf.OpenAI.Domain.Services
 {
@@ -171,57 +171,43 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// 使用 Dall·E 接口绘图
         /// </summary>
         /// <param name="prompt"></param>
+        /// <param name="userId"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="imageCount"></param>
         /// <param name="user"></param>
         /// <param name="size"></param>
         /// <returns></returns>
-        public async Task<(List<Stream> streamList, string errorMessage)> GetDallEResult(string prompt, string user, string size = "512x512")
+        public async Task<(List<Stream> streamList, string errorMessage)> GetDallEResult(string prompt, string userId, int width = 512, int height = 512, int imageCount = 1)
         {
-            var openAiService = await this.GetOpenAiServiceAsync();
-            
-            var imageResult = await _openAiService.Image.CreateImage(new ImageCreateRequest
-            {
-                Prompt = prompt,
-                N = 2,
-                Size = size,
-                ResponseFormat = StaticValues.ImageStatics.ResponseFormat.Url,
-                User = user
-            });
+            var semanticAiHandler = await GetSemanticAiHandlerAsync();
+            var iWantTo = semanticAiHandler
+                .IWantTo()
+                .ConfigModel(ConfigModel.ImageGeneration, userId, "image-generation")
+                .BuildKernel();
 
-            List<Stream> streamResult = new List<Stream>();
+            var dallE = iWantTo.GetService<IImageGeneration>();
+            List<Stream> streamList = new List<Stream>();
             string errorMessage = String.Empty;
-            if (imageResult.Successful)
-            {
-                var urls = imageResult.Results.Select(r => r.Url);
-                foreach (var url in urls)
-                {
-                    try
-                    {
-                        var memoryStream = new MemoryStream();
 
-                        await Senparc.CO2NET.HttpUtility.Get.DownloadAsync(base._serviceProvider, url, memoryStream);
-                        memoryStream.Seek(0, SeekOrigin.Begin);
-                        streamResult.Add(memoryStream);
-                    }
-                    catch
-                    {
-                        //TODO:显示错误信息
-                    }
-                }
-            }
-            else
+            for (int i = 0; i < imageCount; i++)
             {
-                if (imageResult.Error == null)
+                try
                 {
-                    //TODO: OpenApi Exception
-                    new NcfExceptionBase("OpenAI Error: Unknown Error");
+                    var memoryStream = new MemoryStream();
+                    var url = await dallE.GenerateImageAsync(prompt, width, height);
+
+                    await Senparc.CO2NET.HttpUtility.Get.DownloadAsync(base._serviceProvider, url, memoryStream);
+                    memoryStream.Seek(0, SeekOrigin.Begin);
+                    streamList.Add(memoryStream);
                 }
-                else
+                catch (Exception ex)
                 {
-                    errorMessage = $"{imageResult.Error.Code} {imageResult.Error.Message}";
+                    errorMessage = $"OpenAI Error: {ex.Message}";
                     new NcfExceptionBase($"OpenAI Error: {errorMessage}");
                 }
             }
-            return (streamResult, errorMessage);
+            return (streamList, errorMessage);
         }
     }
 }
