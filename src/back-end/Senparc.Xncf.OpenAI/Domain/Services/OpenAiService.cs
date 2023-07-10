@@ -94,6 +94,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <param name="startNewConversation"></param>
         /// <param name="maxTokens"></param>
         /// <returns></returns>
+        /// <exception cref="NcfExceptionBase"></exception>
         public async Task<string> GetChatGPTResultAsync(string userId, string prompt, bool startNewConversation = false, int maxTokens = 50)
         {
             var cacheKey = ChatHistory.GetCacheKey(userId);
@@ -136,11 +137,13 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
                 else
                 {
                     finalMessage = $"OpenAI GPT-3 服务出错：{completionResult.LastException.Message}";
+                    throw new NcfExceptionBase(finalMessage);
                 }
             }
             catch (Exception ex)
             {
                 finalMessage = $"OpenAI GPT-3 服务出错：{ex.Message}";
+                throw new NcfExceptionBase(finalMessage);
             }
             finally
             {
@@ -173,6 +176,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <param name="height"></param>
         /// <param name="imageCount"></param>
         /// <returns></returns>
+        /// <exception cref="NcfExceptionBase"></exception>
         public async Task<(List<Stream> streamList, string errorMessage)> GetDallEResult(string prompt, string userId, int width = 512, int height = 512, int imageCount = 1)
         {
             var semanticAiHandler = await GetSemanticAiHandlerAsync();
@@ -199,6 +203,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
                 catch (Exception ex)
                 {
                     errorMessage = $"OpenAI Error: {ex.Message}";
+                    throw new NcfExceptionBase(errorMessage);
                 }
             }
             return (streamList, errorMessage);
