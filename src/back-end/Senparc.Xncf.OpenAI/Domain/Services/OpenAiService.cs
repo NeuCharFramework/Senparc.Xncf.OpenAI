@@ -1,4 +1,6 @@
 ﻿using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using Senparc.AI.Interfaces;
+using Senparc.AI.Kernel;
 using OpenAI.GPT3;
 using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels;
@@ -16,11 +18,17 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Senparc.AI.Kernel.Helpers;
+using Senparc.AI;
+using Senparc.AI.Entities;
+using Senparc.AI.Kernel.Handlers;
 
 namespace Senparc.Xncf.OpenAI.Domain.Services
 {
     public class OpenAiService : ServiceBase<OpenAiConfig>
     {
+        SemanticAiHandler _semanticAiHandler;
+
         private OpenAIService _openAiService;
 
         private readonly IBaseObjectCacheStrategy _cache;
@@ -28,6 +36,34 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         public OpenAiService(IRepositoryBase<OpenAiConfig> repo, IServiceProvider serviceProvider) : base(repo, serviceProvider)
         {
             _cache = CacheStrategyFactory.GetObjectCacheStrategyInstance();
+        }
+
+        /// <summary>
+        /// 获取 SemanticAiHandler 对象
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NcfExceptionBase"></exception>
+        public async Task<SemanticAiHandler> GetSemanticAiHandlerAsync()
+        {
+            if (_semanticAiHandler == null)
+            {
+                var config = await base.GetObjectAsync(z => true, z => z.Id, Ncf.Core.Enums.OrderingType.Descending);
+                if (config == null || config.ApiKey.IsNullOrEmpty())
+                {
+                    throw new NcfExceptionBase("请先设置 API Key！");
+                }
+
+                SenparcAiSetting aiSetting = new SenparcAiSetting();
+                aiSetting.AiPlatform = AI.AiPlatform.OpenAI;
+                aiSetting.OpenAIKeys = new OpenAIKeys
+                {
+                    ApiKey = config.GetOriginalAppKey(),
+                    OrgaizationId = config.OrganizationID
+                };
+
+                _semanticAiHandler = new SemanticAiHandler(new SemanticKernelHelper(aiSetting));
+            }
+            return _semanticAiHandler;
         }
 
         /// <summary>
@@ -66,36 +102,43 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <returns></returns>
         public async Task<string> GetChatGPTResultAsync(string userId, string prompt, bool startNewConversation = false, int maxTokens = 50)
         {
+            var cacheKey = ChatHistory.GetCacheKey(userId);
+            ChatHistory history = await _cache.GetAsync<ChatHistory>(cacheKey);
+            history ??= new ChatHistory(userId);
 
-            var cacheKey = ChatGPTMessages.GetCacheKey(userId);
-            ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
-            messages ??= new ChatGPTMessages(userId);
-
-            var chatRequest = new ChatCompletionCreateRequest
+            var promptParameter = new PromptConfigParameter()
             {
-                Messages = new List<ChatMessage>(),
-                Model = global::OpenAI.GPT3.ObjectModels.Models.ChatGpt3_5Turbo,
-                MaxTokens = maxTokens//optional
+                MaxTokens = maxTokens,
+                Temperature = 0.7,
+                TopP = 0.5,
             };
 
-            foreach (var msg in messages.Messages)
-            {
-                chatRequest.Messages.Add(msg);
-            }
+            var semanticAiHandler = await GetSemanticAiHandlerAsync();
+            var iWantToRun = semanticAiHandler
+                .IWantTo()
+                .ConfigModel(ConfigModel.TextCompletion, userId, "text-davinci-003")
+                .BuildKernel()
+                .RegisterSemanticFunction("ChatBot","Chat", promptParameter)
+                .iWantToRun;
 
-            chatRequest.Messages.Add(ChatMessage.FromUser(prompt));
+            var chatRequest = iWantToRun.CreateRequest(true);
 
-            string finalMessage = null;
+            chatRequest.SetStoredContext("history",history.Content);
+            chatRequest.SetStoredContext("human_input", prompt);
+
+            string finalMessage;
             try
             {
-                var openAiService = await this.GetOpenAiServiceAsync();
-                var completionResult = await openAiService.ChatCompletion.CreateCompletion(chatRequest);
-
-                if (completionResult.Successful)
+                var completionResult = await iWantToRun.RunAsync(chatRequest);
+                if (completionResult.LastException == null)
                 {
-                    finalMessage = completionResult.Choices.First().Message.Content;
-                    messages.Messages.Add(ChatMessage.FromAssistance(finalMessage));
-                    await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
+                    finalMessage = completionResult.Output;
+                    history.AppendHistory($"\nHuman: {prompt}\nBot: {finalMessage}");
+                    await _cache.SetAsync(cacheKey, history, TimeSpan.FromHours(1));
+                }
+                else
+                {
+                    finalMessage = $"OpenAI GPT-3 服务出错：{completionResult.LastException.Message}";
                 }
             }
             catch (Exception ex)
@@ -104,9 +147,9 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
             }
             finally
             {
+
             }
             return finalMessage;
-
         }
 
         /// <summary>
@@ -171,8 +214,8 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         public async Task<(List<Stream> streamList, string errorMessage)> GetDallEResult(string prompt, string user, string size = "512x512")
         {
             var openAiService = await this.GetOpenAiServiceAsync();
-
-            var imageResult = await openAiService.Image.CreateImage(new ImageCreateRequest
+            
+            var imageResult = await _openAiService.Image.CreateImage(new ImageCreateRequest
             {
                 Prompt = prompt,
                 N = 2,
