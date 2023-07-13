@@ -1,14 +1,7 @@
-﻿using OpenAI.GPT3.ObjectModels.RequestModels;
-using OpenAI.GPT3.ObjectModels.SharedModels;
-using Senparc.CO2NET;
-using Senparc.CO2NET.Extensions;
+﻿using Senparc.CO2NET;
 using Senparc.Ncf.Core.AppServices;
-using Senparc.Ncf.Core.Exceptions;
 using Senparc.Xncf.OpenAI.Domain.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
@@ -23,7 +16,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         {
             _openAiService = openAiService;
         }
-
+        /**
         /// <summary>
         /// 使用不同模型运行 OpenAI
         /// </summary>
@@ -138,7 +131,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
                 return choiceResponse;
             });
         }
-
+        **/
 
         /// <summary>
         /// ChatGPT 接口

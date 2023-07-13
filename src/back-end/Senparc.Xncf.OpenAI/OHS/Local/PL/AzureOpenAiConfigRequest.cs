@@ -1,27 +1,32 @@
-﻿using Senparc.Ncf.XncfBase.FunctionRenders;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Senparc.Ncf.XncfBase.FunctionRenders;
+using Senparc.Xncf.OpenAI.Domain.Services;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Senparc.Xncf.OpenAI.Domain.Services;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Senparc.Xncf.OpenAI.OHS.Local.PL
 {
-    public class OpenAiConfigRequest_Update : FunctionAppRequestBase
+    public class AzureOpenAiConfigRequest_Update : FunctionAppRequestBase
     {
         [Required]
         [MaxLength(100)]
         [Description("AppKey||OpenAI 的 AppKey，可以从 https://platform.openai.com/account/api-keys 获取。出于安全考虑，AppKey 不会明文返回，每次需要重新设置")]
         public string ApiKey { get; set; }
-        [MaxLength(100)]
-        [Description("OrganizationID||OpenAI 的 OrganizationID，可以从 https://platform.openai.com/account/org-settings 获取")]
-        public string OrganizationId { get; set; }
+        [Required]
+        [MaxLength(200)]
+        [Description("Endpoint||")]
+        public string Endpoint { get; set; }
+        [Required]
+        [MaxLength(50)]
+        [Description("ApiVersion||")]
+        public string ApiVersion { get; set; }
 
-        public OpenAiConfigRequest_Update()
+        public AzureOpenAiConfigRequest_Update()
         {
 
         }
@@ -33,7 +38,8 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.PL
             if (result != null)
             {
                 ApiKey = "";//始终留空
-                OrganizationId = result.OpenAiOrganizationId;
+                Endpoint = result.AzureOpenAiEndpoint;
+                ApiVersion = result.AzureOpenAiApiVersion;
             }
 
             await base.LoadData(serviceProvider);

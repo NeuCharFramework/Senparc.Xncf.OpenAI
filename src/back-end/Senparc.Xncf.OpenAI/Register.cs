@@ -77,8 +77,6 @@ namespace Senparc.Xncf.OpenAI
         public override IServiceCollection AddXncfModule(IServiceCollection services, IConfiguration configuration, IHostEnvironment env)
         {
             services.AddScoped<OpenAiConfigService>();
-            services.AddScoped<AzureOpenAiConfigService>();
-            services.AddScoped<NeuCharOpenAiConfigService>();
             services.AddScoped<OpenAiService>();
             return base.AddXncfModule(services, configuration, env);
         }

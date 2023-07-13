@@ -1,17 +1,15 @@
 ﻿using Microsoft.SemanticKernel.AI.ImageGeneration;
-using OpenAI.GPT3;
-using OpenAI.GPT3.Managers;
 using Senparc.AI;
 using Senparc.AI.Entities;
 using Senparc.AI.Kernel;
 using Senparc.AI.Kernel.Handlers;
 using Senparc.AI.Kernel.Helpers;
 using Senparc.CO2NET.Cache;
-using Senparc.CO2NET.Extensions;
 using Senparc.Ncf.Core.Exceptions;
 using Senparc.Ncf.Repository;
 using Senparc.Ncf.Service;
 using Senparc.Xncf.OpenAI.Domain.Models.CacheModels;
+using Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,15 +17,15 @@ using System.Threading.Tasks;
 
 namespace Senparc.Xncf.OpenAI.Domain.Services
 {
-    public class OpenAiService : ServiceBase<OpenAiConfig>
+    public class OpenAiService : ServiceBase<SenparcAiConfig>
     {
         SemanticAiHandler _semanticAiHandler;
 
-        private OpenAIService _openAiService;
+        //private OpenAIService _openAiService;
 
         private readonly IBaseObjectCacheStrategy _cache;
 
-        public OpenAiService(IRepositoryBase<OpenAiConfig> repo, IServiceProvider serviceProvider) : base(repo, serviceProvider)
+        public OpenAiService(IRepositoryBase<SenparcAiConfig> repo, IServiceProvider serviceProvider) : base(repo, serviceProvider)
         {
             _cache = CacheStrategyFactory.GetObjectCacheStrategyInstance();
         }
@@ -42,24 +40,57 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
             if (_semanticAiHandler == null)
             {
                 var config = await base.GetObjectAsync(z => true, z => z.Id, Ncf.Core.Enums.OrderingType.Descending);
-                if (config == null || config.ApiKey.IsNullOrEmpty())
+                if (config == null || !config.IsApiKeySetted)
                 {
                     throw new NcfExceptionBase("请先设置 API Key！");
                 }
 
-                SenparcAiSetting aiSetting = new SenparcAiSetting();
-                aiSetting.AiPlatform = AI.AiPlatform.OpenAI;
-                aiSetting.OpenAIKeys = new OpenAIKeys
+                if (!Enum.TryParse(config.AiPlatform, out AiPlatform aiPlatform))
                 {
-                    ApiKey = config.GetOriginalAppKey(),
-                    OrgaizationId = config.OrganizationID
+                    throw new ArgumentException("Invalid platform name.", nameof(config.AiPlatform));
+                }
+
+                SenparcAiSetting aiSetting = new()
+                {
+                    AiPlatform = aiPlatform,
+                    IsDebug = config.IsDebug
                 };
+
+                switch (aiPlatform)
+                {
+                    case AiPlatform.OpenAI:
+                        aiSetting.OpenAIKeys = new OpenAIKeys()
+                        {
+                            ApiKey = config.OpenAiApiKey,
+                            OrgaizationId = config.OpenAiOrganizationId
+                        };
+                        break;
+                    case AiPlatform.AzureOpenAI:
+                        aiSetting.AzureOpenAIKeys = new AzureOpenAIKeys()
+                        {
+                            ApiKey = config.AzureOpenAiApiKey,
+                            AzureEndpoint = config.AzureOpenAiEndpoint,
+                            AzureOpenAIApiVersion = config.AzureOpenAiApiVersion
+                        };
+                        break;
+                    case AiPlatform.NeuCharOpenAI:
+                        aiSetting.NeuCharOpenAIKeys = new NeuCharOpenAIKeys()
+                        {
+                            ApiKey = config.NeuCharOpenAiApiKey,
+                            NeuCharEndpoint = config.NeuCharOpenAiEndpoint,
+                            NeuCharOpenAIApiVersion = config.NeuCharOpenAiApiVersion
+                        };
+                        break;
+                    default:
+                        throw new NotImplementedException();
+                }
 
                 _semanticAiHandler = new SemanticAiHandler(new SemanticKernelHelper(aiSetting));
             }
             return _semanticAiHandler;
         }
 
+        /**
         /// <summary>
         /// 获取 OpenAIService 对象
         /// </summary>
@@ -70,21 +101,22 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
             if (_openAiService == null)
             {
                 var config = await base.GetObjectAsync(z => true, z => z.Id, Ncf.Core.Enums.OrderingType.Descending);
-                if (config == null || config.ApiKey.IsNullOrEmpty())
+                if (config == null || config.OpenAi.ApiKey.IsNullOrEmpty())
                 {
                     throw new NcfExceptionBase("请先设置 API Key！");
                 }
 
                 _openAiService = new OpenAIService(new OpenAiOptions()
                 {
-                    ApiKey = config.GetOriginalAppKey(),
-                    Organization = config.OrganizationID?.Trim().Length == 0 ? null : config.OrganizationID
+                    ApiKey = config.OpenAi.GetOriginalAppKey(),
+                    Organization = config.OpenAi.OrganizationId?.Trim().Length == 0 ? null : config.OpenAi.OrganizationId
                 });
 
 
             }
             return _openAiService;
         }
+        **/
 
         /// <summary>
         /// 获取 ChatGPT 结果

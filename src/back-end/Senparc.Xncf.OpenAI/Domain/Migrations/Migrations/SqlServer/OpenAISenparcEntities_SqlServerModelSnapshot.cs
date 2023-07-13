@@ -22,7 +22,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Migrations.Migrations.SqlServer
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Senparc.Xncf.OpenAI.AzureOpenAiConfig", b =>
+            modelBuilder.Entity("Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel.SenparcAiConfig", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -37,108 +37,48 @@ namespace Senparc.Xncf.OpenAI.Domain.Migrations.Migrations.SqlServer
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
-                    b.Property<string>("ApiKey")
-                        .IsRequired()
+                    b.Property<string>("AiPlatform")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("AzureOpenAiApiKey")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("AzureEndpoint")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<string>("AzureOpenAiApiVersion")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("AzureOpenAIApiVersion")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("AzureOpenAiEndpoint")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<bool>("Flag")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDebug")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("LastUpdateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Remark")
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
-
-                    b.Property<int>("TenantId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Senparc_OpenAI_AzureOpenAiConfig");
-                });
-
-            modelBuilder.Entity("Senparc.Xncf.OpenAI.NeuCharOpenAiConfig", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("AddTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("AdminRemark")
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
-
-                    b.Property<string>("ApiKey")
-                        .IsRequired()
+                    b.Property<string>("NeuCharOpenAiApiKey")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<bool>("Flag")
-                        .HasColumnType("bit");
+                    b.Property<string>("NeuCharOpenAiApiVersion")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<DateTime>("LastUpdateTime")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("NeuCharOpenAiEndpoint")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
-                    b.Property<string>("NeuCharEndpoint")
+                    b.Property<string>("OpenAiApiKey")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("NeuCharOpenAIApiVersion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Remark")
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
-
-                    b.Property<int>("TenantId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Senparc_OpenAI_NeuCharOpenAiConfig");
-                });
-
-            modelBuilder.Entity("Senparc.Xncf.OpenAI.OpenAiConfig", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("AddTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("AdminRemark")
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
-
-                    b.Property<string>("ApiKey")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<bool>("Flag")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("LastUpdateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("OrganizationID")
+                    b.Property<string>("OpenAiOrganizationId")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -151,7 +91,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Migrations.Migrations.SqlServer
 
                     b.HasKey("Id");
 
-                    b.ToTable("Senparc_OpenAI_OpenAiConfig");
+                    b.ToTable("Senparc_OpenAI_SenparcAiConfig");
                 });
 #pragma warning restore 612, 618
         }
