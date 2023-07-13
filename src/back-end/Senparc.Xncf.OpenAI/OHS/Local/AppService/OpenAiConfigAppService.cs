@@ -25,7 +25,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         {
             return await this.GetResponseAsync<AppResponseBase<SenparcAiConfigDto>, SenparcAiConfigDto>(async (response, logger) =>
             {
-                var result = await _openAiConfigService.GetSenparcAiSettingDtoAsync(true);
+                var result = await _openAiConfigService.GetSenparcAiConfigDtoAsync(true);
                 return result;
             });
         }

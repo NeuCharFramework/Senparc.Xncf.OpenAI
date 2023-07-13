@@ -30,7 +30,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <param name="hideApiKey">是否隐藏 ApiKey</param>
         /// <returns></returns>
         [ApiBind]
-        public async Task<SenparcAiConfigDto> GetSenparcAiSettingDtoAsync(bool hideApiKey = true)
+        public async Task<SenparcAiConfigDto> GetSenparcAiConfigDtoAsync(bool hideApiKey = true)
         {
             var config = await GetObjectAsync();
             if (config == null)

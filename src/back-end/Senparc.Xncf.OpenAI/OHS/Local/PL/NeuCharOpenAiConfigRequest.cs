@@ -34,7 +34,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.PL
         public override async Task LoadData(IServiceProvider serviceProvider)
         {
             var openAiConfigService = serviceProvider.GetService<OpenAiConfigService>();
-            var result = await openAiConfigService.GetSenparcAiSettingDtoAsync();
+            var result = await openAiConfigService.GetSenparcAiConfigDtoAsync();
             if (result != null)
             {
                 ApiKey = "";//始终留空
