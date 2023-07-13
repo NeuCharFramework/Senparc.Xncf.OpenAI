@@ -2,9 +2,10 @@
 
 namespace Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel.Dto
 {
-    public class OpenAiConfigDto : DtoBase
+    public class AzureOpenAiConfigDto:DtoBase
     {
         public string ApiKey { get; set; }
-        public string OrganizationID { get; set; }
+        public string AzureEndpoint { get; set; }
+        public string AzureOpenAIApiVersion { get; set; }
     }
 }

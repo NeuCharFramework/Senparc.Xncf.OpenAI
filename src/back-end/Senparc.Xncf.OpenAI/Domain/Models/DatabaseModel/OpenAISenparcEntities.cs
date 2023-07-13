@@ -2,6 +2,7 @@
 using Senparc.Ncf.Database;
 using Senparc.Ncf.Core.Models;
 using Senparc.Ncf.XncfBase.Database;
+using Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel;
 
 namespace Senparc.Xncf.OpenAI.Models
 {
@@ -12,6 +13,8 @@ namespace Senparc.Xncf.OpenAI.Models
         }
 
         public DbSet<OpenAiConfig> OpenAiConfigs { get; set; }
+        public DbSet<AzureOpenAiConfig> AzureOpenAiConfigs { get; set; }
+        public DbSet<NeuCharOpenAiConfig> NeuCharOpenAiConfigs { get; set; }
 
         //DOT REMOVE OR MODIFY THIS LINE 请勿移除或修改本行 - Entities Point
         //ex. public DbSet<Color> Colors { get; set; }

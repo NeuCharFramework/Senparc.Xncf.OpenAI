@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Senparc.Xncf.OpenAI.Models;
 
@@ -11,9 +12,10 @@ using Senparc.Xncf.OpenAI.Models;
 namespace Senparc.Xncf.OpenAI.Domain.Migrations.Migrations.SqlServer
 {
     [DbContext(typeof(OpenAISenparcEntities_SqlServer))]
-    partial class OpenAISenparcEntities_SqlServerModelSnapshot : ModelSnapshot
+    [Migration("20230713123518_AddSenparcAiConfig")]
+    partial class AddSenparcAiConfig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
