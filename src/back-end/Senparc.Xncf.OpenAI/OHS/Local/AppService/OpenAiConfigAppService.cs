@@ -21,7 +21,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         /// </summary>
         /// <returns></returns>
         [FunctionRender("获取全部配置信息", "获取 ApiPlatform，ApiKey 等信息", typeof(Register))]
-        public async Task<AppResponseBase<SenparcAiConfigDto>> GetSettings()
+        public async Task<AppResponseBase<SenparcAiConfigDto>> GetAiConfig()
         {
             return await this.GetResponseAsync<AppResponseBase<SenparcAiConfigDto>, SenparcAiConfigDto>(async (response, logger) =>
             {
@@ -34,8 +34,8 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         /// 切换AI平台
         /// </summary>
         /// <returns></returns>
-        [FunctionRender("切换API平台", "切换API平台", typeof(Register))]
-        public async Task<StringAppResponse> SwitchApiPlatform(SwitchAiPlatform_Update request)
+        [FunctionRender("切换AI平台", "切换AI平台", typeof(Register))]
+        public async Task<StringAppResponse> SwitchAiPlatform(SwitchAiPlatform_Update request)
         {
             return await this.GetResponseAsync<StringAppResponse, string>(async (response, logger) =>
             {
