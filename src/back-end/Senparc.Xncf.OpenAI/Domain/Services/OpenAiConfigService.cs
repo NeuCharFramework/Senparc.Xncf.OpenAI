@@ -29,7 +29,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// </summary>
         /// <param name="hideApiKey">是否隐藏 ApiKey</param>
         /// <returns></returns>
-        [ApiBind]
+        [ApiBind()]
         public async Task<SenparcAiConfigDto> GetSenparcAiConfigDtoAsync(bool hideApiKey = true)
         {
             var config = await GetObjectAsync();
@@ -42,9 +42,9 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
 
             if (hideApiKey)
             {
-                dto.OpenAiApiKey = config.GetOriginalApiKey(config.OpenAiApiKey).SubString(0, 5) + "...";
-                dto.AzureOpenAiApiKey = config.GetOriginalApiKey(config.AzureOpenAiApiKey).SubString(0, 5) + "...";
-                dto.NeuCharOpenAiApiKey = config.GetOriginalApiKey(config.NeuCharOpenAiApiKey).SubString(0, 5) + "...";
+                dto.OpenAiApiKey = config.DecryptApiKey(config.OpenAiApiKey).SubString(0, 5) + "...";
+                dto.AzureOpenAiApiKey = config.DecryptApiKey(config.AzureOpenAiApiKey).SubString(0, 5) + "...";
+                dto.NeuCharOpenAiApiKey = config.DecryptApiKey(config.NeuCharOpenAiApiKey).SubString(0, 5) + "...";
             }
 
             return dto;

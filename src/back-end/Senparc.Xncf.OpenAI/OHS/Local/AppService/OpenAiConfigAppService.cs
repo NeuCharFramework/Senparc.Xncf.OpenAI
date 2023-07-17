@@ -35,19 +35,19 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         /// </summary>
         /// <returns></returns>
         [FunctionRender("切换API平台", "切换API平台", typeof(Register))]
-        public async Task<StringAppResponse> SwitchApiPlatform(string platformName)
+        public async Task<StringAppResponse> SwitchApiPlatform(SwitchAiPlatform_Update request)
         {
             return await this.GetResponseAsync<StringAppResponse, string>(async (response, logger) =>
             {
                 try
                 {
-                    await _openAiConfigService.SwitchApiPlatform(platformName);
+                    await _openAiConfigService.SwitchApiPlatform(request.AiPlatform);
                 }
                 catch (ArgumentException ex)
                 {
-                    return $"{platformName}为无效值，有效值为'OpenAI'，'AzureOpenAI'，'NeuCharOpenAI'";
+                    return $"{request.AiPlatform}为无效值，有效值为'OpenAI'，'AzureOpenAI'，'NeuCharOpenAI'";
                 }
-                return $"当前使用AI平台已切换为{platformName}";
+                return $"当前使用AI平台已切换为{request.AiPlatform}";
             });
         }
 
@@ -74,7 +74,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         {
             return await this.GetResponseAsync<StringAppResponse, string>(async (response, logger) =>
             {
-                await _openAiConfigService.UpdateAzureOpenAi(request.ApiKey, request.Endpoint,request.ApiVersion);
+                await _openAiConfigService.UpdateAzureOpenAi(request.ApiKey, request.Endpoint, request.ApiVersion);
                 return "更新完成。";
             });
         }
@@ -88,7 +88,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         {
             return await this.GetResponseAsync<StringAppResponse, string>(async (response, logger) =>
             {
-                await _openAiConfigService.UpdateNeuCharOpenAi(request.ApiKey, request.Endpoint,request.ApiVersion);
+                await _openAiConfigService.UpdateNeuCharOpenAi(request.ApiKey, request.Endpoint, request.ApiVersion);
                 return "更新完成。";
             });
         }

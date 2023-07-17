@@ -66,6 +66,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
 
             });
         }
+        **/
 
         /// <summary>
         /// 使用不同模型运行 OpenAI（使用 Stream 方式）
@@ -75,63 +76,18 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         /// <param name="maxTokens">最大消费 Token 数量。默认为 50</param>
         /// <returns></returns>
         [ApiBind(ApiRequestMethod = CO2NET.WebApi.ApiRequestMethod.Post)]
-        public async Task<AppResponseBase<ChoiceResponse>> CreateCompletionStreamAsync(string prompt, string model = null, int maxTokens = 50)
+        public async Task<AppResponseBase<string>> CreateCompletionStreamAsync(string prompt, string model = null, int maxTokens = 50)
         {
-            return await this.GetResponseAsync<AppResponseBase<ChoiceResponse>, ChoiceResponse>(async (response, logger) =>
+            return await this.GetResponseAsync<AppResponseBase<string>, string>(async (response, logger) =>
             {
-                var dt1 = SystemTime.Now;//开始计时
-
-                var openAIService = await _openAiService.GetOpenAiServiceAsync();
-
-                if (model.IsNullOrEmpty())
+                if (string.IsNullOrEmpty(model))
                 {
-                    model = global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3;
+                    model = "text-davinci-003";
                 }
-
-                //openAIService.SetDefaultModelId(global::OpenAI.GPT3.ObjectModels.Models.TextDavinciV3);
-                var completionResult = openAIService.Completions.CreateCompletionAsStream(new CompletionCreateRequest()
-                {
-                    Prompt = prompt,
-                    Model = model,
-                    MaxTokens = maxTokens,
-                });
-
-                List<ChoiceResponse> result = new List<ChoiceResponse>();
-                var sb = new StringBuilder();
-
-                await foreach (var completion in completionResult)
-                {
-                    if (completion.Successful)
-                    {
-                        if (completion.Choices.FirstOrDefault() is ChoiceResponse first && first is not null)
-                        {
-                            result.Add(first);
-                            sb.Append(first.Text);
-                        }
-                        //sb.Append(completion.Choices.FirstOrDefault()?.Text);
-                    }
-                    else
-                    {
-                        if (completion.Error == null)
-                        {
-                            throw new NcfExceptionBase("Unknown Error");
-                        }
-                        new NcfExceptionBase($"{completion.Error.Code}: {completion.Error.Message}");
-                    }
-                }
-
-                var choiceResponse = new ChoiceResponse()
-                {
-                    Index = 0,
-                    FinishReason = result.LastOrDefault()?.FinishReason,
-                    LogProbs = result.LastOrDefault()?.LogProbs,
-                    Text = sb.ToString()
-                };
-
-                return choiceResponse;
+                var result = await _openAiService.GetChatGPTResultAsync("", prompt, true, maxTokens, model);
+                return result;
             });
         }
-        **/
 
         /// <summary>
         /// ChatGPT 接口

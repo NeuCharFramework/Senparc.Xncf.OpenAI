@@ -52,7 +52,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel
         { 
             get
             {
-                return string.IsNullOrEmpty(OpenAiApiKey) && string.IsNullOrEmpty(AzureOpenAiApiKey) && string.IsNullOrEmpty(NeuCharOpenAiApiKey);
+                return !(string.IsNullOrEmpty(OpenAiApiKey) && string.IsNullOrEmpty(AzureOpenAiApiKey) && string.IsNullOrEmpty(NeuCharOpenAiApiKey));
             }
         }
 
@@ -83,7 +83,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel
             return null;
         }
 
-        public string GetOriginalApiKey(string apiKey)
+        public string DecryptApiKey(string apiKey)
         {
             if (!apiKey.IsNullOrEmpty())
                 return Encoding.Default.GetString(Convert.FromBase64String(apiKey));

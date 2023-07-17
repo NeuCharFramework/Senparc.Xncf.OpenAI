@@ -40,14 +40,14 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
             if (_semanticAiHandler == null)
             {
                 var config = await base.GetObjectAsync(z => true, z => z.Id, Ncf.Core.Enums.OrderingType.Descending);
-                if (config == null || !config.IsApiKeySetted)
+                if (config == null || config.AiPlatform == null)
                 {
-                    throw new NcfExceptionBase("请先设置 API Key！");
+                    throw new NcfExceptionBase("请先配置OpenAI模块");
                 }
 
                 if (!Enum.TryParse(config.AiPlatform, out AiPlatform aiPlatform))
                 {
-                    throw new ArgumentException("Invalid platform name.", nameof(config.AiPlatform));
+                    throw new ArgumentException("无效的AI平台名称", nameof(config.AiPlatform));
                 }
 
                 SenparcAiSetting aiSetting = new()
@@ -61,14 +61,14 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
                     case AiPlatform.OpenAI:
                         aiSetting.OpenAIKeys = new OpenAIKeys()
                         {
-                            ApiKey = config.OpenAiApiKey,
+                            ApiKey = config.DecryptApiKey(config.OpenAiApiKey) ?? throw new NcfExceptionBase("请先设置 API Key！"),
                             OrgaizationId = config.OpenAiOrganizationId
                         };
                         break;
                     case AiPlatform.AzureOpenAI:
                         aiSetting.AzureOpenAIKeys = new AzureOpenAIKeys()
                         {
-                            ApiKey = config.AzureOpenAiApiKey,
+                            ApiKey = config.DecryptApiKey(config.AzureOpenAiApiKey) ?? throw new NcfExceptionBase("请先设置 API Key！"),
                             AzureEndpoint = config.AzureOpenAiEndpoint,
                             AzureOpenAIApiVersion = config.AzureOpenAiApiVersion
                         };
@@ -76,7 +76,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
                     case AiPlatform.NeuCharOpenAI:
                         aiSetting.NeuCharOpenAIKeys = new NeuCharOpenAIKeys()
                         {
-                            ApiKey = config.NeuCharOpenAiApiKey,
+                            ApiKey = config.DecryptApiKey(config.NeuCharOpenAiApiKey)?? throw new NcfExceptionBase("请先设置 API Key！"),
                             NeuCharEndpoint = config.NeuCharOpenAiEndpoint,
                             NeuCharOpenAIApiVersion = config.NeuCharOpenAiApiVersion
                         };
@@ -127,7 +127,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <param name="maxTokens"></param>
         /// <returns></returns>
         /// <exception cref="NcfExceptionBase"></exception>
-        public async Task<string> GetChatGPTResultAsync(string userId, string prompt, bool startNewConversation = false, int maxTokens = 50)
+        public async Task<string> GetChatGPTResultAsync(string userId, string prompt, bool startNewConversation = false, int maxTokens = 50, string model = "text-davinci-003")
         {
             var cacheKey = ChatHistory.GetCacheKey(userId);
             ChatHistory history = await _cache.GetAsync<ChatHistory>(cacheKey);
@@ -142,23 +142,23 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
                 TopP = 0.5,
             };
 
-            var semanticAiHandler = await GetSemanticAiHandlerAsync();
-
-            var iWantToRun = semanticAiHandler
-                .IWantTo()
-                .ConfigModel(ConfigModel.TextCompletion, userId, "text-davinci-003")
-                .BuildKernel()
-                .RegisterSemanticFunction("ChatBot","Chat", promptParameter)
-                .iWantToRun;
-
-            var chatRequest = iWantToRun.CreateRequest(true);
-
-            chatRequest.SetStoredContext("history",history.Content);
-            chatRequest.SetStoredContext("human_input", prompt);
-
             string finalMessage;
             try
             {
+                var semanticAiHandler = await GetSemanticAiHandlerAsync();
+
+                var iWantToRun = semanticAiHandler
+                    .IWantTo()
+                    .ConfigModel(ConfigModel.TextCompletion, userId, model)
+                    .BuildKernel()
+                    .RegisterSemanticFunction("ChatBot", "Chat", promptParameter)
+                    .iWantToRun;
+
+                var chatRequest = iWantToRun.CreateRequest(true);
+
+                chatRequest.SetStoredContext("history", history.Content);
+                chatRequest.SetStoredContext("human_input", prompt);
+
                 var completionResult = await iWantToRun.RunAsync(chatRequest);
                 if (completionResult.LastException == null)
                 {
