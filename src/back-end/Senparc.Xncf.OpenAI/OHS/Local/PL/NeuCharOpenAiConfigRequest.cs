@@ -1,13 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Senparc.Ncf.XncfBase.FunctionRenders;
 using Senparc.Xncf.OpenAI.Domain.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using Senparc.Ncf.XncfBase.FunctionRenders;
 
 namespace Senparc.Xncf.OpenAI.OHS.Local.PL
 {

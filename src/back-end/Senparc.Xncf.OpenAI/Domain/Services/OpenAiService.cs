@@ -21,8 +21,6 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
     {
         SemanticAiHandler _semanticAiHandler;
 
-        //private OpenAIService _openAiService;
-
         private readonly IBaseObjectCacheStrategy _cache;
 
         public OpenAiService(IRepositoryBase<SenparcAiConfig> repo, IServiceProvider serviceProvider) : base(repo, serviceProvider)
@@ -89,34 +87,6 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
             }
             return _semanticAiHandler;
         }
-
-        /**
-        /// <summary>
-        /// 获取 OpenAIService 对象
-        /// </summary>
-        /// <returns></returns>
-        /// <exception cref="NcfExceptionBase"></exception>
-        public async Task<OpenAIService> GetOpenAiServiceAsync()
-        {
-            if (_openAiService == null)
-            {
-                var config = await base.GetObjectAsync(z => true, z => z.Id, Ncf.Core.Enums.OrderingType.Descending);
-                if (config == null || config.OpenAi.ApiKey.IsNullOrEmpty())
-                {
-                    throw new NcfExceptionBase("请先设置 API Key！");
-                }
-
-                _openAiService = new OpenAIService(new OpenAiOptions()
-                {
-                    ApiKey = config.OpenAi.GetOriginalAppKey(),
-                    Organization = config.OpenAi.OrganizationId?.Trim().Length == 0 ? null : config.OpenAi.OrganizationId
-                });
-
-
-            }
-            return _openAiService;
-        }
-        **/
 
         /// <summary>
         /// 获取 ChatGPT 结果
