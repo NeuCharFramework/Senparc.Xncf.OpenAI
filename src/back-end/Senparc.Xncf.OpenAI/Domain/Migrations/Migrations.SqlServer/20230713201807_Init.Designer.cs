@@ -12,7 +12,7 @@ using Senparc.Xncf.OpenAI.Models;
 namespace Senparc.Xncf.OpenAI.Domain.Migrations.Migrations.SqlServer
 {
     [DbContext(typeof(OpenAISenparcEntities_SqlServer))]
-    [Migration("20230221145211_Init")]
+    [Migration("20230713201807_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Migrations.Migrations.SqlServer
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Senparc.Xncf.OpenAI.OpenAiConfig", b =>
+            modelBuilder.Entity("Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel.SenparcAiConfig", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,18 +39,48 @@ namespace Senparc.Xncf.OpenAI.Domain.Migrations.Migrations.SqlServer
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
-                    b.Property<string>("ApiKey")
-                        .IsRequired()
+                    b.Property<string>("AiPlatform")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("AzureOpenAiApiKey")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("AzureOpenAiApiVersion")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("AzureOpenAiEndpoint")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
                     b.Property<bool>("Flag")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDebug")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("LastUpdateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("OrganizationID")
+                    b.Property<string>("NeuCharOpenAiApiKey")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("NeuCharOpenAiApiVersion")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("NeuCharOpenAiEndpoint")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("OpenAiApiKey")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("OpenAiOrganizationId")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -63,7 +93,7 @@ namespace Senparc.Xncf.OpenAI.Domain.Migrations.Migrations.SqlServer
 
                     b.HasKey("Id");
 
-                    b.ToTable("Senparc_OpenAI_OpenAiConfig");
+                    b.ToTable("Senparc_OpenAI_SenparcAiConfig");
                 });
 #pragma warning restore 612, 618
         }

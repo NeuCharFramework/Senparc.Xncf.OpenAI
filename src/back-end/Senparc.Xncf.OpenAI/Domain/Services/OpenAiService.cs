@@ -1,59 +1,91 @@
-﻿using Microsoft.IdentityModel.Protocols.OpenIdConnect;
-using OpenAI.GPT3;
-using OpenAI.GPT3.Managers;
-using OpenAI.GPT3.ObjectModels;
-using OpenAI.GPT3.ObjectModels.RequestModels;
-using OpenAI.GPT3.ObjectModels.ResponseModels;
+﻿using Microsoft.SemanticKernel.AI.ImageGeneration;
+using Senparc.AI;
+using Senparc.AI.Entities;
+using Senparc.AI.Kernel;
+using Senparc.AI.Kernel.Handlers;
+using Senparc.AI.Kernel.Helpers;
 using Senparc.CO2NET.Cache;
-using Senparc.CO2NET.Extensions;
 using Senparc.Ncf.Core.Exceptions;
 using Senparc.Ncf.Repository;
 using Senparc.Ncf.Service;
 using Senparc.Xncf.OpenAI.Domain.Models.CacheModels;
+using Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Senparc.Xncf.OpenAI.Domain.Services
 {
-    public class OpenAiService : ServiceBase<OpenAiConfig>
+    public class OpenAiService : ServiceBase<SenparcAiConfig>
     {
-        private OpenAIService _openAiService;
+        SemanticAiHandler _semanticAiHandler;
 
         private readonly IBaseObjectCacheStrategy _cache;
 
-        public OpenAiService(IRepositoryBase<OpenAiConfig> repo, IServiceProvider serviceProvider) : base(repo, serviceProvider)
+        public OpenAiService(IRepositoryBase<SenparcAiConfig> repo, IServiceProvider serviceProvider) : base(repo, serviceProvider)
         {
             _cache = CacheStrategyFactory.GetObjectCacheStrategyInstance();
         }
 
         /// <summary>
-        /// 获取 OpenAIService 对象
+        /// 获取 SemanticAiHandler 对象
         /// </summary>
         /// <returns></returns>
         /// <exception cref="NcfExceptionBase"></exception>
-        public async Task<OpenAIService> GetOpenAiServiceAsync()
+        public async Task<SemanticAiHandler> GetSemanticAiHandlerAsync()
         {
-            if (_openAiService == null)
+            if (_semanticAiHandler == null)
             {
                 var config = await base.GetObjectAsync(z => true, z => z.Id, Ncf.Core.Enums.OrderingType.Descending);
-                if (config == null || config.ApiKey.IsNullOrEmpty())
+                if (config == null || config.AiPlatform == null)
                 {
-                    throw new NcfExceptionBase("请先设置 API Key！");
+                    throw new NcfExceptionBase("请先配置OpenAI模块");
                 }
 
-                _openAiService = new OpenAIService(new OpenAiOptions()
+                if (!Enum.TryParse(config.AiPlatform, out AiPlatform aiPlatform))
                 {
-                    ApiKey = config.GetOriginalAppKey(),
-                    Organization = config.OrganizationID?.Trim().Length == 0 ? null : config.OrganizationID
-                });
+                    throw new ArgumentException("无效的AI平台名称", nameof(config.AiPlatform));
+                }
 
+                SenparcAiSetting aiSetting = new()
+                {
+                    AiPlatform = aiPlatform,
+                    IsDebug = config.IsDebug
+                };
 
+                switch (aiPlatform)
+                {
+                    case AiPlatform.OpenAI:
+                        aiSetting.OpenAIKeys = new OpenAIKeys()
+                        {
+                            ApiKey = config.DecryptApiKey(config.OpenAiApiKey) ?? throw new NcfExceptionBase("请先设置 API Key！"),
+                            OrgaizationId = config.OpenAiOrganizationId
+                        };
+                        break;
+                    case AiPlatform.AzureOpenAI:
+                        aiSetting.AzureOpenAIKeys = new AzureOpenAIKeys()
+                        {
+                            ApiKey = config.DecryptApiKey(config.AzureOpenAiApiKey) ?? throw new NcfExceptionBase("请先设置 API Key！"),
+                            AzureEndpoint = config.AzureOpenAiEndpoint,
+                            AzureOpenAIApiVersion = config.AzureOpenAiApiVersion
+                        };
+                        break;
+                    case AiPlatform.NeuCharOpenAI:
+                        aiSetting.NeuCharOpenAIKeys = new NeuCharOpenAIKeys()
+                        {
+                            ApiKey = config.DecryptApiKey(config.NeuCharOpenAiApiKey)?? throw new NcfExceptionBase("请先设置 API Key！"),
+                            NeuCharEndpoint = config.NeuCharOpenAiEndpoint,
+                            NeuCharOpenAIApiVersion = config.NeuCharOpenAiApiVersion
+                        };
+                        break;
+                    default:
+                        throw new NotImplementedException();
+                }
+
+                _semanticAiHandler = new SemanticAiHandler(new SemanticKernelHelper(aiSetting));
             }
-            return _openAiService;
+            return _semanticAiHandler;
         }
 
         /// <summary>
@@ -64,49 +96,62 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <param name="startNewConversation"></param>
         /// <param name="maxTokens"></param>
         /// <returns></returns>
-        public async Task<string> GetChatGPTResultAsync(string userId, string prompt, bool startNewConversation = false, int maxTokens = 50)
+        /// <exception cref="NcfExceptionBase"></exception>
+        public async Task<string> GetChatGPTResultAsync(string userId, string prompt, bool startNewConversation = false, int maxTokens = 50, string model = "text-davinci-003")
         {
+            var cacheKey = ChatHistory.GetCacheKey(userId);
+            ChatHistory history = await _cache.GetAsync<ChatHistory>(cacheKey);
 
-            var cacheKey = ChatGPTMessages.GetCacheKey(userId);
-            ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
-            messages ??= new ChatGPTMessages(userId);
+            if (history == null || startNewConversation)
+                history = new ChatHistory(userId);
 
-            var chatRequest = new ChatCompletionCreateRequest
+            var promptParameter = new PromptConfigParameter()
             {
-                Messages = new List<ChatMessage>(),
-                Model = global::OpenAI.GPT3.ObjectModels.Models.ChatGpt3_5Turbo,
-                MaxTokens = maxTokens//optional
+                MaxTokens = maxTokens,
+                Temperature = 0.7,
+                TopP = 0.5,
             };
 
-            foreach (var msg in messages.Messages)
-            {
-                chatRequest.Messages.Add(msg);
-            }
-
-            chatRequest.Messages.Add(ChatMessage.FromUser(prompt));
-
-            string finalMessage = null;
+            string finalMessage;
             try
             {
-                var openAiService = await this.GetOpenAiServiceAsync();
-                var completionResult = await openAiService.ChatCompletion.CreateCompletion(chatRequest);
+                var semanticAiHandler = await GetSemanticAiHandlerAsync();
 
-                if (completionResult.Successful)
+                var iWantToRun = semanticAiHandler
+                    .IWantTo()
+                    .ConfigModel(ConfigModel.TextCompletion, userId, model)
+                    .BuildKernel()
+                    .RegisterSemanticFunction("ChatBot", "Chat", promptParameter)
+                    .iWantToRun;
+
+                var chatRequest = iWantToRun.CreateRequest(true);
+
+                chatRequest.SetStoredContext("history", history.Content);
+                chatRequest.SetStoredContext("human_input", prompt);
+
+                var completionResult = await iWantToRun.RunAsync(chatRequest);
+                if (completionResult.LastException == null)
                 {
-                    finalMessage = completionResult.Choices.First().Message.Content;
-                    messages.Messages.Add(ChatMessage.FromAssistance(finalMessage));
-                    await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
+                    finalMessage = completionResult.Output;
+                    history.AppendHistory($"\nHuman: {prompt}\nBot: {finalMessage}");
+                    await _cache.SetAsync(cacheKey, history, TimeSpan.FromHours(1));
+                }
+                else
+                {
+                    finalMessage = $"OpenAI GPT-3 服务出错：{completionResult.LastException.Message}";
+                    throw new NcfExceptionBase(finalMessage);
                 }
             }
             catch (Exception ex)
             {
                 finalMessage = $"OpenAI GPT-3 服务出错：{ex.Message}";
+                throw new NcfExceptionBase(finalMessage);
             }
             finally
             {
+
             }
             return finalMessage;
-
         }
 
         /// <summary>
@@ -116,48 +161,11 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// <returns></returns>
         public async Task CleanChatGPT(string userId)
         {
-            var cacheKey = ChatGPTMessages.GetCacheKey(userId);
-            ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
-            if (messages != null)
+            var cacheKey = ChatHistory.GetCacheKey(userId);
+            ChatHistory history = await _cache.GetAsync<ChatHistory>(cacheKey);
+            if (history != null)
             {
                 await _cache.RemoveFromCacheAsync(cacheKey);
-            }
-        }
-
-        /// <summary>
-        /// 清除上一条消息
-        /// </summary>
-        /// <param name="userId"></param>
-        /// <returns></returns>
-        public async Task CleanLastChatGPT(string userId, int chatNumber = 1)
-        {
-            var cacheKey = ChatGPTMessages.GetCacheKey(userId);
-            ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
-            if (messages != null)
-            {
-                if (chatNumber == 0)
-                {
-                    messages.CleanMessage();
-                }
-                else
-                {
-                    for (int i = 0; i < chatNumber; i++)
-                    {
-                        //清除一次对话（两次）
-                        if (messages.Messages.Count >= 1)
-                        {
-                            //删除上一条系统回复
-                            messages.Messages.RemoveAt(messages.Messages.Count - 1);
-                        }
-                        if (messages.Messages.Count >= 1)
-                        {
-                            //删除上一条用户对话
-                            messages.Messages.RemoveAt(messages.Messages.Count - 1);
-                        }
-                    }
-                }
-
-                await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
             }
         }
 
@@ -165,57 +173,42 @@ namespace Senparc.Xncf.OpenAI.Domain.Services
         /// 使用 Dall·E 接口绘图
         /// </summary>
         /// <param name="prompt"></param>
-        /// <param name="user"></param>
-        /// <param name="size"></param>
+        /// <param name="userId"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="imageCount"></param>
         /// <returns></returns>
-        public async Task<(List<Stream> streamList, string errorMessage)> GetDallEResult(string prompt, string user, string size = "512x512")
+        /// <exception cref="NcfExceptionBase"></exception>
+        public async Task<(List<Stream> streamList, string errorMessage)> GetDallEResult(string prompt, string userId, int width = 512, int height = 512, int imageCount = 1)
         {
-            var openAiService = await this.GetOpenAiServiceAsync();
+            var semanticAiHandler = await GetSemanticAiHandlerAsync();
+            var iWantTo = semanticAiHandler
+                .IWantTo()
+                .ConfigModel(ConfigModel.ImageGeneration, userId, "image-generation")
+                .BuildKernel();
 
-            var imageResult = await openAiService.Image.CreateImage(new ImageCreateRequest
-            {
-                Prompt = prompt,
-                N = 2,
-                Size = size,
-                ResponseFormat = StaticValues.ImageStatics.ResponseFormat.Url,
-                User = user
-            });
-
-            List<Stream> streamResult = new List<Stream>();
+            var dallE = iWantTo.GetService<IImageGeneration>();
+            List<Stream> streamList = new List<Stream>();
             string errorMessage = String.Empty;
-            if (imageResult.Successful)
-            {
-                var urls = imageResult.Results.Select(r => r.Url);
-                foreach (var url in urls)
-                {
-                    try
-                    {
-                        var memoryStream = new MemoryStream();
 
-                        await Senparc.CO2NET.HttpUtility.Get.DownloadAsync(base._serviceProvider, url, memoryStream);
-                        memoryStream.Seek(0, SeekOrigin.Begin);
-                        streamResult.Add(memoryStream);
-                    }
-                    catch
-                    {
-                        //TODO:显示错误信息
-                    }
-                }
-            }
-            else
+            for (int i = 0; i < imageCount; i++)
             {
-                if (imageResult.Error == null)
+                try
                 {
-                    //TODO: OpenApi Exception
-                    new NcfExceptionBase("OpenAI Error: Unknown Error");
+                    var memoryStream = new MemoryStream();
+                    var url = await dallE.GenerateImageAsync(prompt, width, height);
+
+                    await Senparc.CO2NET.HttpUtility.Get.DownloadAsync(base._serviceProvider, url, memoryStream);
+                    memoryStream.Seek(0, SeekOrigin.Begin);
+                    streamList.Add(memoryStream);
                 }
-                else
+                catch (Exception ex)
                 {
-                    errorMessage = $"{imageResult.Error.Code} {imageResult.Error.Message}";
-                    new NcfExceptionBase($"OpenAI Error: {errorMessage}");
+                    errorMessage = $"OpenAI Error: {ex.Message}";
+                    throw new NcfExceptionBase(errorMessage);
                 }
             }
-            return (streamResult, errorMessage);
+            return (streamList, errorMessage);
         }
     }
 }

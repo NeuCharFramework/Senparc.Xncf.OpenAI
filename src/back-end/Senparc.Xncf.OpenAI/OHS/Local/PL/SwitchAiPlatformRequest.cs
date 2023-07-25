@@ -8,17 +8,14 @@ using System.Threading.Tasks;
 
 namespace Senparc.Xncf.OpenAI.OHS.Local.PL
 {
-    public class OpenAiConfigRequest_Update : FunctionAppRequestBase
+    public class SwitchAiPlatform_Update : FunctionAppRequestBase
     {
         [Required]
-        [MaxLength(100)]
-        [Description("AppKey||OpenAI 的 AppKey，可以从 https://platform.openai.com/account/api-keys 获取。出于安全考虑，AppKey 不会明文返回，每次需要重新设置")]
-        public string ApiKey { get; set; }
-        [MaxLength(100)]
-        [Description("OrganizationID||OpenAI 的 OrganizationID，可以从 https://platform.openai.com/account/org-settings 获取")]
-        public string OrganizationId { get; set; }
+        [MaxLength(50)]
+        [Description("AiPlatform||当前要使用的AI平台，可选值有'OpenAI','AzureOpenAI'以及'NeuCharOpenAI'")]
+        public string AiPlatform { get; set; }
 
-        public OpenAiConfigRequest_Update()
+        public SwitchAiPlatform_Update()
         {
 
         }
@@ -29,10 +26,8 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.PL
             var result = await openAiConfigService.GetSenparcAiConfigDtoAsync();
             if (result != null)
             {
-                ApiKey = "";//始终留空
-                OrganizationId = result.OpenAiOrganizationId;
+                AiPlatform = result.AiPlatform;
             }
-
             await base.LoadData(serviceProvider);
         }
     }

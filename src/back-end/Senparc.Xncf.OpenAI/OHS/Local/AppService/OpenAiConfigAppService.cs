@@ -1,14 +1,9 @@
-﻿using Senparc.CO2NET.WebApi;
-using Senparc.CO2NET;
-using Senparc.Ncf.Core.AppServices;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Senparc.Ncf.Core.AppServices;
+using Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel.Dto;
 using Senparc.Xncf.OpenAI.Domain.Services;
 using Senparc.Xncf.OpenAI.OHS.Local.PL;
-using Senparc.Xncf.OpenAI.Domain.Models.DatabaseModel.Dto;
+using System;
+using System.Threading.Tasks;
 
 namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
 {
@@ -22,31 +17,79 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
         }
 
         /// <summary>
-        /// 更新
+        /// 获取全部配置信息
         /// </summary>
         /// <returns></returns>
-        [FunctionRender("更新 OpenAI 配置信息", "配置 OpenAI 的 AppKey、Organization 等信息", typeof(Register))]
-        public async Task<StringAppResponse> Update(OpenAiConfigRequest_Update request)
+        [FunctionRender("获取全部配置信息", "获取 ApiPlatform，ApiKey 等信息", typeof(Register))]
+        public async Task<AppResponseBase<SenparcAiConfigDto>> GetAiConfig()
+        {
+            return await this.GetResponseAsync<AppResponseBase<SenparcAiConfigDto>, SenparcAiConfigDto>(async (response, logger) =>
+            {
+                var result = await _openAiConfigService.GetSenparcAiConfigDtoAsync(true);
+                return result;
+            });
+        }
+
+        /// <summary>
+        /// 切换AI平台
+        /// </summary>
+        /// <returns></returns>
+        [FunctionRender("切换AI平台", "切换AI平台", typeof(Register))]
+        public async Task<StringAppResponse> SwitchAiPlatform(SwitchAiPlatform_Update request)
         {
             return await this.GetResponseAsync<StringAppResponse, string>(async (response, logger) =>
             {
-                await _openAiConfigService.Update(request.AppKey, request.OrganizationID);
+                try
+                {
+                    await _openAiConfigService.SwitchApiPlatform(request.AiPlatform);
+                }
+                catch (ArgumentException ex)
+                {
+                    return $"{request.AiPlatform}为无效值，有效值为'OpenAI'，'AzureOpenAI'，'NeuCharOpenAI'";
+                }
+                return $"当前使用AI平台已切换为{request.AiPlatform}";
+            });
+        }
+
+        /// <summary>
+        /// 更新 OpenAI 配置信息
+        /// </summary>
+        /// <returns></returns>
+        [FunctionRender("更新 OpenAI 配置信息", "配置 OpenAI 的 AppKey、Organization 等信息", typeof(Register))]
+        public async Task<StringAppResponse> UpdateOpenAi(OpenAiConfigRequest_Update request)
+        {
+            return await this.GetResponseAsync<StringAppResponse, string>(async (response, logger) =>
+            {
+                await _openAiConfigService.UpdateOpenAi(request.ApiKey, request.OrganizationId);
                 return "更新完成。";
             });
         }
 
-
         /// <summary>
-        /// 更新
+        /// 更新 AzureOpenAI 配置信息
         /// </summary>
         /// <returns></returns>
-        [FunctionRender("获取 OpenAI 配置信息", "获取 OpenAI 的 AppKey、Organization 等信息", typeof(Register))]
-        public async Task<AppResponseBase<OpenAiConfigDto>> Get(OpenAiConfigRequest_Update request)
+        [FunctionRender("更新 AzureOpenAI 配置信息", "配置 OpenAI 的 AppKey、Organization 等信息", typeof(Register))]
+        public async Task<StringAppResponse> UpdateAzureOpenAi(AzureOpenAiConfigRequest_Update request)
         {
-            return await this.GetResponseAsync<AppResponseBase<OpenAiConfigDto>, OpenAiConfigDto >(async (response, logger) =>
+            return await this.GetResponseAsync<StringAppResponse, string>(async (response, logger) =>
             {
-                var result = await _openAiConfigService.GetOpenAiConfigDtoAsync(true);
-                return result;
+                await _openAiConfigService.UpdateAzureOpenAi(request.ApiKey, request.Endpoint, request.ApiVersion);
+                return "更新完成。";
+            });
+        }
+
+        /// <summary>
+        /// 更新 NeuCharOpenAI 配置信息
+        /// </summary>
+        /// <returns></returns>
+        [FunctionRender("更新 NeuCharOpenAI 配置信息", "配置 OpenAI 的 AppKey、Organization 等信息", typeof(Register))]
+        public async Task<StringAppResponse> UpdateNeuCharOpenAi(NeuCharOpenAiConfigRequest_Update request)
+        {
+            return await this.GetResponseAsync<StringAppResponse, string>(async (response, logger) =>
+            {
+                await _openAiConfigService.UpdateNeuCharOpenAi(request.ApiKey, request.Endpoint, request.ApiVersion);
+                return "更新完成。";
             });
         }
     }

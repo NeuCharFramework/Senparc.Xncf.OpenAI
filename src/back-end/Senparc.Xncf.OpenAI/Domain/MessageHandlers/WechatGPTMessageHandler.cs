@@ -66,9 +66,9 @@ Xncf.OpenAI模块：https://github.com/NeuCharFramework/Senparc.Xncf.OpenAI
             var messageContext = await base.GetCurrentMessageContext();
 
             //正式对话
-            var cacheKey = ChatGPTMessages.GetCacheKey(OpenId);
-            ChatGPTMessages messages = await _cache.GetAsync<ChatGPTMessages>(cacheKey);
-            messages ??= new ChatGPTMessages(OpenId);
+            var cacheKey = ChatHistory.GetCacheKey(OpenId);
+            ChatHistory history = await _cache.GetAsync<ChatHistory>(cacheKey);
+            history ??= new ChatHistory(OpenId);
 
             var requestHandler = await requestMessage.StartHandler()
                 .Keyword("s", () =>
@@ -79,8 +79,8 @@ Xncf.OpenAI模块：https://github.com/NeuCharFramework/Senparc.Xncf.OpenAI
                         GlobalMessageContext.UpdateMessageContext(messageContext);//储存到缓存
 
                         //清除上下文
-                        messages.CleanMessage();
-                        await _cache.SetAsync(cacheKey, messages, TimeSpan.FromHours(1));
+                        history.CleanHistory();
+                        await _cache.SetAsync(cacheKey, history, TimeSpan.FromHours(1));
                         responseMessage.Content = "ChatGPT 准备就绪，请开始对话！";
                         return responseMessage;
                     });
@@ -104,7 +104,7 @@ Xncf.OpenAI模块：https://github.com/NeuCharFramework/Senparc.Xncf.OpenAI
 
                         _ = CustomApi.SendTextAsync(_appId, OpenId, $"已收到请求，请等待约 1 分钟，期间您可以正常进行其他对话，不会打乱我的思路 :)");
 
-                        var streamResult = await _openAiService.GetDallEResult(keyword, OpenId, "512x512");
+                        var streamResult = await _openAiService.GetDallEResult(keyword, OpenId, 512, 512 , 1);
                         var streamList = streamResult.streamList;
                         //TODO:拼接图片
 
