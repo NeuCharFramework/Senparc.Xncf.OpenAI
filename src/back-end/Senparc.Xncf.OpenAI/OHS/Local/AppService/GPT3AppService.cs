@@ -50,7 +50,7 @@ namespace Senparc.Xncf.OpenAI.OHS.Local.AppService
             return await this.GetResponseAsync<AppResponseBase<string>, string>(async (response, logger) =>
             {
 
-                var result = await _openAiService.GetChatGPTResultAsync("DefaultUser", prompt);
+                var result = await _openAiService.GetChatGPTResultAsync("DefaultUser", prompt, false, maxTokens);
 
                 return result;
             });
